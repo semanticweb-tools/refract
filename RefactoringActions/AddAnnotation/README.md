@@ -2,6 +2,9 @@
 
 **URI:** `https://semanticweb.tools/ont/refract#AddAnnotation`
 
+**Type:** [Annotation action](../../Definitions/AnnotationAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
+**Scope:** [Local action](../../Definitions/LocalAction.md)
+
 A catch-all annotation action that adds an annotation to an ontology element. For language-tagged string annotations, use [AddAnnotationLangString](../AddAnnotationLangString/README.md) instead.
 
 For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddAnnotation).
