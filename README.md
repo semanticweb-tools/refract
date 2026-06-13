@@ -6,7 +6,7 @@
 **Version:** 1.0.0 \
 **Licence:** [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
-REFrACT is a vocabulary for describing and validating a Transformation Manifest File (TMF). A TMF records the metadata and refactoring actions associated with an ontology transformation process, including refactoring, evolution, transformation, and localisation. REFrACT has been aligned to the DASH Data Shapes Vocabulary, which in turn imports the Shapes Constraint Language (SHACL).
+REFrACT is a vocabulary for describing and validating a Transformation Manifest File (TMF). A TMF records the metadata and refactoring actions associated with an ontology transformation process, including refactoring, evolution, transformation, and localisation. REFrACT has been aligned to the [DASH Data Shapes Vocabulary](https://datashapes.org/dash), which in turn imports the Shapes Constraint Language (SHACL).
 
 ## Repository Contents
 
