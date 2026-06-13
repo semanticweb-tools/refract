@@ -1,0 +1,35 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+shape:ShapeAddAnnotation
+    a sh:NodeShape ;
+    sh:targetClass ref:AddAnnotation ;
+    sh:or (
+        [ sh:property [ sh:path ref:sourceNode ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
+        [ sh:property [ sh:path ref:targetNode ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
+    ) ;
+    sh:property [
+        sh:path ref:targetAnnotation ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ref:targetAnnotationValue ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:not [ sh:datatype xsd:boolean ] ;
+        sh:not [ sh:datatype xsd:date ] ;
+        sh:not [ sh:datatype xsd:dateTime ] ;
+        sh:not [ sh:datatype rdf:langString ] ;
+    ] ;
+    sh:property [
+        sh:path ref:targetDataType ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
