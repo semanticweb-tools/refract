@@ -1,0 +1,24 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+shape:ShapeAddEquivalentClassSet
+    a sh:NodeShape ;
+    sh:targetClass ref:AddEquivalentClassSet ;
+    sh:xone (
+        [ sh:property [ sh:path ref:sourceNode ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
+        [ sh:property [ sh:path ref:targetNode ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
+    ) ;
+    sh:property [
+        sh:path ref:targetMembers ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ref:setType ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in (owl:unionOf owl:intersectionOf) ;
+    ] .

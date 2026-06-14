@@ -1,0 +1,18 @@
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix ex: <https://example.org/efo/> .
+
+ref:tmf_AddEquivalentClassSet a ref:Manifest ;
+    ref:transformationType ref:OntologyEvolutionProcess ;
+    ref:transformationSource <http://www.ebi.ac.uk/efo/> ;
+    ref:hasURIRelationshipToSource ref:SameVersioned ;
+    ref:hasAction ref:action_AddEquivalentClassSet_1 .
+
+ref:action_AddEquivalentClassSet_1 a ref:AddEquivalentClassSet ;
+    ref:targetNode ex:DistributedIntelligence ;
+    ref:targetMembers ( efo:EFO_0004337 ex:ArtificialIntelligence ) ;
+    ref:setType owl:unionOf ;
+    dash:shape shape:ShapeAddEquivalentClassSet .
