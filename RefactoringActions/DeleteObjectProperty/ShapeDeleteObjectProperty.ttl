@@ -1,0 +1,19 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+
+shape:ShapeDeleteObjectProperty
+    a sh:NodeShape ;
+    sh:targetClass ref:DeleteObjectProperty ;
+    sh:property [
+        sh:path ref:sourceNode ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ref:checkForAssertion ;
+        sh:class ref:AlgorithmCheckAssertion ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+    ] .

@@ -1,0 +1,15 @@
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix ex: <http://example.org/ontology#> .
+
+ref:tmf_DeleteObjectProperty a ref:Manifest ;
+    ref:transformationType ref:OntologyRefactoringProcess ;
+    ref:transformationSource <http://example.org/ontology> ;
+    ref:hasURIRelationshipToSource ref:SameVersioned ;
+    ref:hasAction ref:action_DeleteObjectProperty_1 .
+
+ref:action_DeleteObjectProperty_1 a ref:DeleteObjectProperty ;
+    ref:sourceNode ex:flowsInto ;
+    ref:checkForAssertion ref:IfTrueStop ;
+    dash:shape shape:ShapeDeleteObjectProperty .
