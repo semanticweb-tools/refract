@@ -9,7 +9,7 @@ An annotation action that adds a deprecation comment and optionally a 'see also'
 For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddCommentForDeprecation).
 
 ## Shapes graph
-- [ShapeAddCommentForDeprecation.ttl (local instance)](ShapeAddCommentForDeprecation.ttl)
+- [ShapeAddCommentForDeprecation.ttl](ShapeAddCommentForDeprecation.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeAddCommentForDeprecation.ttl`
 
 ## Examples
