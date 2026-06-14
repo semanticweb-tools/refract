@@ -1,0 +1,16 @@
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/ontology#> .
+
+ref:tmf_AddSemanticAxiomUnary a ref:Manifest ;
+    ref:transformationType ref:OntologyRefactoringProcess ;
+    ref:transformationSource <http://example.org/ontology> ;
+    ref:hasURIRelationshipToSource ref:SameVersioned ;
+    ref:hasAction ref:action_AddSemanticAxiomUnary_1 .
+
+ref:action_AddSemanticAxiomUnary_1 a ref:AddSemanticAxiomUnary ;
+    ref:sourceNode ex:hasGuardian ;
+    ref:axiomType owl:TransitiveProperty ;
+    dash:shape shape:ShapeAddSemanticAxiomUnary .
