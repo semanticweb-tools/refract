@@ -9,7 +9,8 @@ An annotation action that deletes an existing annotation from an ontology elemen
 For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeleteAnnotation).
 
 ## Shapes graph
-- [ShapeDeleteAnnotation.ttl](ShapeDeleteAnnotation.ttl)
+- [ShapeDeleteAnnotation.ttl (local instance)](ShapeDeleteAnnotation.ttl)
+- URI: `https://semanticweb.tools/rdf/shapes/ShapeDeleteAnnotation.ttl`
 
 ## Examples
 - [Example TMF](TMFDeleteAnnotation.ttl)
