@@ -1,0 +1,42 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+
+shape:ShapeLocalisation
+    a sh:NodeShape ;
+    sh:target [
+        a dash:HasValueTarget ;
+        dash:predicate ref:transformationType ;
+        dash:object ref:OntologyLocalisationProcess ;
+    ] ;
+    sh:property [
+        sh:path ref:transformationSource ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ref:startingNode ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 0 ;
+    ] ;
+    sh:property [
+        sh:path ref:hasURIRelationshipToSource ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ref:targetOntologyURI ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ref:targetViewpoint ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ref:versionManifest ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+    ] .
