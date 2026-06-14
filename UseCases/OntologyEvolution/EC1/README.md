@@ -1,11 +1,13 @@
 # Semantic drift – expansion of 'intelligence' to include distributed human-AI cognition
 
-- ## Artefacts
+## Artefacts
 - Source ontology: [fragment](Files/source.ttl) from [Experimental Factor Ontology (EFO)](https://bioportal.bioontology.org/ontologies/EFO)
 - Target ontology: [revised fragment](Files/target.ttl)
 - SPARQL for CQs: [CQ1](Files/CQ1.rq) | [CQ2](Files/CQ2.rq) | [CQ3](Files/CQ3.rq) | [CQ4](Files/CQ4.rq)
 - TMF for target viewpoint: [JSON-LD](Files/TMF.json) | [Turtle](Files/TMF.ttl)
-- Shapes graphs: [ShapeEvolution](../../ShapesGraphs/ShapeEvolution/README.md) (macro) | [ShapeAddClass](../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddEquivalentClassSet](../../RefactoringActions/AddEquivalentClassSet/ShapeAddEquivalentClassSet.ttl) | [ShapeAddAnnotationLangString](../../RefactoringActions/AddAnnotationLangString/ShapeAddAnnotationLangString.ttl) (micro)
+- Shapes graphs:
+  - Macro: [ShapeEvolution](../../ShapesGraphs/ShapeEvolution/README.md)
+  - Micro: [ShapeAddClass](../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddEquivalentClassSet](../../RefactoringActions/AddEquivalentClassSet/ShapeAddEquivalentClassSet.ttl) | [ShapeAddAnnotationLangString](../../RefactoringActions/AddAnnotationLangString/ShapeAddAnnotationLangString.ttl)
 
 ## Description
 
@@ -27,6 +29,13 @@ The goal is to update EFO with a new class `efo:DistributedIntelligence` as a si
 
 **CQ4:** What is the equivalent class expression for `ex:DistributedIntelligence`?
 - Target: `owl:unionOf (efo:EFO_0004337 ex:ArtificialIntelligence)`
+
+## Evaluation
+
+- Shapes graph validation: [Using SHACL meta-validation](Evaluation/ShapesGraphValidation.md)
+- TMF validation: [Using SHACL](Evaluation/TMFValidation.md)
+
+---
 
 ## Rationale for classification as ontology evolution
 
