@@ -1,0 +1,10 @@
+PREFIX ex: <https://example.org/efo/>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+ASK {
+    ex:DistributedIntelligence owl:equivalentClass ?ec .
+    ?ec owl:unionOf ?list .
+    ?list rdf:rest*/rdf:first efo:EFO_0004337 .
+    ?list rdf:rest*/rdf:first ex:ArtificialIntelligence .
+}

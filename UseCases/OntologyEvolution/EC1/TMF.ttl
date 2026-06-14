@@ -1,0 +1,67 @@
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix ex: <https://example.org/efo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ref:tmf_ec1 a ref:Manifest ;
+    rdfs:label "Manifest 1.0.0 for evolution of EFO ontology"@en ;
+    ref:transformationType ref:OntologyEvolutionProcess ;
+    ref:transformationSource <http://www.ebi.ac.uk/efo/> ;
+    ref:hasURIRelationshipToSource ref:SameVersioned ;
+    ref:versionManifest ref:tmf_ec1_v1 ;
+    dash:shape shape:ShapeEvolution ;
+    ref:hasAction ref:action_ec1_1, ref:action_ec1_2, ref:action_ec1_3, ref:action_ec1_4, ref:action_ec1_5 ;
+    ref:actionOrder (
+        ref:action_ec1_1
+        ref:action_ec1_2
+        ref:action_ec1_3
+        ref:action_ec1_4
+        ref:action_ec1_5
+    ) .
+
+ref:tmf_ec1_v1 a ref:Version ;
+    ref:versionNumber "1.0.0" ;
+    dct:date "2025-05-01" ;
+    ref:versionPrevious ref:NoPreviousVersion ;
+    dct:contributor "Frances Gillis-Webber" .
+
+ref:action_ec1_1 a ref:AddClass ;
+    ref:targetIdentifier ex:ArtificialIntelligence ;
+    ref:targetParent efo:EFO_0004542 ;
+    ref:targetLabel "Artificial intelligence" ;
+    ref:targetLanguageTag "en" ;
+    dash:shape shape:ShapeAddClass .
+
+ref:action_ec1_2 a ref:AddClass ;
+    ref:targetIdentifier ex:DistributedIntelligence ;
+    ref:targetParent efo:EFO_0003925 ;
+    ref:targetLabel "Distributed intelligence" ;
+    ref:targetLanguageTag "en" ;
+    dash:shape shape:ShapeAddClass .
+
+ref:action_ec1_3 a ref:AddEquivalentClassSet ;
+    ref:targetNode ex:DistributedIntelligence ;
+    ref:targetMembers ( efo:EFO_0004337 ex:ArtificialIntelligence ) ;
+    ref:setType owl:unionOf ;
+    dash:shape shape:ShapeAddEquivalentClassSet .
+
+ref:action_ec1_4 a ref:AddAnnotationLangString ;
+    ref:targetNode ex:DistributedIntelligence ;
+    ref:targetAnnotation skos:definition ;
+    ref:targetAnnotationValue "The cognitive capacity emerging from the partnership between human and artificial intelligence systems." ;
+    ref:targetLanguageTag "en" ;
+    dash:shape shape:ShapeAddAnnotationLangString .
+
+ref:action_ec1_5 a ref:AddAnnotationLangString ;
+    ref:targetNode ex:ArtificialIntelligence ;
+    ref:targetAnnotation skos:definition ;
+    ref:targetAnnotationValue "Machines capable of performing tasks that typically require human intelligence." ;
+    ref:targetLanguageTag "en" ;
+    dash:shape shape:ShapeAddAnnotationLangString .

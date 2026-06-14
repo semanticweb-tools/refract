@@ -1,0 +1,16 @@
+RC1@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+efo:EFO_0004323 a owl:Class ;
+    rdfs:label "Mental process"@en .
+
+efo:EFO_0003925 a owl:Class ;
+    rdfs:label "Cognition"@en ;
+    rdfs:subClassOf efo:EFO_0004323 .
+
+efo:EFO_0004337 a owl:Class ;
+    rdfs:label "Intelligence"@en ;
+    rdfs:subClassOf efo:EFO_0003925 ;
+    skos:definition "The ability to learn and to deal with new situations and to deal effectively with tasks involving abstractions."@en .

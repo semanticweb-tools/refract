@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "ref": "http://semanticweb.tools/ont/refract#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "shape": "https://semanticweb.tools/rdf/shapes/",
+    "dash": "http://datashapes.org/dash#",
+    "efo": "http://www.ebi.ac.uk/efo/",
+    "ex": "https://example.org/efo/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  },
+  "@graph": [
+    {
+      "@id": "ref:tmf_ec1",
+      "@type": "ref:Manifest",
+      "rdfs:label": {"@value": "Manifest 1.0.0 for evolution of EFO ontology", "@language": "en"},
+      "ref:transformationType": {"@id": "ref:OntologyEvolutionProcess"},
+      "ref:transformationSource": {"@id": "http://www.ebi.ac.uk/efo/"},
+      "ref:hasURIRelationshipToSource": {"@id": "ref:SameVersioned"},
+      "ref:versionManifest": {"@id": "ref:tmf_ec1_v1"},
+      "dash:shape": {"@id": "shape:ShapeEvolution"},
+      "ref:hasAction": [
+        {"@id": "ref:action_ec1_1"},
+        {"@id": "ref:action_ec1_2"},
+        {"@id": "ref:action_ec1_3"},
+        {"@id": "ref:action_ec1_4"},
+        {"@id": "ref:action_ec1_5"}
+      ],
+      "ref:actionOrder": {
+        "@list": [
+          {"@id": "ref:action_ec1_1"},
+          {"@id": "ref:action_ec1_2"},
+          {"@id": "ref:action_ec1_3"},
+          {"@id": "ref:action_ec1_4"},
+          {"@id": "ref:action_ec1_5"}
+        ]
+      }
+    },
+    {
+      "@id": "ref:tmf_ec1_v1",
+      "@type": "ref:Version",
+      "ref:versionNumber": "1.0.0",
+      "dct:date": "2025-05-01",
+      "ref:versionPrevious": {"@id": "ref:NoPreviousVersion"},
+      "dct:contributor": "Frances Gillis-Webber"
+    },
+    {
+      "@id": "ref:action_ec1_1",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "ex:ArtificialIntelligence"},
+      "ref:targetParent": {"@id": "efo:EFO_0004542"},
+      "ref:targetLabel": "Artificial intelligence",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_ec1_2",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "ex:DistributedIntelligence"},
+      "ref:targetParent": {"@id": "efo:EFO_0003925"},
+      "ref:targetLabel": "Distributed intelligence",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_ec1_3",
+      "@type": "ref:AddEquivalentClassSet",
+      "ref:targetNode": {"@id": "ex:DistributedIntelligence"},
+      "ref:targetMembers": {
+        "@list": [
+          {"@id": "efo:EFO_0004337"},
+          {"@id": "ex:ArtificialIntelligence"}
+        ]
+      },
+      "ref:setType": {"@id": "owl:unionOf"},
+      "dash:shape": {"@id": "shape:ShapeAddEquivalentClassSet"}
+    },
+    {
+      "@id": "ref:action_ec1_4",
+      "@type": "ref:AddAnnotationLangString",
+      "ref:targetNode": {"@id": "ex:DistributedIntelligence"},
+      "ref:targetAnnotation": {"@id": "skos:definition"},
+      "ref:targetAnnotationValue": "The cognitive capacity emerging from the partnership between human and artificial intelligence systems.",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddAnnotationLangString"}
+    },
+    {
+      "@id": "ref:action_ec1_5",
+      "@type": "ref:AddAnnotationLangString",
+      "ref:targetNode": {"@id": "ex:ArtificialIntelligence"},
+      "ref:targetAnnotation": {"@id": "skos:definition"},
+      "ref:targetAnnotationValue": "Machines capable of performing tasks that typically require human intelligence.",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddAnnotationLangString"}
+    }
+  ]
+}

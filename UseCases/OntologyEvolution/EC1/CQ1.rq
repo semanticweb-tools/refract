@@ -1,0 +1,6 @@
+PREFIX ex: <https://example.org/efo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+ASK {
+    ex:ArtificialIntelligence a owl:Class .
+}

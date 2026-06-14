@@ -1,0 +1,38 @@
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/efo/> .
+
+efo:EFO_0004323 a owl:Class ;
+    rdfs:label "mental process"@en .
+
+efo:EFO_0004542 a owl:Class ;
+    rdfs:label "planned process"@en .
+
+efo:EFO_0003925 a owl:Class ;
+    rdfs:label "cognition"@en ;
+    rdfs:subClassOf efo:EFO_0004323 .
+
+efo:EFO_0004337 a owl:Class ;
+    rdfs:label "intelligence"@en ;
+    rdfs:subClassOf efo:EFO_0003925 ;
+    skos:definition "The ability to learn and to deal with new situations and to deal effectively with tasks involving abstractions."@en .
+
+ex:ArtificialIntelligence a owl:Class ;
+    rdfs:label "artificial intelligence"@en ;
+    rdfs:subClassOf efo:EFO_0004542 ;
+    skos:definition "The simulation of human intelligence processes by computer systems."@en ;
+    dct:created "2025-01-01"^^xsd:date .
+
+ex:DistributedIntelligence a owl:Class ;
+    rdfs:label "distributed intelligence"@en ;
+    rdfs:subClassOf efo: EFO_0003925 ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:unionOf ( efo:EFO_0004337 ex:ArtificialIntelligence )
+    ] ;
+    skos:definition "The cognitive capacity emerging from the partnership between human and artificial intelligence systems, as described by extended cognition and distributed cognition frameworks."@en ;
+    dct:created "2025-01-01"^^xsd:date .
