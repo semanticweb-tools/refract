@@ -12,7 +12,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 - [ShapeAddAnnotationLangString.ttl](ShapeAddAnnotationLangString.ttl)
 
 ## Examples
-- [Example TMF](AddAnnotationLangString.ttl)
+- [Example TMF](TMFAddAnnotationLangString.ttl)
 
 ## Used in use cases
 - Ontology Refactoring: [RC3](../../UseCases/OntologyRefactoring/RC3/README.md)
