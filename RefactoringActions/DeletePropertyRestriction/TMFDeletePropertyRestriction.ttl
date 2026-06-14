@@ -1,0 +1,19 @@
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix mar: <https://example.org/marine#> .
+@prefix marnz: <https://example.org/marine/nz#> .
+
+ref:tmf_DeletePropertyRestriction a ref:Manifest ;
+    ref:transformationType ref:OntologyLocalisationProcess ;
+    ref:transformationSource <https://example.org/marine> ;
+    ref:hasURIRelationshipToSource ref:SameVersioned ;
+    ref:hasAction ref:action_DeletePropertyRestriction_1 .
+
+ref:action_DeletePropertyRestriction_1 a ref:DeletePropertyRestriction ;
+    ref:sourceNode mar:Whale ;
+    ref:targetObject marnz:hasGuardian ;
+    ref:targetObjectValue mar:Guardian ;
+    ref:restrictionType owl:someValuesFrom ;
+    dash:shape shape:ShapeDeletePropertyRestriction .
