@@ -9,7 +9,7 @@ A semantic action that adds a superclass assertion to a class in the ontology.
 For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddSuperclassAssertion).
 
 ## Shapes graph
-- [ShapeAddSuperclassAssertion.ttl (local instance)](ShapeAddSuperclassAssertion.ttl)
+- [ShapeAddSuperclassAssertion.ttl](ShapeAddSuperclassAssertion.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeAddSuperclassAssertion.ttl`
 
 ## Examples
