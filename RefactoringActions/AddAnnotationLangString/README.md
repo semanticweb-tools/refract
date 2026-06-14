@@ -9,7 +9,8 @@ An annotation action that adds a language-tagged string annotation to an ontolog
 For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddAnnotationLangString).
 
 ## Shapes graph
-- [ShapeAddAnnotationLangString.ttl](ShapeAddAnnotationLangString.ttl)
+- [ShapeAddAnnotationLangString.ttl (local instance)](ShapeAddAnnotationLangString.ttl)
+- URI: `https://semanticweb.tools/rdf/shapes/ShapeAddAnnotationLangString.ttl`
 
 ## Examples
 - [Example TMF](TMFAddAnnotationLangString.ttl)
