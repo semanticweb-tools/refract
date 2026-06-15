@@ -1,5 +1,5 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix ref: <https://semanticweb.tools/ont/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 
 shape:ShapeChangeInstanceAssertion
