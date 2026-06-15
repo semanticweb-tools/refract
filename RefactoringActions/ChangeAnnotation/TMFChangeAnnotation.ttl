@@ -1,4 +1,4 @@
-@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix ref: <https://semanticweb.tools/ont/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix dct: <http://purl.org/dc/terms/> .
