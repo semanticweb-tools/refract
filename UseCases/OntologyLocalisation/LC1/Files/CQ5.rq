@@ -1,0 +1,7 @@
+PREFIX sweetfr: <https://example.org/sweet/fr#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?superclass
+WHERE {
+    sweetfr:Riviere rdfs:subClassOf ?superclass .
+}

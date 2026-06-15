@@ -1,0 +1,35 @@
+@prefix sweet: <http://sweetontology.net/realmHydroBody/> .
+@prefix sweetfr: <https://example.org/sweet/fr#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix multi: <https://w3id.org/MULTI#> .
+
+<https://example.org/sweet/fr>
+    a owl:Ontology ;
+    rdfs:label "SWEET Ontology Realm Hydrosphere Body - French Viewpoint"@en ;
+    prov:wasDerivedFrom <http://sweetontology.net/realmHydroBody> ;
+    dct:created "2025-01-01"^^xsd:date ;
+    multi:hasViewpoint <https://semanticweb.tools/rdf/multi/language-french> .
+
+sweet:BodyOfWater a owl:Class ;
+    rdfs:label "Body of water"@en .
+
+sweet:NaturalWaterBody a owl:Class ;
+    rdfs:label "Natural water body"@en ;
+    rdfs:subClassOf sweet:BodyOfWater .
+
+sweetfr:Riviere a owl:Class ;
+    rdfs:label "Rivière"@fr ;
+    rdfs:subClassOf sweet:NaturalWaterBody ;
+    skos:definition "A river that flows into another river."@fr ;
+    owl:disjointWith sweetfr:Fleuve .
+
+sweetfr:Fleuve a owl:Class ;
+    rdfs:label "Fleuve"@fr ;
+    rdfs:subClassOf sweet:NaturalWaterBody ;
+    skos:definition "A river that flows into the sea."@fr ;
+    owl:disjointWith sweetfr:Riviere .

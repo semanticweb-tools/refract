@@ -1,0 +1,106 @@
+{
+  "@context": {
+    "ref": "http://semanticweb.tools/ont/refract#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "shape": "https://semanticweb.tools/rdf/shapes/",
+    "dash": "http://datashapes.org/dash#",
+    "sweet": "http://sweetontology.net/realmHydroBody/",
+    "sweetfr": "https://example.org/sweet/fr#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  },
+  "@graph": [
+    {
+      "@id": "ref:tmf_lc1",
+      "@type": "ref:Manifest",
+      "rdfs:label": {"@value": "Manifest 1.0.0 for localisation of SWEET Ontology Realm Hydrosphere Body to French Viewpoint", "@language": "en"},
+      "ref:transformationType": {"@id": "ref:OntologyLocalisationProcess"},
+      "ref:transformationSource": {"@id": "http://sweetontology.net/realmHydroBody"},
+      "ref:startingNode": {"@id": "sweet:BodyOfWater"},
+      "ref:hasURIRelationshipToSource": {"@id": "ref:Different"},
+      "ref:targetOntologyURI": {"@id": "https://example.org/sweet/fr"},
+      "ref:targetViewpoint": {"@id": "https://semanticweb.tools/rdf/multi/language-french"},
+      "ref:versionManifest": {"@id": "ref:tmf_lc1_v1"},
+      "dash:shape": {"@id": "shape:ShapeLocalisation"},
+      "ref:hasAction": [
+        {"@id": "ref:action_lc1_1"},
+        {"@id": "ref:action_lc1_2"},
+        {"@id": "ref:action_lc1_3"},
+        {"@id": "ref:action_lc1_4"},
+        {"@id": "ref:action_lc1_5"},
+        {"@id": "ref:action_lc1_6"}
+      ],
+      "ref:actionOrder": {
+        "@list": [
+          {"@id": "ref:action_lc1_1"},
+          {"@id": "ref:action_lc1_2"},
+          {"@id": "ref:action_lc1_3"},
+          {"@id": "ref:action_lc1_4"},
+          {"@id": "ref:action_lc1_5"},
+          {"@id": "ref:action_lc1_6"}
+        ]
+      }
+    },
+    {
+      "@id": "ref:tmf_lc1_v1",
+      "@type": "ref:Version",
+      "ref:versionNumber": "1.0.0",
+      "dct:date": "2025-05-01",
+      "ref:versionPrevious": {"@id": "ref:NoPreviousVersion"},
+      "dct:contributor": "Frances Gillis-Webber"
+    },
+    {
+      "@id": "ref:action_lc1_1",
+      "@type": "ref:DeleteClass",
+      "ref:sourceNode": {"@id": "sweet:River"},
+      "dash:shape": {"@id": "shape:ShapeDeleteClass"}
+    },
+    {
+      "@id": "ref:action_lc1_2",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "sweetfr:Riviere"},
+      "ref:targetParent": {"@id": "sweet:NaturalWaterBody"},
+      "ref:targetLabel": "Rivière",
+      "ref:targetLanguageTag": "fr",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_lc1_3",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "sweetfr:Fleuve"},
+      "ref:targetParent": {"@id": "sweet:NaturalWaterBody"},
+      "ref:targetLabel": "Fleuve",
+      "ref:targetLanguageTag": "fr",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_lc1_4",
+      "@type": "ref:AddSemanticAxiom",
+      "ref:sourceNode": {"@id": "sweetfr:Riviere"},
+      "ref:axiomType": {"@id": "owl:disjointWith"},
+      "ref:targetNode": {"@id": "sweetfr:Fleuve"},
+      "dash:shape": {"@id": "shape:ShapeAddSemanticAxiom"}
+    },
+    {
+      "@id": "ref:action_lc1_5",
+      "@type": "ref:AddAnnotationLangString",
+      "ref:targetNode": {"@id": "sweetfr:Riviere"},
+      "ref:targetAnnotation": {"@id": "skos:definition"},
+      "ref:targetAnnotationValue": "A river that flows into another river.",
+      "ref:targetLanguageTag": "fr",
+      "dash:shape": {"@id": "shape:ShapeAddAnnotationLangString"}
+    },
+    {
+      "@id": "ref:action_lc1_6",
+      "@type": "ref:AddAnnotationLangString",
+      "ref:targetNode": {"@id": "sweetfr:Fleuve"},
+      "ref:targetAnnotation": {"@id": "skos:definition"},
+      "ref:targetAnnotationValue": "A river that flows into the sea.",
+      "ref:targetLanguageTag": "fr",
+      "dash:shape": {"@id": "shape:ShapeAddAnnotationLangString"}
+    }
+  ]
+}
