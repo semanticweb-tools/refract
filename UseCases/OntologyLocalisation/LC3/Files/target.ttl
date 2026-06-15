@@ -1,0 +1,64 @@
+@prefix mar: <https://example.org/marine#> .
+@prefix marnz: <https://example.org/marine/nz#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/marine/nz>
+    a owl:Ontology ;
+    dct:title "Marine Life Ontology - New Zealand Viewpoint"@en ;
+    prov:wasDerivedFrom <https://example.org/marine> ;
+    dct:created "2025-01-01"^^xsd:date .
+
+mar:MarineAnimal a owl:Class ;
+    rdfs:label "Marine animal"@en .
+
+mar:Cetacean a owl:Class ;
+    rdfs:label "Cetacean"@en ;
+    rdfs:subClassOf mar:MarineAnimal .
+
+mar:Whale a owl:Class ;
+    rdfs:label "Whale"@en ;
+    rdfs:subClassOf mar:Cetacean ;
+    rdfs:subClassOf mar:NaturalLegalPerson ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty marnz:hasGuardian ;
+        owl:someValuesFrom mar:Guardian
+    ] ;
+    skos:definition "A large marine mammal of the order Cetacea, recognised as a legal person under New Zealand law."@en .
+
+mar:Dolphin a owl:Class ;
+    rdfs:label "Dolphin"@en ;
+    rdfs:subClassOf mar:Cetacean .
+
+mar:LegalPerson a owl:Class ;
+    rdfs:label "Legal person"@en ;
+    skos:definition "An entity recognised by law as having rights and responsibilities."@en .
+
+mar:NaturalLegalPerson a owl:Class ;
+    rdfs:label "Natural legal person"@en ;
+    rdfs:subClassOf mar:LegalPerson ;
+    skos:definition "A natural entity recognised by law as having legal personhood, distinct from a corporate legal person."@en .
+
+mar:Guardian a owl:Class ;
+    rdfs:label "Guardian"@en ;
+    skos:definition "An entity appointed to represent and protect the interests of a natural legal person."@en .
+
+mar:HumanGuardian a owl:Class ;
+    rdfs:label "Human guardian"@en ;
+    rdfs:subClassOf mar:Guardian ;
+    skos:definition "An individual human appointed as guardian of a natural legal person."@en .
+
+mar:InstitutionalGuardian a owl:Class ;
+    rdfs:label "Institutional guardian"@en ;
+    rdfs:subClassOf mar:Guardian ;
+    skos:definition "An institution appointed as guardian of a natural legal person, such as a government body or iwi."@en .
+
+marnz:hasGuardian a owl:ObjectProperty ;
+    rdfs:label "has guardian"@en ;
+    rdfs:domain mar:NaturalLegalPerson ;
+    rdfs:range mar:Guardian .

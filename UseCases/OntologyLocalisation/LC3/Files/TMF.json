@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "ref": "http://semanticweb.tools/ont/refract#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "shape": "https://semanticweb.tools/rdf/shapes/",
+    "dash": "http://datashapes.org/dash#",
+    "mar": "https://example.org/marine#",
+    "marnz": "https://example.org/marine/nz#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  },
+  "@graph": [
+    {
+      "@id": "ref:tmf_lc3",
+      "@type": "ref:Manifest",
+      "rdfs:label": {"@value": "Manifest 1.0.0 for localisation of Marine Life Ontology to New Zealand Viewpoint", "@language": "en"},
+      "ref:transformationType": {"@id": "ref:OntologyLocalisationProcess"},
+      "ref:transformationSource": {"@id": "https://example.org/marine"},
+      "ref:hasURIRelationshipToSource": {"@id": "ref:Different"},
+      "ref:targetOntologyURI": {"@id": "https://example.org/marine/nz"},
+      "ref:targetViewpoint": {"@id": "https://semanticweb.tools/rdf/multi/newzealand"},
+      "ref:versionManifest": {"@id": "ref:tmf_lc3_v1"},
+      "dash:shape": {"@id": "shape:ShapeLocalisation"},
+      "ref:hasAction": [
+        {"@id": "ref:action_lc3_1"},
+        {"@id": "ref:action_lc3_2"},
+        {"@id": "ref:action_lc3_3"},
+        {"@id": "ref:action_lc3_4"},
+        {"@id": "ref:action_lc3_5"}
+      ],
+      "ref:actionOrder": {
+        "@list": [
+          {"@id": "ref:action_lc3_1"},
+          {"@id": "ref:action_lc3_2"},
+          {"@id": "ref:action_lc3_3"},
+          {"@id": "ref:action_lc3_4"},
+          {"@id": "ref:action_lc3_5"}
+        ]
+      }
+    },
+    {
+      "@id": "ref:tmf_lc3_v1",
+      "@type": "ref:Version",
+      "ref:versionNumber": "1.0.0",
+      "dct:date": "2025-05-01",
+      "ref:versionPrevious": {"@id": "ref:NoPreviousVersion"},
+      "dct:contributor": "Frances Gillis-Webber"
+    },
+    {
+      "@id": "ref:action_lc3_1",
+      "@type": "ref:AddObjectProperty",
+      "ref:targetIdentifier": {"@id": "marnz:hasGuardian"},
+      "ref:targetLabel": "has guardian",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddObjectProperty"}
+    },
+    {
+      "@id": "ref:action_lc3_2",
+      "@type": "ref:AddPropertyDomainRange",
+      "ref:sourceNode": {"@id": "marnz:hasGuardian"},
+      "ref:targetNode": {"@id": "mar:Guardian"},
+      "ref:axiomType": {"@id": "rdfs:range"},
+      "ref:propertyType": {"@id": "owl:ObjectProperty"},
+      "dash:shape": {"@id": "shape:ShapeAddPropertyDomainRange"}
+    },
+    {
+      "@id": "ref:action_lc3_3",
+      "@type": "ref:AddSuperclassAssertion",
+      "ref:sourceNode": {"@id": "mar:Whale"},
+      "ref:targetParent": {"@id": "mar:NaturalLegalPerson"},
+      "dash:shape": {"@id": "shape:ShapeAddSuperclassAssertion"}
+    },
+    {
+      "@id": "ref:action_lc3_4",
+      "@type": "ref:AddPropertyRestriction",
+      "ref:sourceNode": {"@id": "mar:Whale"},
+      "ref:targetObject": {"@id": "marnz:hasGuardian"},
+      "ref:targetObjectValue": {"@id": "mar:Guardian"},
+      "ref:restrictionType": {"@id": "owl:someValuesFrom"},
+      "ref:propertyType": {"@id": "owl:ObjectProperty"},
+      "dash:shape": {"@id": "shape:ShapeAddPropertyRestriction"}
+    },
+    {
+      "@id": "ref:action_lc3_5",
+      "@type": "ref:ChangeAnnotationValue",
+      "ref:sourceNode": {"@id": "mar:Whale"},
+      "ref:targetAnnotation": {"@id": "skos:definition"},
+      "ref:targetAnnotationValue": "A large marine mammal of the order Cetacea, recognised as a legal person under New Zealand law.",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeChangeAnnotationValue"}
+    }
+  ]
+}

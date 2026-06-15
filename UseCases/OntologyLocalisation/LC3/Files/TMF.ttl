@@ -1,0 +1,69 @@
+@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix mar: <https://example.org/marine#> .
+@prefix marnz: <https://example.org/marine/nz#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ref:tmf_lc3 a ref:Manifest ;
+    rdfs:label "Manifest 1.0.0 for localisation of Marine Life Ontology to New Zealand Viewpoint"@en ;
+    ref:transformationType ref:OntologyLocalisationProcess ;
+    ref:transformationSource <https://example.org/marine> ;
+    ref:hasURIRelationshipToSource ref:Different ;
+    ref:targetOntologyURI <https://example.org/marine/nz> ;
+    ref:targetViewpoint <https://semanticweb.tools/rdf/multi/newzealand> ;
+    ref:versionManifest ref:tmf_lc3_v1 ;
+    dash:shape shape:ShapeLocalisation ;
+    ref:hasAction ref:action_lc3_1, ref:action_lc3_2, ref:action_lc3_3,
+                  ref:action_lc3_4, ref:action_lc3_5 ;
+    ref:actionOrder (
+        ref:action_lc3_1
+        ref:action_lc3_2
+        ref:action_lc3_3
+        ref:action_lc3_4
+        ref:action_lc3_5
+    ) .
+
+ref:tmf_lc3_v1 a ref:Version ;
+    ref:versionNumber "1.0.0" ;
+    dct:date "2025-05-01" ;
+    ref:versionPrevious ref:NoPreviousVersion ;
+    dct:contributor "Frances Gillis-Webber" .
+
+ref:action_lc3_1 a ref:AddObjectProperty ;
+    ref:targetIdentifier marnz:hasGuardian ;
+    ref:targetLabel "has guardian" ;
+    ref:targetLanguageTag "en" ;
+    dash:shape shape:ShapeAddObjectProperty .
+
+ref:action_lc3_2 a ref:AddPropertyDomainRange ;
+    ref:sourceNode marnz:hasGuardian ;
+    ref:targetNode mar:Guardian ;
+    ref:axiomType rdfs:range ;
+    ref:propertyType owl:ObjectProperty ;
+    dash:shape shape:ShapeAddPropertyDomainRange .
+
+ref:action_lc3_3 a ref:AddSuperclassAssertion ;
+    ref:sourceNode mar:Whale ;
+    ref:targetParent mar:NaturalLegalPerson ;
+    dash:shape shape:ShapeAddSuperclassAssertion .
+
+ref:action_lc3_4 a ref:AddPropertyRestriction ;
+    ref:sourceNode mar:Whale ;
+    ref:targetObject marnz:hasGuardian ;
+    ref:targetObjectValue mar:Guardian ;
+    ref:restrictionType owl:someValuesFrom ;
+    ref:propertyType owl:ObjectProperty ;
+    dash:shape shape:ShapeAddPropertyRestriction .
+
+ref:action_lc3_5 a ref:ChangeAnnotationValue ;
+    ref:sourceNode mar:Whale ;
+    ref:targetAnnotation skos:definition ;
+    ref:targetAnnotationValue "A large marine mammal of the order Cetacea, recognised as a legal person under New Zealand law." ;
+    ref:targetLanguageTag "en" ;
+    dash:shape shape:ShapeChangeAnnotationValue .

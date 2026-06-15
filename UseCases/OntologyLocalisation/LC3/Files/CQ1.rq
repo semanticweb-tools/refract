@@ -1,0 +1,6 @@
+PREFIX mar: <https://example.org/marine#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK {
+    mar:Whale rdfs:subClassOf mar:NaturalLegalPerson .
+}

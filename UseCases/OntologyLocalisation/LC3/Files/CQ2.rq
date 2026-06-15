@@ -1,0 +1,6 @@
+PREFIX marnz: <https://example.org/marine/nz#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+ASK {
+    marnz:hasGuardian a owl:ObjectProperty .
+}

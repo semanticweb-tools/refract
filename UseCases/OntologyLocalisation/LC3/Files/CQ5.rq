@@ -1,0 +1,11 @@
+PREFIX mar: <https://example.org/marine#>
+PREFIX marnz: <https://example.org/marine/nz#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK {
+    mar:Whale rdfs:subClassOf ?restriction .
+    ?restriction a owl:Restriction ;
+        owl:onProperty marnz:hasGuardian ;
+        owl:someValuesFrom mar:Guardian .
+}
