@@ -1,0 +1,129 @@
+{
+  "@context": {
+    "ref": "http://semanticweb.tools/ont/refract#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "shape": "https://semanticweb.tools/rdf/shapes/",
+    "dash": "http://datashapes.org/dash#",
+    "mesh": "http://purl.bioontology.org/ontology/MESH/",
+    "meshza": "https://example.org/mesh/za#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  },
+  "@graph": [
+    {
+      "@id": "ref:tmf_lc2",
+      "@type": "ref:Manifest",
+      "rdfs:label": {"@value": "Manifest 1.0.0 for localisation of MeSH to South African Viewpoint", "@language": "en"},
+      "ref:transformationType": {"@id": "ref:OntologyLocalisationProcess"},
+      "ref:transformationSource": {"@id": "http://purl.bioontology.org/ontology/MESH/"},
+      "ref:hasURIRelationshipToSource": {"@id": "ref:Different"},
+      "ref:targetOntologyURI": {"@id": "https://example.org/mesh/za"},
+      "ref:targetViewpoint": {"@id": "https://semanticweb.tools/rdf/multi/southafrica"},
+      "ref:versionManifest": {"@id": "ref:tmf_lc2_v1"},
+      "dash:shape": {"@id": "shape:ShapeLocalisation"},
+      "ref:hasAction": [
+        {"@id": "ref:action_lc2_1"},
+        {"@id": "ref:action_lc2_2"},
+        {"@id": "ref:action_lc2_3"},
+        {"@id": "ref:action_lc2_4"},
+        {"@id": "ref:action_lc2_5"},
+        {"@id": "ref:action_lc2_6"},
+        {"@id": "ref:action_lc2_7"},
+        {"@id": "ref:action_lc2_8"}
+      ],
+      "ref:actionOrder": {
+        "@list": [
+          {"@id": "ref:action_lc2_1"},
+          {"@id": "ref:action_lc2_2"},
+          {"@id": "ref:action_lc2_3"},
+          {"@id": "ref:action_lc2_4"},
+          {"@id": "ref:action_lc2_5"},
+          {"@id": "ref:action_lc2_6"},
+          {"@id": "ref:action_lc2_7"},
+          {"@id": "ref:action_lc2_8"}
+        ]
+      }
+    },
+    {
+      "@id": "ref:tmf_lc2_v1",
+      "@type": "ref:Version",
+      "ref:versionNumber": "1.0.0",
+      "dct:date": "2025-05-01",
+      "ref:versionPrevious": {"@id": "ref:NoPreviousVersion"},
+      "dct:contributor": "Frances Gillis-Webber"
+    },
+    {
+      "@id": "ref:action_lc2_1",
+      "@type": "ref:ChangeAnnotationValue",
+      "ref:sourceNode": {"@id": "mesh:D000095083"},
+      "ref:targetAnnotation": {"@id": "skos:prefLabel"},
+      "ref:targetAnnotationValue": "Traditional Healer",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeChangeAnnotationValue"}
+    },
+    {
+      "@id": "ref:action_lc2_2",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "meshza:Sangoma"},
+      "ref:targetParent": {"@id": "mesh:D000095083"},
+      "ref:targetLabel": "Sangoma",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_lc2_3",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "meshza:Herbalist"},
+      "ref:targetParent": {"@id": "mesh:D000095083"},
+      "ref:targetLabel": "Herbalist",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_lc2_4",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "meshza:TraditionalBirthAttendant"},
+      "ref:targetParent": {"@id": "mesh:D000095083"},
+      "ref:targetLabel": "Traditional Birth Attendant",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_lc2_5",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "meshza:TraditionalSurgeon"},
+      "ref:targetParent": {"@id": "mesh:D000095083"},
+      "ref:targetLabel": "Traditional Surgeon",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_lc2_6",
+      "@type": "ref:AddClass",
+      "ref:targetIdentifier": {"@id": "meshza:MedicineSouthAfricanTraditional"},
+      "ref:targetParent": {"@id": "mesh:D016488"},
+      "ref:targetLabel": "Medicine, South African Traditional",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddClass"}
+    },
+    {
+      "@id": "ref:action_lc2_7",
+      "@type": "ref:AddSuperclassAssertion",
+      "ref:sourceNode": {"@id": "meshza:MedicineSouthAfricanTraditional"},
+      "ref:targetParent": {"@id": "mesh:D013812"},
+      "dash:shape": {"@id": "shape:ShapeAddSuperclassAssertion"}
+    },
+    {
+      "@id": "ref:action_lc2_8",
+      "@type": "ref:AddAnnotationLangString",
+      "ref:sourceNode": {"@id": "mesh:D000095083"},
+      "ref:targetAnnotation": {"@id": "skos:altLabel"},
+      "ref:targetAnnotationValue": "Traditional Medicine Practitioners",
+      "ref:targetLanguageTag": "en",
+      "dash:shape": {"@id": "shape:ShapeAddAnnotationLangString"}
+    }
+  ]
+}

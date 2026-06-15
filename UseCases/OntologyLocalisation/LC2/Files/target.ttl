@@ -1,0 +1,59 @@
+@prefix mesh: <http://purl.bioontology.org/ontology/MESH/> .
+@prefix meshza: <https://example.org/mesh/za#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/mesh/za>
+    a owl:Ontology ;
+    dct:title "Medical Subject Headings - South African Viewpoint"@en ;
+    prov:wasDerivedFrom <http://purl.bioontology.org/ontology/MESH/> ;
+    dct:created "2025-01-01"^^xsd:date .
+
+mesh:D013812 a owl:Class ;
+    skos:prefLabel "Therapeutics"@en .
+
+mesh:D006282 a owl:Class ;
+    skos:prefLabel "Health Personnel"@en .
+
+mesh:D000095083 a owl:Class ;
+    skos:prefLabel "Traditional Healer"@en ;
+    skos:altLabel "Traditional Medicine Practitioners"@en ;
+    skos:altLabel "Traditional Healers"@en ;
+    rdfs:subClassOf mesh:D006282 .
+
+meshza:Sangoma a owl:Class ;
+    skos:prefLabel "Sangoma"@en ;
+    rdfs:subClassOf mesh:D000095083 .
+
+meshza:Herbalist a owl:Class ;
+    skos:prefLabel "Herbalist"@en ;
+    rdfs:subClassOf mesh:D000095083 .
+
+meshza:TraditionalBirthAttendant a owl:Class ;
+    skos:prefLabel "Traditional Birth Attendant"@en ;
+    rdfs:subClassOf mesh:D000095083 .
+
+meshza:TraditionalSurgeon a owl:Class ;
+    skos:prefLabel "Traditional Surgeon"@en ;
+    rdfs:subClassOf mesh:D000095083 .
+
+mesh:D000529 a owl:Class ;
+    skos:prefLabel "Complementary Therapies"@en ;
+    rdfs:subClassOf mesh:D013812 .
+
+mesh:D008519 a owl:Class ;
+    skos:prefLabel "Medicine, Traditional"@en ;
+    rdfs:subClassOf mesh:D000529 .
+
+mesh:D016488 a owl:Class ;
+    skos:prefLabel "Medicine, Traditional African"@en ;
+    rdfs:subClassOf mesh:D008519 .
+
+meshza:MedicineSouthAfricanTraditional a owl:Class ;
+    skos:prefLabel "Medicine, South African Traditional"@en ;
+    rdfs:subClassOf mesh:D016488 ;
+    rdfs:subClassOf mesh:D013812 .

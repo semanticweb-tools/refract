@@ -1,0 +1,6 @@
+PREFIX meshza: <https://example.org/mesh/za#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+ASK {
+    meshza:MedicineSouthAfricanTraditional a owl:Class .
+}

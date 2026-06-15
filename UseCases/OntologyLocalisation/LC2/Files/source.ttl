@@ -1,0 +1,33 @@
+@prefix mesh: <http://purl.bioontology.org/ontology/MESH/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<http://purl.bioontology.org/ontology/MESH/>
+    a owl:Ontology ;
+    dct:title "Medical Subject Headings"@en .
+
+mesh:D013812 a owl:Class ;
+    skos:prefLabel "Therapeutics"@en .
+
+mesh:D006282 a owl:Class ;
+    skos:prefLabel "Health Personnel"@en .
+
+mesh:D000095083 a owl:Class ;
+    skos:prefLabel "Traditional Medicine Practitioners"@en ;
+    skos:altLabel "Traditional Healer"@en ;
+    skos:altLabel "Traditional Healers"@en ;
+    rdfs:subClassOf mesh:D006282 .
+
+mesh:D000529 a owl:Class ;
+    skos:prefLabel "Complementary Therapies"@en ;
+    rdfs:subClassOf mesh:D013812 .
+
+mesh:D008519 a owl:Class ;
+    skos:prefLabel "Medicine, Traditional"@en ;
+    rdfs:subClassOf mesh:D000529 .
+
+mesh:D016488 a owl:Class ;
+    skos:prefLabel "Medicine, Traditional African"@en ;
+    rdfs:subClassOf mesh:D008519 .
