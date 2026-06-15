@@ -1,12 +1,12 @@
 {
   "@context": {
-    "ref": "http://semanticweb.tools/ont/refract#",
+    "ref": "https://semanticweb.tools/ont/refract#",
     "dct": "http://purl.org/dc/terms/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "shape": "https://semanticweb.tools/rdf/shapes/",
     "dash": "http://datashapes.org/dash#",
-    "mola": "https://ontology.londisizwe.org/mola#",
+    "mola": "https://semanticweb.tools/ont/mola#",
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   },
@@ -18,7 +18,7 @@
       "ref:transformationType": {"@id": "ref:OntologyTransformationProcess"},
       "ref:transformationSource": {"@id": "https://semanticweb.tools/ont/mola"},
       "ref:hasURIRelationshipToSource": {"@id": "ref:Different"},
-      "ref:targetOntologyURI": {"@id": "https://ontology.londisizwe.org/mola/rl"},
+      "ref:targetOntologyURI": {"@id": "https://semanticweb.tools/ont/mola/rl"},
       "ref:targetViewpoint": {"@id": "https://semanticweb.tools/rdf/multi/owl2rl"},
       "ref:versionManifest": {"@id": "ref:tmf_tc3_v1"},
       "dash:shape": {"@id": "shape:ShapeTransformation"},

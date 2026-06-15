@@ -1,4 +1,4 @@
-@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix ref: <https://semanticweb.tools/ont/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,14 +6,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
-@prefix mola: <https://ontology.londisizwe.org/mola#> .
+@prefix mola: <https://semanticweb.tools/ont/mola#> .
 
 ref:tmf_tc3 a ref:Manifest ;
     rdfs:label "Manifest 1.0.0 for transformation of MoLA Ontology to OWL2_RL Context"@en ;
     ref:transformationType ref:OntologyTransformationProcess ;
     ref:transformationSource <https://semanticweb.tools/ont/mola> ;
     ref:hasURIRelationshipToSource ref:Different ;
-    ref:targetOntologyURI <https://ontology.londisizwe.org/mola/rl> ;
+    ref:targetOntologyURI <https://semanticweb.tools/ont/mola/rl> ;
     ref:targetViewpoint <https://semanticweb.tools/rdf/multi/owl2rl> ;
     ref:versionManifest ref:tmf_tc3_v1 ;
     dash:shape shape:ShapeTransformation ;
