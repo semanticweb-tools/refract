@@ -26,6 +26,6 @@ This is a real-world scenario where the name of a department at the University o
 
 ---
 ## Rationale for classification as ontology refactoring
-- _Same viewpoint_ - UCT's organisational structure perspective is unchanged
-- _Same URI_ - updated in place, versioned
+- _Same viewpoint_ - UCT's organisational structure perspective is unchanged.
+- _Same URI_ - updated in place, versioned.
 - _Structural change only_ - the department is renamed via a new class identifier and updated label, with the deprecated class preserved for backwards compatibility. The organisational concept itself has not changed - the same entity now has a new name.
