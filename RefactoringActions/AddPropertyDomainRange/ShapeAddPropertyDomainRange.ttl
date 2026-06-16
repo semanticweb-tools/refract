@@ -1,26 +1,34 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix ref: <https://semanticweb.tools/ont/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 shape:ShapeAddPropertyDomainRange
     a sh:NodeShape ;
+    rdfs:label "Shape Add Property Domain or Range Assertion" ;
+    rdfs:comment "A shapes graph for validating an 'Add property domain or range assertion' refactoring action in a Transformation Manifest File." ;
     sh:targetClass ref:AddPropertyDomainRange ;
     sh:property [
         sh:path ref:sourceNode ;
+        sh:name "source node" ;
+        sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:targetNode ;
+        sh:name "target node" ;
+        sh:description "The URI of an ontology element that already exists in the target ontology, or has been created during the transformation process, and is then referenced by a refactoring action during the same transformation process." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:axiomType ;
+        sh:name "axiom type" ;
+        sh:description "Specifies the type of axiom used in a refactoring action. The value must be either rdfs:domain or rdfs:range." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -28,6 +36,8 @@ shape:ShapeAddPropertyDomainRange
     ] ;
     sh:property [
         sh:path ref:propertyType ;
+        sh:name "property type" ;
+        sh:description "Specifies the type of property used in a refactoring action. The value must be either owl:ObjectProperty or owl:DatatypeProperty." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
