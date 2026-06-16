@@ -11,6 +11,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 ## Shapes graph
 - [ShapeDeleteAnnotationProperty.ttl](ShapeDeleteAnnotationProperty.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeDeleteAnnotationProperty.ttl`
+- [See evaluation](Evaluation/README.md)
 
 ## Examples
 - [Example TMF](TMFDeleteAnnotationProperty.ttl)
