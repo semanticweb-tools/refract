@@ -11,6 +11,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 ## Shapes graph
 - [ShapeAddCommentForDeprecation.ttl](ShapeAddCommentForDeprecation.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeAddCommentForDeprecation.ttl`
+- [See evaluation](Evaluation/README.md)
 
 ## Examples
 - [Example TMF](TMFAddCommentForDeprecation.ttl)
