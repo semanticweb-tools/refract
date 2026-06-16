@@ -11,6 +11,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 ## Shapes graph
 - [ShapeAddSemanticAxiomUnary.ttl](ShapeAddSemanticAxiomUnary.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeAddSemanticAxiomUnary.ttl`
+- [See evaluation](Evaluation/README.md)
 
 ## Examples
 - [Example TMF](TMFAddSemanticAxiomUnary.ttl)
