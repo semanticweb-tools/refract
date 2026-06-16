@@ -1,24 +1,33 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix ref: <https://semanticweb.tools/ont/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 shape:ShapeAddSemanticAxiom
     a sh:NodeShape ;
+    rdfs:label "Shape Add Semantic Axiom" ;
+    rdfs:comment "A shapes graph for validating an 'Add semantic axiom' refactoring action in a Transformation Manifest File." ;
     sh:targetClass ref:AddSemanticAxiom ;
     sh:property [
         sh:path ref:sourceNode ;
+        sh:name "source node" ;
+        sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:targetNode ;
+        sh:name "target node" ;
+        sh:description "The URI of an ontology element that already exists in the target ontology, or has been created during the transformation process, and is then referenced by a refactoring action during the same transformation process." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:axiomType ;
+        sh:name "axiom type" ;
+        sh:description "Specifies the type of axiom used in a refactoring action. The value must be a URI representing a valid OWL or RDF axiom type." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
