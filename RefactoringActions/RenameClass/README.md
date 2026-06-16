@@ -11,6 +11,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 ## Shapes graph
 - [ShapeRenameClass.ttl](ShapeRenameClass.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeRenameClass.ttl`
+- [See evaluation](Evaluation/README.md)
 
 ## Examples
 - [Example TMF](TMFRenameClass.ttl)
