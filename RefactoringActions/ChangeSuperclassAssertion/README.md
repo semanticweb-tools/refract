@@ -11,6 +11,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 ## Shapes graph
 - [ShapeChangeSuperclassAssertion.ttl](ShapeChangeSuperclassAssertion.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeChangeSuperclassAssertion.ttl`
+- [See evaluation](Evaluation/README.md)
 
 ## Examples
 - [Example TMF](TMFChangeSuperclassAssertion.ttl)
