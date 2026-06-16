@@ -11,6 +11,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 ## Shapes graph
 - [ShapeChangeInstanceAssertion.ttl](ShapeChangeInstanceAssertion.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeChangeInstanceAssertion.ttl`
+- [See evaluation](Evaluation/README.md)
 
 ## Examples
 - [Example TMF](TMFChangeInstanceAssertion.ttl)
