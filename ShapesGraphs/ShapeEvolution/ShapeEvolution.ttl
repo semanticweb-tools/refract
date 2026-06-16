@@ -1,28 +1,37 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix dash: <http://datashapes.org/dash#> .
-@prefix ref: <http://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://semanticweb.tools/ont/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 shape:ShapeEvolution
     a sh:NodeShape ;
+    rdfs:label "Shape Evolution" ;
+    rdfs:comment "A macro-level shapes graph for validating the Transformation Manifest File of an ontology evolution process." ;
     sh:target [
         a dash:HasValueTarget ;
-        dash:predicate ref:transformationType ;
-        dash:object ref:OntologyEvolutionProcess ;
+        dash:predicate fract:transformationType ;
+        dash:object fract:OntologyEvolutionProcess ;
     ] ;
     sh:property [
-        sh:path ref:transformationSource ;
+        sh:path fract:transformationSource ;
+        sh:name "transformation source" ;
+        sh:description "The URI of the source ontology that is being transformed, refactored, evolved, or localised." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:hasURIRelationshipToSource ;
+        sh:path fract:hasURIRelationshipToSource ;
+        sh:name "has URI relationship to source" ;
+        sh:description "Specifies the URI relationship between the source and target ontology. The value must be a subclass of 'URI relationship'." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:versionManifest ;
+        sh:path fract:versionManifest ;
+        sh:name "version manifest" ;
+        sh:description "Links a manifest to its version metadata, specified as an instance of 'Version'." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
     ] .
