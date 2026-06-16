@@ -1,24 +1,33 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ref: <https://semanticweb.tools/ont/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 shape:ShapeChangeSuperclassAssertion
     a sh:NodeShape ;
+    rdfs:label "Shape Change Superclass Assertion" ;
+    rdfs:comment "A shapes graph for validating a 'Change superclass assertion' refactoring action in a Transformation Manifest File." ;
     sh:targetClass ref:ChangeSuperclassAssertion ;
     sh:property [
         sh:path ref:sourceNode ;
+        sh:name "source node" ;
+        sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:sourceParent ;
+        sh:name "source parent" ;
+        sh:description "The URI of an existing parent class or property of an ontology element, used to identify the specific superclass or super-property assertion to be changed or deleted." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 0 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:targetParent ;
+        sh:name "target parent" ;
+        sh:description "The URI of the parent class or property of an ontology element that is to be created by a refactoring action." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
