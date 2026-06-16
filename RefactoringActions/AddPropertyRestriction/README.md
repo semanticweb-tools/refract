@@ -11,6 +11,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 ## Shapes graph
 - [ShapeAddPropertyRestriction.ttl](ShapeAddPropertyRestriction.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeAddPropertyRestriction.ttl`
+- [See evaluation](Evaluation/README.md)
 
 ## Examples
 - [Example TMF](TMFAddPropertyRestriction.ttl)
