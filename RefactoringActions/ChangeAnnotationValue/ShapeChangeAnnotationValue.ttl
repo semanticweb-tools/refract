@@ -2,34 +2,45 @@
 @prefix ref: <https://semanticweb.tools/ont/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 shape:ShapeChangeAnnotationValue
     a sh:NodeShape ;
+    rdfs:label "Shape Change Annotation Value" ;
+    rdfs:comment "A shapes graph for validating a 'Change annotation value' refactoring action in a Transformation Manifest File." ;
     sh:targetClass ref:ChangeAnnotationValue ;
     sh:or (
-        [ sh:property [ sh:path ref:sourceNode ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
-        [ sh:property [ sh:path ref:targetNode ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
+        [ sh:property [ sh:path ref:sourceNode ; sh:name "source node" ; sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
+        [ sh:property [ sh:path ref:targetNode ; sh:name "target node" ; sh:description "The URI of an ontology element that already exists in the target ontology, or has been created during the transformation process, and is then referenced by a refactoring action during the same transformation process." ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
     ) ;
     sh:property [
         sh:path ref:targetAnnotation ;
+        sh:name "target annotation" ;
+        sh:description "The URI of an annotation property to be added to an ontology element as part of a refactoring action." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:targetAnnotationValue ;
+        sh:name "target annotation value" ;
+        sh:description "The value of an annotation to be added to an ontology element as part of a refactoring action, expressed as a plain string." ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:targetLanguageTag ;
+        sh:name "target language tag" ;
+        sh:description "A language tag expressed as a plain string, conforming to ISO 639 or BCP 47 (e.g. \"en-za\", \"fr\")." ;
         sh:datatype xsd:string ;
         sh:minCount 0 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:checkForAnnotation ;
+        sh:name "check for annotation" ;
+        sh:description "Specifies the behaviour of the transformation algorithm when the annotation to be changed is not found during pre-processing for a change annotation action." ;
         sh:class ref:AlgorithmCheckAnnotation ;
         sh:minCount 0 ;
         sh:maxCount 2 ;
