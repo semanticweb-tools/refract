@@ -5,15 +5,21 @@
 
 shape:ShapeDeletePropertyDomainRange
     a sh:NodeShape ;
+    rdfs:label "Shape Delete Property Domain or Range Assertion" ;
+    rdfs:comment "A shapes graph for validating a 'Delete property domain or range assertion' refactoring action in a Transformation Manifest File." ;
     sh:targetClass ref:DeletePropertyDomainRange ;
     sh:property [
         sh:path ref:sourceNode ;
+        sh:name "source node" ;
+        sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:axiomType ;
+        sh:name "axiom type" ;
+        sh:description "Specifies the type of axiom used in a refactoring action. The value must be either rdfs:domain or rdfs:range." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
