@@ -1,18 +1,25 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix ref: <https://semanticweb.tools/ont/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 shape:ShapeDeleteAnnotationProperty
     a sh:NodeShape ;
+    rdfs:label "Shape Delete Annotation Property" ;
+    rdfs:comment "A shapes graph for validating a 'Delete annotation property' refactoring action in a Transformation Manifest File." ;
     sh:targetClass ref:DeleteAnnotationProperty ;
     sh:property [
         sh:path ref:sourceNode ;
+        sh:name "source node" ;
+        sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
         sh:path ref:checkForAssertion ;
+        sh:name "check for assertion" ;
+        sh:description "Specifies the behaviour of the transformation algorithm when existing assertions are found during pre-processing for an element that is to be deleted. The value must be an instance of 'Algorithm check - assertion'. If this parameter is omitted, the algorithm defaults to 'If true - stop'." ;
         sh:class ref:AlgorithmCheckAssertion ;
         sh:minCount 0 ;
         sh:maxCount 1 ;
