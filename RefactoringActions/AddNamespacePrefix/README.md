@@ -10,6 +10,7 @@ For full documentation including parameters, see the [REFrACT vocabulary](https:
 ## Shapes graph
 - [ShapeAddNamespacePrefix.ttl](ShapeAddNamespacePrefix.ttl) (local instance)
 - URI: `https://semanticweb.tools/rdf/shapes/ShapeAddNamespacePrefix.ttl`
+- [See evaluation](Evaluation/README.md)
 
 ## Examples
 - [Example TMF](TMFAddNamespacePrefix.ttl)
