@@ -457,7 +457,7 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
 
 ###  https://semanticweb.tools/ont/refract#targetMembers
 :targetMembers rdf:type owl:ObjectProperty ;
-               rdfs:comment "A list of URIs representing the members of a set-based class expression in a refactoring action, for example the classes in a union or intersection."@en ;
+               rdfs:comment "A list of URIs representing the members of an ordered or unordered group used in a refactoring action, for example the classes in a union or intersection, or the properties in a sub-property chain."@en ;
                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
                rdfs:label "target members"@en .
 
