@@ -1,4 +1,4 @@
-@prefix : <https://semanticweb.tools/ont/refract#> .
+@prefix : <https://w3id.org/refract#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -12,32 +12,32 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix multi: <https://semanticweb.tools/ont/multi#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://semanticweb.tools/ont/refract#> .
+@base <https://w3id.org/refract#> .
 
-<https://semanticweb.tools/ont/refract> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://semanticweb.tools/ont/refract/1.0.0> ;
-                                         owl:imports <https://semanticweb.tools/ont/dash> ,
-                                                     <https://semanticweb.tools/ont/shacl> ;
-                                         cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                         dc:creator "Frances Gillis-Webber" ;
-                                         dc:description """REFrACT is a vocabulary for describing and validating a Transformation Manifest File (TMF). A TMF records the metadata and refactoring actions associated with an ontology transformation process, including refactoring, evolution, transformation, and localisation. REFrACT has been aligned to the DASH Data Shapes Vocabulary, which in turn imports the Shapes Constraint Language (SHACL).
+<https://w3id.org/refract> rdf:type owl:Ontology ;
+                            owl:versionIRI <https://w3id.org/refract/1.0.0> ;
+                            owl:imports <https://semanticweb.tools/ont/dash> ,
+                                        <https://semanticweb.tools/ont/shacl> ;
+                            cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                            dc:creator "Frances Gillis-Webber" ;
+                            dc:description """REFrACT is a vocabulary for describing and validating a Transformation Manifest File (TMF). A TMF records the metadata and refactoring actions associated with an ontology transformation process, including refactoring, evolution, transformation, and localisation. REFrACT has been aligned to the DASH Data Shapes Vocabulary, which in turn imports the Shapes Constraint Language (SHACL).
 
 REFrACT provides a controlled vocabulary of refactoring action types, each with associated SHACL shapes graphs for validation, enabling the provenance and configuration metadata of ontology transformation processes to be captured in a machine-readable and reusable form. An example TMF is provided for each refactoring action."""@en ;
-                                         dc:rights "CC-Zero" ;
-                                         dc:title "Refactoring Actions Shapes Library (REFrACT)"@en ;
-                                         dcterms:bibliographicCitation "Gillis-Webber, Frances. 2026. \"Refactoring Actions Shapes Library (REFrACT).\" https://w3id.org/refract."@en ;
-                                         dcterms:created "2026-05-16"^^xsd:date ;
-                                         dcterms:issued "2026-06-16"^^xsd:date ;
-                                         dcterms:modified "2026-06-16"^^xsd:date ;
-                                         dcterms:publisher "Frances Gillis-Webber c/o SemanticWeb.tools" ;
-                                         dcterms:source <https://github.com/semanticweb-tools/refract> ;
-                                         vann:preferredNamespacePrefix "fract" ;
-                                         vann:preferredNamespaceUri "https://semanticweb.tools/ont/refract#" ;
-                                         rdfs:comment "The SHACL shapes graphs, example Transformation Manifest Files, rdfs:comments, and ref:hasParameters annotations for each refactoring action were generated with the assistance of Claude Sonnet 4.6 by Anthropic. If you identify any discrepancies, please contact Frances Gillis-Webber at fgilliswebber@cs.uct.ac.za."@en ;
-                                         rdfs:label "REFrACT" ;
-                                         owl:versionInfo "1.0.0" ;
-                                         foaf:logo <https://semanticweb.tools/logo.png> ;
-                                         <https://w3id.org/mod#status> "stable" .
+                            dc:rights "CC-Zero" ;
+                            dc:title "Refactoring Actions Shapes Library (REFrACT)"@en ;
+                            dcterms:bibliographicCitation "Gillis-Webber, Frances. 2026. \"Refactoring Actions Shapes Library (REFrACT).\" https://w3id.org/refract."@en ;
+                            dcterms:created "2026-05-16"^^xsd:date ;
+                            dcterms:issued "2026-06-16"^^xsd:date ;
+                            dcterms:modified "2026-06-16"^^xsd:date ;
+                            dcterms:publisher "Frances Gillis-Webber c/o SemanticWeb.tools" ;
+                            dcterms:source <https://github.com/semanticweb-tools/refract> ;
+                            vann:preferredNamespacePrefix "fract" ;
+                            vann:preferredNamespaceUri "https://w3id.org/refract#" ;
+                            rdfs:comment "The SHACL shapes graphs, example Transformation Manifest Files, rdfs:comments, and fract:hasParameters annotations for each refactoring action were generated with the assistance of Claude Sonnet 4.6 by Anthropic. If you identify any discrepancies, please contact Frances Gillis-Webber at fgilliswebber@cs.uct.ac.za."@en ;
+                            rdfs:label "REFrACT" ;
+                            owl:versionInfo "1.0.0" ;
+                            foaf:logo <https://semanticweb.tools/logo.png> ;
+                            <https://w3id.org/mod#status> "stable" .
 
 #################################################################
 #    Annotation properties
@@ -122,10 +122,15 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 foaf:logo rdf:type owl:AnnotationProperty .
 
 
-###  https://semanticweb.tools/ont/refract#exampleTMF
+###  https://w3id.org/mod#status
+<https://w3id.org/mod#status> rdf:type owl:AnnotationProperty ;
+                              rdfs:isDefinedBy <https://w3id.org/mod> .
+
+
+###  https://w3id.org/refract#exampleTMF
 :exampleTMF rdf:type owl:AnnotationProperty ;
             rdfs:comment "An annotation property used internally to provide an example Transformation Manifest File (TMF) for a refactoring action, for documentation purposes. This property is not intended for external use. For more information on the TMF, see the REFrACT documentation."@en ;
-            rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+            rdfs:isDefinedBy <https://w3id.org/refract> ;
             rdfs:label "example TMF"@en .
 
 [ rdf:type owl:Axiom ;
@@ -136,100 +141,95 @@ foaf:logo rdf:type owl:AnnotationProperty .
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#hasActions
+###  https://w3id.org/refract#hasActions
 :hasActions rdf:type owl:AnnotationProperty ;
             rdfs:comment "An annotation property used internally to describe the constituent actions of a composite refactoring action for documentation purposes. This property is not intended for external use."@en ;
-            rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+            rdfs:isDefinedBy <https://w3id.org/refract> ;
             rdfs:label "has actions"@en .
 
 
-###  https://semanticweb.tools/ont/refract#hasOptionalParameter
+###  https://w3id.org/refract#hasOptionalParameter
 :hasOptionalParameter rdf:type owl:AnnotationProperty ;
                       rdfs:comment "An annotation property used internally to indicate an optional parameter of a refactoring action, for documentation purposes. This property is not intended for external use."@en ;
-                      rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                      rdfs:isDefinedBy <https://w3id.org/refract> ;
                       rdfs:label "is optional parameter"@en .
 
 
-###  https://semanticweb.tools/ont/refract#hasOptionalParameterWithAtLeastOne
+###  https://w3id.org/refract#hasOptionalParameterWithAtLeastOne
 :hasOptionalParameterWithAtLeastOne rdf:type owl:AnnotationProperty ;
                                     rdfs:comment "An annotation property used internally to indicate a parameter of a refactoring action that is individually optional, but where at least one parameter from the group must be specified. For documentation purposes only. This property is not intended for external use."@en ;
-                                    rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                                    rdfs:isDefinedBy <https://w3id.org/refract> ;
                                     rdfs:label "is optional parameter (with at least one)"@en .
 
 
-###  https://semanticweb.tools/ont/refract#hasOptionalParameterWithFallback
+###  https://w3id.org/refract#hasOptionalParameterWithFallback
 :hasOptionalParameterWithFallback rdf:type owl:AnnotationProperty ;
                                   rdfs:comment "An annotation property used internally to indicate an optional parameter of a refactoring action that has a default fallback value. If the parameter is omitted from the transformation manifest, the algorithm will inject the fallback value at runtime. For documentation purposes only. This property is not intended for external use."@en ;
-                                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                                   rdfs:label "is optional parameter (with fallback)"@en .
 
 
-###  https://semanticweb.tools/ont/refract#hasParameters
+###  https://w3id.org/refract#hasParameters
 :hasParameters rdf:type owl:AnnotationProperty ;
                rdfs:comment "An annotation property used internally to describe the parameters of a refactoring action for documentation purposes. This property is not intended for external use."@en ;
-               rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+               rdfs:isDefinedBy <https://w3id.org/refract> ;
                rdfs:label "has parameters"@en .
 
 
-###  https://semanticweb.tools/ont/refract#hasRequiredParameter
+###  https://w3id.org/refract#hasRequiredParameter
 :hasRequiredParameter rdf:type owl:AnnotationProperty ;
                       rdfs:comment "An annotation property used internally to indicate a required parameter of a refactoring action, for documentation purposes. This property is not intended for external use."@en ;
-                      rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                      rdfs:isDefinedBy <https://w3id.org/refract> ;
                       rdfs:label "is required parameter"@en .
 
 
-###  https://semanticweb.tools/ont/refract#hasShapesGraph
+###  https://w3id.org/refract#hasShapesGraph
 :hasShapesGraph rdf:type owl:AnnotationProperty ;
                 rdfs:comment "Links a refactoring action to its associated SHACL shapes graph, which can be used to validate a Transformation Manifest File containing that action."@en ;
-                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "has shapes graph"@en .
 
 
-###  https://semanticweb.tools/ont/refract#isOptionalAction
+###  https://w3id.org/refract#isOptionalAction
 :isOptionalAction rdf:type owl:AnnotationProperty ;
                   rdfs:comment "An annotation property used internally to indicate an optional constituent action of a composite refactoring action, for documentation purposes. This property is not intended for external use."@en ;
-                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "is optional action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#isRequiredAction
+###  https://w3id.org/refract#isRequiredAction
 :isRequiredAction rdf:type owl:AnnotationProperty ;
                   rdfs:comment "An annotation property used internally to indicate a required constituent action of a composite refactoring action, for documentation purposes. This property is not intended for external use."@en ;
-                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "is required action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetRights
+###  https://w3id.org/refract#targetRights
 :targetRights rdf:type owl:AnnotationProperty ;
               rdfs:comment "Specifies the rights of the target ontology. The value may be 'Target same as source' if the rights are the same as the source ontology, or a URI to a licence such as a Creative Commons licence. If omitted, the rights of the target ontology are unknown."@en ;
-              rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "target rights"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :targetRights ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "Specifies the rights of the target ontology. The value may be 'Target same as source' if the rights are the same as the source ontology, or a URI to a licence such as a Creative Commons licence. If omitted, the rights of the target ontology are unknown."@en ;
-   rdfs:seeAlso <https://semanticweb.tools/ont/refract/TargetSameAsSource>
+   rdfs:seeAlso <https://w3id.org/refract/TargetSameAsSource>
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#versionNumber
+###  https://w3id.org/refract#versionNumber
 :versionNumber rdf:type owl:AnnotationProperty ;
                rdfs:comment "The version number of a Transformation Manifest File, expressed as a plain string (e.g. \"1.0.0\")."@en ;
-               rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+               rdfs:isDefinedBy <https://w3id.org/refract> ;
                rdfs:label "version number"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :versionNumber ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "The version number of a Transformation Manifest File, expressed as a plain string (e.g. \"1.0.0\")."@en ;
-   rdfs:seeAlso <https://semanticweb.tools/ont/refract/Manifest>
+   rdfs:seeAlso <https://w3id.org/refract/Manifest>
  ] .
-
-
-###  https://w3id.org/mod#status
-<https://w3id.org/mod#status> rdf:type owl:AnnotationProperty ;
-                              rdfs:isDefinedBy <https://w3id.org/mod> .
 
 
 #################################################################
@@ -268,25 +268,25 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
                    rdfs:label "has viewpoint"@en .
 
 
-###  https://semanticweb.tools/ont/refract#actionOrder
+###  https://w3id.org/refract#actionOrder
 :actionOrder rdf:type owl:ObjectProperty ;
              rdfs:comment "Specifies the execution order of the top-level refactoring actions in a Transformation Manifest File, expressed as an rdf:list of action URIs. If omitted, the algorithm will execute the actions in the order they appear in the manifest."@en ;
-             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+             rdfs:isDefinedBy <https://w3id.org/refract> ;
              rdfs:label "action order"@en .
 
 
-###  https://semanticweb.tools/ont/refract#axiomType
+###  https://w3id.org/refract#axiomType
 :axiomType rdf:type owl:ObjectProperty ;
            rdfs:comment "Specifies the type of axiom used in a refactoring action. The value must be a URI representing a valid OWL or RDF axiom type."@en ;
-           rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+           rdfs:isDefinedBy <https://w3id.org/refract> ;
            rdfs:label "axiom type"@en .
 
 
-###  https://semanticweb.tools/ont/refract#checkForAnnotation
+###  https://w3id.org/refract#checkForAnnotation
 :checkForAnnotation rdf:type owl:ObjectProperty ;
                     rdfs:range :AlgorithmCheckAnnotation ;
                     rdfs:comment "Specifies the behaviour of the transformation algorithm when the annotation to be changed is not found during pre-processing for a change annotation action. The value must be an instance of 'Algorithm check - annotation'. If this parameter is omitted, the algorithm defaults to 'If false - add'."@en ;
-                    rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                    rdfs:isDefinedBy <https://w3id.org/refract> ;
                     rdfs:label "check for annotation"@en .
 
 [ rdf:type owl:Axiom ;
@@ -297,11 +297,11 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#checkForAssertion
+###  https://w3id.org/refract#checkForAssertion
 :checkForAssertion rdf:type owl:ObjectProperty ;
                    rdfs:range :AlgorithmCheckAssertion ;
                    rdfs:comment "Specifies the behaviour of the transformation algorithm when existing assertions are found during pre-processing for an element that is to be deleted. The value must be an instance of 'Algorithm check - assertion'. If this parameter is omitted, the algorithm defaults to 'If true - stop'."@en ;
-                   rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                   rdfs:isDefinedBy <https://w3id.org/refract> ;
                    rdfs:label "check for assertion"@en .
 
 [ rdf:type owl:Axiom ;
@@ -312,10 +312,10 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#fallbackOntologyURI
+###  https://w3id.org/refract#fallbackOntologyURI
 :fallbackOntologyURI rdf:type owl:ObjectProperty ;
                      rdfs:comment "The URI of the source ontology, declared on the target ontology manifest to provide backwards compatibility for external resources that were consuming the source ontology at its original URI. Should be declared when 'has URI relationship to source' is 'Different relationship'."@en ;
-                     rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                     rdfs:isDefinedBy <https://w3id.org/refract> ;
                      rdfs:label "fallback ontology URI"@en .
 
 [ rdf:type owl:Axiom ;
@@ -327,10 +327,10 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#hasAction
+###  https://w3id.org/refract#hasAction
 :hasAction rdf:type owl:ObjectProperty ;
            rdfs:comment "Links a composite refactoring action to its constituent atomic actions. The execution order of the atomic actions is specified using 'action sequence'."@en ;
-           rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+           rdfs:isDefinedBy <https://w3id.org/refract> ;
            rdfs:label "has action"@en .
 
 [ rdf:type owl:Axiom ;
@@ -342,18 +342,18 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#hasSemanticCategory
+###  https://w3id.org/refract#hasSemanticCategory
 :hasSemanticCategory rdf:type owl:ObjectProperty ;
                      rdfs:range :SemanticCategory ;
                      rdfs:comment "Links a concept transformation to its semantic category, indicating the type of conceptual relationship between the source concept and its corresponding concept(s) in the target viewpoint."@en ;
-                     rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                     rdfs:isDefinedBy <https://w3id.org/refract> ;
                      rdfs:label "has semantic category"@en .
 
 
-###  https://semanticweb.tools/ont/refract#hasURIRelationshipToSource
+###  https://w3id.org/refract#hasURIRelationshipToSource
 :hasURIRelationshipToSource rdf:type owl:ObjectProperty ;
                             rdfs:comment "Specifies the URI relationship between the source and target ontology. The value must be a subclass of 'URI relationship'."@en ;
-                            rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                            rdfs:isDefinedBy <https://w3id.org/refract> ;
                             rdfs:label "has URI relationship to source"@en .
 
 [ rdf:type owl:Axiom ;
@@ -364,87 +364,87 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#propertyType
+###  https://w3id.org/refract#propertyType
 :propertyType rdf:type owl:ObjectProperty ;
               rdfs:comment "Specifies the type of property used in a refactoring action. The value must be either owl:ObjectProperty or owl:DatatypeProperty."@en ;
-              rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "property type"@en .
 
 
-###  https://semanticweb.tools/ont/refract#restrictionType
+###  https://w3id.org/refract#restrictionType
 :restrictionType rdf:type owl:ObjectProperty ;
                  rdfs:comment "Specifies the type of restriction to be added as part of a refactoring action. The value must be either owl:someValuesFrom (existential restriction) or owl:allValuesFrom (universal restriction)."@en ;
-                 rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                 rdfs:isDefinedBy <https://w3id.org/refract> ;
                  rdfs:label "restriction type"@en .
 
 
-###  https://semanticweb.tools/ont/refract#setType
+###  https://w3id.org/refract#setType
 :setType rdf:type owl:ObjectProperty ;
          rdfs:comment "Specifies the type of set operation used in a set-based equivalent class assertion. The value must be either owl:unionOf or owl:intersectionOf."@en ;
-         rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+         rdfs:isDefinedBy <https://w3id.org/refract> ;
          rdfs:label "set type"@en .
 
 
-###  https://semanticweb.tools/ont/refract#sourceNode
+###  https://w3id.org/refract#sourceNode
 :sourceNode rdf:type owl:ObjectProperty ;
             rdfs:comment "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action."@en ;
-            rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+            rdfs:isDefinedBy <https://w3id.org/refract> ;
             rdfs:label "source node"@en .
 
 
-###  https://semanticweb.tools/ont/refract#sourceOnClass
+###  https://w3id.org/refract#sourceOnClass
 :sourceOnClass rdf:type owl:ObjectProperty ;
                rdfs:comment "The URI of the filler class in a qualified cardinality restriction in the source ontology, used to uniquely identify the restriction when a class has multiple cardinality restrictions on the same property. If omitted, the restriction is assumed to be unqualified."@en ;
-               rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+               rdfs:isDefinedBy <https://w3id.org/refract> ;
                rdfs:label "source on class"@en .
 
 
-###  https://semanticweb.tools/ont/refract#sourceParent
+###  https://w3id.org/refract#sourceParent
 :sourceParent rdf:type owl:ObjectProperty ;
               rdfs:comment "The URI of an existing parent class or property of an ontology element, used to identify the specific superclass or super-property assertion to be changed or deleted. If omitted, the algorithm assumes there is only one superclass or super-property assertion."@en ;
-              rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "source parent"@en .
 
 
-###  https://semanticweb.tools/ont/refract#sourceProperty
+###  https://w3id.org/refract#sourceProperty
 :sourceProperty rdf:type owl:ObjectProperty ;
                 rdfs:comment "The URI of the property that a restriction or axiom is applied to in the source ontology, used to identify the specific restriction or axiom to be deleted."@en ;
-                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "source property"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetAnnotation
+###  https://w3id.org/refract#targetAnnotation
 :targetAnnotation rdf:type owl:ObjectProperty ;
                   rdfs:comment "The URI of an annotation property to be added to an ontology element as part of a refactoring action."@en ;
-                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "target annotation"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetConcept
+###  https://w3id.org/refract#targetConcept
 :targetConcept rdf:type owl:ObjectProperty ;
                rdfs:comment "16-06-2026: Possibly needs to be removed."@en ;
-               rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+               rdfs:isDefinedBy <https://w3id.org/refract> ;
                rdfs:label "target concept"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetDataType
+###  https://w3id.org/refract#targetDataType
 :targetDataType rdf:type owl:ObjectProperty ;
                 rdfs:comment "Specifies the datatype of a value in a refactoring action, for example an annotation value or a data property value. The value must be a URI representing a valid XSD, RDF, or OWL datatype."@en ;
-                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "target datatype"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetIdentifier
+###  https://w3id.org/refract#targetIdentifier
 :targetIdentifier rdf:type owl:ObjectProperty ;
                   rdfs:comment "The URI (or fragment identifier) of an ontology element. This parameter is used when the element does not yet exist in the target ontology, for example when creating a new element. It is also used to specify the new URI when renaming an existing element."@en ;
-                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "target identifier"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetInstanceOf
+###  https://w3id.org/refract#targetInstanceOf
 :targetInstanceOf rdf:type owl:ObjectProperty ;
                   rdfs:comment "The URI of the class that a new named individual is declared as an instance of, as part of an 'add instance' refactoring action. Multiple classes may be specified."@en ;
-                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "target instance of"@en .
 
 [ rdf:type owl:Axiom ;
@@ -455,52 +455,52 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#targetMembers
+###  https://w3id.org/refract#targetMembers
 :targetMembers rdf:type owl:ObjectProperty ;
                rdfs:comment "A list of URIs representing the members of an ordered or unordered group used in a refactoring action, for example the classes in a union or intersection, or the properties in a sub-property chain."@en ;
-               rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+               rdfs:isDefinedBy <https://w3id.org/refract> ;
                rdfs:label "target members"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetNode
+###  https://w3id.org/refract#targetNode
 :targetNode rdf:type owl:ObjectProperty ;
             rdfs:comment "The URI of an ontology element that already exists in the target ontology, or has been created during the transformation process, and is then referenced by a refactoring action during the same transformation process."@en ;
-            rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+            rdfs:isDefinedBy <https://w3id.org/refract> ;
             rdfs:label "target node"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetObject
+###  https://w3id.org/refract#targetObject
 :targetObject rdf:type owl:ObjectProperty ;
               rdfs:comment "The URI of the property used in a refactoring action, for example the property of a restriction, axiom, or instance property assertion."@en ;
-              rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "target object"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetObjectValue
+###  https://w3id.org/refract#targetObjectValue
 :targetObjectValue rdf:type owl:ObjectProperty ;
                    rdfs:comment "The URI of the value used in a refactoring action, for example the filler class of a restriction or the value of an instance property assertion."@en ;
-                   rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                   rdfs:isDefinedBy <https://w3id.org/refract> ;
                    rdfs:label "target object value"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetOntologyURI
+###  https://w3id.org/refract#targetOntologyURI
 :targetOntologyURI rdf:type owl:ObjectProperty ;
                    rdfs:comment "The URI of the target ontology produced by a transformation or localisation process."@en ;
-                   rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                   rdfs:isDefinedBy <https://w3id.org/refract> ;
                    rdfs:label "target ontology URI"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetParent
+###  https://w3id.org/refract#targetParent
 :targetParent rdf:type owl:ObjectProperty ;
               rdfs:comment "The URI of the parent class or property of an ontology element that is to be created by a refactoring action. If omitted, the element will be a subclass of owl:Thing (for classes) or a sub-property of the top object, data, or annotation property (for properties)."@en ;
-              rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "target parent"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetViewpoint
+###  https://w3id.org/refract#targetViewpoint
 :targetViewpoint rdf:type owl:ObjectProperty ;
                  rdfs:comment "The URI of the viewpoint that the target ontology represents, as defined in the MULTI ontology."@en ;
-                 rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                 rdfs:isDefinedBy <https://w3id.org/refract> ;
                  rdfs:label "target viewpoint"@en .
 
 [ rdf:type owl:Axiom ;
@@ -511,24 +511,24 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#versionManifest
+###  https://w3id.org/refract#versionManifest
 :versionManifest rdf:type owl:ObjectProperty ;
                  rdfs:comment "Links a manifest to its version metadata, specified as an instance of 'Version'."@en ;
-                 rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                 rdfs:isDefinedBy <https://w3id.org/refract> ;
                  rdfs:label "version manifest"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :versionManifest ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "Links a manifest to its version metadata, specified as an instance of 'Version'."@en ;
-   rdfs:seeAlso <https://semanticweb.tools/ont/refract/Version>
+   rdfs:seeAlso <https://w3id.org/refract/Version>
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#versionPrevious
+###  https://w3id.org/refract#versionPrevious
 :versionPrevious rdf:type owl:ObjectProperty ;
                  rdfs:comment "Links a version of a Transformation Manifest File to its previous version. If this is the first version of the TMF, the value should be 'No previous version'."@en ;
-                 rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                 rdfs:isDefinedBy <https://w3id.org/refract> ;
                  rdfs:label "previous version"@en .
 
 [ rdf:type owl:Axiom ;
@@ -539,38 +539,38 @@ multi:hasViewpoint rdf:type owl:ObjectProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract/startingNode
-<https://semanticweb.tools/ont/refract/startingNode> rdf:type owl:ObjectProperty ;
-                                                     rdfs:comment "The URI of the root class from which a localisation process begins. If omitted, the localisation applies to the entire source ontology."@en ;
-                                                     rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                     rdfs:label "starting node"@en .
+###  https://w3id.org/refract/startingNode
+<https://w3id.org/refract/startingNode> rdf:type owl:ObjectProperty ;
+                                        rdfs:comment "The URI of the root class from which a localisation process begins. If omitted, the localisation applies to the entire source ontology."@en ;
+                                        rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                        rdfs:label "starting node"@en .
 
 
-###  https://semanticweb.tools/ont/refract/transformationSource
-<https://semanticweb.tools/ont/refract/transformationSource> rdf:type owl:ObjectProperty ;
-                                                             rdfs:comment "The URI of the source ontology that is being transformed, refactored, evolved, or localised."@en ;
-                                                             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                             rdfs:label "transformation source"@en .
+###  https://w3id.org/refract/transformationSource
+<https://w3id.org/refract/transformationSource> rdf:type owl:ObjectProperty ;
+                                                rdfs:comment "The URI of the source ontology that is being transformed, refactored, evolved, or localised."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                                rdfs:label "transformation source"@en .
 
 
-###  https://semanticweb.tools/ont/refract/transformationTarget
-<https://semanticweb.tools/ont/refract/transformationTarget> rdf:type owl:ObjectProperty ;
-                                                             rdfs:comment "11-06-2026: Possibly needs to be removed."@en ;
-                                                             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                             rdfs:label "transformation target"@en .
+###  https://w3id.org/refract/transformationTarget
+<https://w3id.org/refract/transformationTarget> rdf:type owl:ObjectProperty ;
+                                                rdfs:comment "11-06-2026: Possibly needs to be removed."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                                rdfs:label "transformation target"@en .
 
 
-###  https://semanticweb.tools/ont/refract/transformationType
-<https://semanticweb.tools/ont/refract/transformationType> rdf:type owl:ObjectProperty ;
-                                                           rdfs:comment "Specifies the type of transformation process described by the Transformation Manifest File. The value must be one of: 'Ontology refactoring process', 'Ontology evolution process', 'Ontology transformation process', or 'Ontology localisation process'."@en ;
-                                                           rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                           rdfs:label "transformation type"@en .
+###  https://w3id.org/refract/transformationType
+<https://w3id.org/refract/transformationType> rdf:type owl:ObjectProperty ;
+                                              rdfs:comment "Specifies the type of transformation process described by the Transformation Manifest File. The value must be one of: 'Ontology refactoring process', 'Ontology evolution process', 'Ontology transformation process', or 'Ontology localisation process'."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                              rdfs:label "transformation type"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource <https://semanticweb.tools/ont/refract/transformationType> ;
+   owl:annotatedSource <https://w3id.org/refract/transformationType> ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "Specifies the type of transformation process described by the Transformation Manifest File. The value must be one of: 'Ontology refactoring process', 'Ontology evolution process', 'Ontology transformation process', or 'Ontology localisation process'."@en ;
-   rdfs:seeAlso <https://semanticweb.tools/ont/refract/TransformationProcess>
+   rdfs:seeAlso <https://w3id.org/refract/TransformationProcess>
  ] .
 
 
@@ -588,17 +588,17 @@ dcterms:title rdf:type owl:DatatypeProperty ;
               rdfs:label "title"@en .
 
 
-###  https://semanticweb.tools/ont/refract#URI
+###  https://w3id.org/refract#URI
 :URI rdf:type owl:DatatypeProperty ;
      rdfs:comment "A URI value associated with a refactoring action, expressed as an xsd:anyURI literal."@en ;
-     rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+     rdfs:isDefinedBy <https://w3id.org/refract> ;
      rdfs:label "URI"@en .
 
 
-###  https://semanticweb.tools/ont/refract#actionSequence
+###  https://w3id.org/refract#actionSequence
 :actionSequence rdf:type owl:DatatypeProperty ;
                 rdfs:comment "An integer value that specifies the execution order of an atomic action within a composite action. If two or more actions have the same sequence number, the transformation algorithm resolves the order by their order of appearance in the Transformation Manifest File."@en ;
-                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "action sequence"@en .
 
 [ rdf:type owl:Axiom ;
@@ -609,38 +609,38 @@ dcterms:title rdf:type owl:DatatypeProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#changeLog
+###  https://w3id.org/refract#changeLog
 :changeLog rdf:type owl:DatatypeProperty ;
            rdfs:comment "11-06-2026: Not used at the moment. Planned for future work."@en ;
-           rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+           rdfs:isDefinedBy <https://w3id.org/refract> ;
            rdfs:label "change log"@en .
 
 
-###  https://semanticweb.tools/ont/refract#includeSeeAlso
+###  https://w3id.org/refract#includeSeeAlso
 :includeSeeAlso rdf:type owl:DatatypeProperty ;
                 rdfs:comment "Specifies whether the algorithm should add an rdfs:seeAlso reference to the successor class on the deprecated class. Accepts \"true\" or \"false\". If omitted, defaults to \"true\"."@en ;
-                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "include 'see also'"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetAnnotationValue
+###  https://w3id.org/refract#targetAnnotationValue
 :targetAnnotationValue rdf:type owl:DatatypeProperty ;
                        rdfs:comment "The value of an annotation to be added to an ontology element as part of a refactoring action, expressed as a plain string. The datatype of the value is specified by 'target datatype' for catch-all annotation actions, or is implicit in the dedicated annotation action type."@en ;
-                       rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                       rdfs:isDefinedBy <https://w3id.org/refract> ;
                        rdfs:label "target annotation value"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetLabel
+###  https://w3id.org/refract#targetLabel
 :targetLabel rdf:type owl:DatatypeProperty ;
              rdfs:comment "A plain string label for an ontology element that is to be created by a refactoring action. The language of the label is specified by 'target language tag'. To add additional language-tagged strings, use the annotation action 'Add annotation - lang string'."@en ;
-             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+             rdfs:isDefinedBy <https://w3id.org/refract> ;
              rdfs:label "target label"@en .
 
 
-###  https://semanticweb.tools/ont/refract#targetLanguageTag
+###  https://w3id.org/refract#targetLanguageTag
 :targetLanguageTag rdf:type owl:DatatypeProperty ;
                    rdfs:comment "A language tag expressed as a plain string, conforming to ISO 639 or BCP 47 (e.g. \"en-za\", \"fr\"). For add actions, this specifies the language tag of the new annotation value or label. For change annotation actions, this is used to identify the specific annotation to be changed where more than one annotation exists for the same annotation property; it is not used to change the language tag itself. To change a language tag, use 'target language tag new'."@en ;
-                   rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                   rdfs:isDefinedBy <https://w3id.org/refract> ;
                    rdfs:label "target language tag"@en .
 
 [ rdf:type owl:Axiom ;
@@ -651,11 +651,11 @@ dcterms:title rdf:type owl:DatatypeProperty ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#targetLanguageTagNew
+###  https://w3id.org/refract#targetLanguageTagNew
 :targetLanguageTagNew rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdfs:comment "The new language tag for a language-tagged string annotation, expressed as a plain string and conforming to BCP 47 (e.g. \"en\", \"en-ZA\"). Used in 'Change annotation - langString' to replace the existing language tag identified by 'target language tag'."@en ;
-                      rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                      rdfs:isDefinedBy <https://w3id.org/refract> ;
                       rdfs:label "target language tag - new"@en .
 
 [ rdf:type owl:Axiom ;
@@ -678,20 +678,20 @@ prov:Activity rdf:type owl:Class ;
               rdfs:label "Activity"@en .
 
 
-###  https://semanticweb.tools/ont/refract#AddAnnotation
+###  https://w3id.org/refract#AddAnnotation
 :AddAnnotation rdf:type owl:Class ;
                rdfs:subClassOf :AnnotationAction ;
-               rdfs:comment "A catch-all annotation action that adds an annotation to an ontology element. For language-tagged string annotations, use ref:AddAnnotationLangString instead."@en ;
-               rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+               rdfs:comment "A catch-all annotation action that adds an annotation to an ontology element. For language-tagged string annotations, use fract:AddAnnotationLangString instead."@en ;
+               rdfs:isDefinedBy <https://w3id.org/refract> ;
                rdfs:label "Add annotation"@en ;
                :exampleTMF <https://semanticweb.tools/rdf/tmf/AddAnnotation.ttl> ;
-               :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target annotation value', a plain string is expected. For 'target datatype', a URI is expected specifying the XSD, RDF, or OWL datatype of the annotation value. The algorithm will cast the value to the specified datatype in the target ontology. For language-tagged string annotations, use ref:AddAnnotationLangString instead."@en ;
+               :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target annotation value', a plain string is expected. For 'target datatype', a URI is expected specifying the XSD, RDF, or OWL datatype of the annotation value. The algorithm will cast the value to the specified datatype in the target ontology. For language-tagged string annotations, use fract:AddAnnotationLangString instead."@en ;
                :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeAddAnnotation.ttl> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :AddAnnotation ;
    owl:annotatedProperty :hasParameters ;
-   owl:annotatedTarget "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target annotation value', a plain string is expected. For 'target datatype', a URI is expected specifying the XSD, RDF, or OWL datatype of the annotation value. The algorithm will cast the value to the specified datatype in the target ontology. For language-tagged string annotations, use ref:AddAnnotationLangString instead."@en ;
+   owl:annotatedTarget "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target annotation value', a plain string is expected. For 'target datatype', a URI is expected specifying the XSD, RDF, or OWL datatype of the annotation value. The algorithm will cast the value to the specified datatype in the target ontology. For language-tagged string annotations, use fract:AddAnnotationLangString instead."@en ;
    :hasOptionalParameterWithAtLeastOne :sourceNode ,
                                        :targetNode ;
    :hasRequiredParameter :targetAnnotation ,
@@ -700,11 +700,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddAnnotationLangString
+###  https://w3id.org/refract#AddAnnotationLangString
 :AddAnnotationLangString rdf:type owl:Class ;
                          rdfs:subClassOf :AnnotationAction ;
                          rdfs:comment "An annotation action that adds a language-tagged string annotation to an ontology element."@en ;
-                         rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                         rdfs:isDefinedBy <https://w3id.org/refract> ;
                          rdfs:label "Add annotation - langString"@en ;
                          :exampleTMF <https://semanticweb.tools/rdf/tmf/AddAnnotationLangString.ttl> ;
                          :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target annotation value', a plain string is expected. For 'target language tag', a language tag conforming to BCP 47 is expected (e.g. \"en-za\"). The algorithm will cast the value to an rdf:langString in the target ontology."@en ;
@@ -722,11 +722,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddAnnotationProperty
+###  https://w3id.org/refract#AddAnnotationProperty
 :AddAnnotationProperty rdf:type owl:Class ;
                        rdfs:subClassOf :StructuralAction ;
                        rdfs:comment "A structural action that adds an annotation property to the ontology."@en ;
-                       rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                       rdfs:isDefinedBy <https://w3id.org/refract> ;
                        rdfs:label "Add annotation property"@en ;
                        :exampleTMF <https://semanticweb.tools/rdf/tmf/AddAnnotationProperty.ttl> ;
                        :hasParameters "For 'target identifier' and 'target parent', a URI is expected. For 'target label' and 'target language tag', a plain string is expected (no language tag). If 'target parent' is specified, the new annotation property is declared as a sub-property of the given parent; otherwise no explicit parent assertion is made."@en ;
@@ -743,12 +743,12 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddClass
+###  https://w3id.org/refract#AddClass
 :AddClass rdf:type owl:Class ;
           rdfs:subClassOf :SemanticAction ,
                           :StructuralAction ;
           rdfs:comment "A structural and semantic action that adds a class to the ontology."@en ;
-          rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+          rdfs:isDefinedBy <https://w3id.org/refract> ;
           rdfs:label "Add class"@en ;
           :exampleTMF <https://semanticweb.tools/rdf/tmf/AddClass.ttl> ;
           :hasParameters "For 'target identifier' and 'target parent', a URI is expected. For 'target label' and 'target language tag', a plain string is expected (no language tag). If 'target parent' is specified, the new class is declared as a subclass of the given parent; otherwise it will by default be a subclass of owl:Thing, with no explicit assertion thereof. Multiple parent URIs may be specified."@en ;
@@ -766,11 +766,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddCommentForDeprecation
+###  https://w3id.org/refract#AddCommentForDeprecation
 :AddCommentForDeprecation rdf:type owl:Class ;
                           rdfs:subClassOf :AnnotationAction ;
                           rdfs:comment "An annotation action that adds a deprecation comment and optionally a 'see also' reference to the deprecated class as part of a 'Deprecate class with successor class' composite action. If 'target annotation value' is omitted, the algorithm generates the comment from a template. This action is not intended to be used standalone."@en ;
-                          rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                          rdfs:isDefinedBy <https://w3id.org/refract> ;
                           rdfs:label "Add comment for deprecation"@en ;
                           :exampleTMF <https://semanticweb.tools/rdf/tmf/AddCommentForDeprecation.ttl> ;
                           :hasParameters "All parameters are optional. For 'target annotation', the URI of an annotation property is expected; if omitted, defaults to rdfs:comment. For 'target annotation value', a plain string is expected specifying a custom deprecation comment; if omitted, the algorithm generates a comment from one of two templates depending on whether a date can be derived from the composite action: \"Deprecated as of {date}. Use {successor} instead.\" or \"Deprecated. Use {successor} instead.\" For 'target language tag', a plain string conforming to BCP 47 is expected; required if 'target annotation value' is specified. For 'include 'see also'', \"true\" or \"false\" is expected; if omitted, defaults to \"true\", adding an rdfs:seeAlso reference to the successor class. For 'action sequence', an integer is expected specifying the execution order of this action within the composite action."@en ;
@@ -795,11 +795,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddDataProperty
+###  https://w3id.org/refract#AddDataProperty
 :AddDataProperty rdf:type owl:Class ;
                  rdfs:subClassOf :StructuralAction ;
                  rdfs:comment "A structural action that adds a data property to the ontology."@en ;
-                 rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                 rdfs:isDefinedBy <https://w3id.org/refract> ;
                  rdfs:label "Add data property"@en ;
                  :exampleTMF <https://semanticweb.tools/rdf/tmf/AddDataProperty.ttl> ;
                  :hasParameters "For 'target identifier' and 'target parent', a URI is expected. For 'target label' and 'target language tag', a plain string is expected (no language tag). If 'target parent' is specified, the new data property is declared as a sub-property of the given parent; otherwise it will by default be a sub-property of owl:topDataProperty, with no explicit assertion thereof."@en ;
@@ -816,11 +816,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddEquivalentClassSet
+###  https://w3id.org/refract#AddEquivalentClassSet
 :AddEquivalentClassSet rdf:type owl:Class ;
                        rdfs:subClassOf :SemanticAction ;
                        rdfs:comment "A semantic action that adds a set-based equivalent class assertion to a class in the ontology, using either an owl:unionOf or owl:intersectionOf property. For simple equivalent class assertions, use 'Add semantic axiom' instead."@en ;
-                       rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                       rdfs:isDefinedBy <https://w3id.org/refract> ;
                        rdfs:label "Add equivalent class (set-based)"@en ;
                        :exampleTMF <https://semanticweb.tools/rdf/tmf/AddEquivalentClassSet.ttl> ;
                        :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target members', a list of class URIs is expected. For 'set type', either owl:unionOf or owl:intersectionOf is expected."@en ;
@@ -837,11 +837,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddInstance
+###  https://w3id.org/refract#AddInstance
 :AddInstance rdf:type owl:Class ;
              rdfs:subClassOf :SemanticAction ;
              rdfs:comment "A semantic action that adds a named individual to the ontology as an instance of a specified class."@en ;
-             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+             rdfs:isDefinedBy <https://w3id.org/refract> ;
              rdfs:label "Add instance"@en ;
              :exampleTMF <https://semanticweb.tools/rdf/tmf/AddInstance.ttl> ;
              :hasParameters "For 'target identifier', a URI is expected specifying the new individual. For 'target instance of', a URI is expected specifying the class the individual is an instance of. Multiple classes may be specified. For 'target label', a plain string is expected. For 'target language tag', a plain string conforming to BCP 47 is expected (e.g. \"en-za\", \"fr\")."@en ;
@@ -858,11 +858,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddInstancePropertyAssertion
+###  https://w3id.org/refract#AddInstancePropertyAssertion
 :AddInstancePropertyAssertion rdf:type owl:Class ;
                               rdfs:subClassOf :SemanticAction ;
                               rdfs:comment "A semantic action that adds an object or data property assertion to a named individual in the ontology."@en ;
-                              rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                              rdfs:isDefinedBy <https://w3id.org/refract> ;
                               rdfs:label "Add instance property assertion"@en ;
                               :exampleTMF <https://semanticweb.tools/rdf/tmf/AddInstancePropertyAssertion.ttl> ;
                               :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided, specifying the named individual. For 'target object', a URI is expected specifying the property. For 'target object value', a URI is expected specifying the value of the assertion. For 'property type', either owl:ObjectProperty or owl:DatatypeProperty is expected."@en ;
@@ -880,11 +880,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddNamespacePrefix
+###  https://w3id.org/refract#AddNamespacePrefix
 :AddNamespacePrefix rdf:type owl:Class ;
                     rdfs:subClassOf :GlobalAction ;
                     rdfs:comment "A global refactoring action that adds a namespace prefix declaration to an ontology."@en ;
-                    rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                    rdfs:isDefinedBy <https://w3id.org/refract> ;
                     rdfs:label "Add namespace prefix"@en ;
                     :exampleTMF <https://semanticweb.tools/rdf/tmf/AddNamespacePrefix.ttl> ;
                     :hasParameters "For 'prefix', a plain string is expected specifying the prefix name (e.g. \"skos\"). For 'namespace', a URI is expected specifying the namespace (e.g. http://www.w3.org/2004/02/skos/core#)."@en ;
@@ -899,11 +899,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddObjectProperty
+###  https://w3id.org/refract#AddObjectProperty
 :AddObjectProperty rdf:type owl:Class ;
                    rdfs:subClassOf :StructuralAction ;
                    rdfs:comment "A structural action that adds an object property to the ontology."@en ;
-                   rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                   rdfs:isDefinedBy <https://w3id.org/refract> ;
                    rdfs:label "Add object property"@en ;
                    :exampleTMF <https://semanticweb.tools/rdf/tmf/AddObjectProperty.ttl> ;
                    :hasParameters "For 'target identifier' and 'target parent', a URI is expected. For 'target label' and 'target language tag', a plain string is expected (no language tag). If 'target parent' is specified, the new object property is declared as a sub-property of the given parent; otherwise it will by default be a sub-property of owl:topObjectProperty, with no explicit assertion thereof."@en ;
@@ -920,11 +920,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddPropertyDomainRange
+###  https://w3id.org/refract#AddPropertyDomainRange
 :AddPropertyDomainRange rdf:type owl:Class ;
                         rdfs:subClassOf :SemanticAction ;
                         rdfs:comment "A semantic action that adds a domain or range assertion to an object or data property in the ontology."@en ;
-                        rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                        rdfs:isDefinedBy <https://w3id.org/refract> ;
                         rdfs:label "Add property domain or range assertion"@en ;
                         :exampleTMF <https://semanticweb.tools/rdf/tmf/AddPropertyDomainRange.ttl> ;
                         :hasParameters "For 'source node', a URI is expected specifying the property. For 'target node', a URI is expected specifying the class to be added as the domain or range. For 'axiom type', either rdfs:domain or rdfs:range is expected. For 'property type', either owl:ObjectProperty or owl:DatatypeProperty is expected."@en ;
@@ -941,11 +941,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddPropertyRestriction
+###  https://w3id.org/refract#AddPropertyRestriction
 :AddPropertyRestriction rdf:type owl:Class ;
                         rdfs:subClassOf :SemanticAction ;
                         rdfs:comment "A semantic action that adds an existential or universal property restriction to a class in the ontology, using either an object or data property."@en ;
-                        rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                        rdfs:isDefinedBy <https://w3id.org/refract> ;
                         rdfs:label "Add property restriction"@en ;
                         :exampleTMF <https://semanticweb.tools/rdf/tmf/AddPropertyRestriction.ttl> ;
                         :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target object', a URI is expected specifying the property of the restriction. For 'target object value', a URI is expected specifying the filler class or datatype of the restriction. For 'restriction type', either owl:someValuesFrom (existential) or owl:allValuesFrom (universal) is expected. For 'property type', either owl:ObjectProperty or owl:DatatypeProperty is expected."@en ;
@@ -964,11 +964,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddSemanticAxiom
+###  https://w3id.org/refract#AddSemanticAxiom
 :AddSemanticAxiom rdf:type owl:Class ;
                   rdfs:subClassOf :SemanticAction ;
                   rdfs:comment "A catch-all semantic action that adds a binary semantic axiom between two ontology elements. Use a dedicated action where one exists for the specific axiom type."@en ;
-                  rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "Add semantic axiom"@en ;
                   :exampleTMF <https://semanticweb.tools/rdf/tmf/AddSemanticAxiom.ttl> ;
                   :hasParameters "For 'source node', a URI is expected specifying the subject of the axiom. For 'target node', a URI is expected specifying the object of the axiom. For 'axiom type', a URI is expected specifying the OWL or RDF axiom type to be added."@en ;
@@ -984,11 +984,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddSemanticAxiomUnary
+###  https://w3id.org/refract#AddSemanticAxiomUnary
 :AddSemanticAxiomUnary rdf:type owl:Class ;
                        rdfs:subClassOf :SemanticAction ;
                        rdfs:comment "A catch-all semantic action that adds a unary semantic axiom to a single ontology element, such as a property characteristic. Use a dedicated action where one exists for the specific axiom type."@en ;
-                       rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                       rdfs:isDefinedBy <https://w3id.org/refract> ;
                        rdfs:label "Add semantic axiom - unary"@en ;
                        :exampleTMF <https://semanticweb.tools/rdf/tmf/AddSemanticAxiomUnary.ttl> ;
                        :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'axiom type', a URI is expected specifying the OWL or RDF axiom type to be added."@en ;
@@ -1004,11 +1004,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddSubPropertyChainOf
+###  https://w3id.org/refract#AddSubPropertyChainOf
 :AddSubPropertyChainOf rdf:type owl:Class ;
                        rdfs:subClassOf :SemanticAction ;
                        rdfs:comment "A semantic action that adds a sub-property chain axiom to an object property in the ontology."@en ;
-                       rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                       rdfs:isDefinedBy <https://w3id.org/refract> ;
                        rdfs:label "Add sub-property chain axiom"@en ;
                        :exampleTMF <https://semanticweb.tools/rdf/tmf/AddSubPropertyChainOf.ttl> ;
                        :hasParameters "For 'source node', a URI is expected specifying the property that is the super-property of the chain. For 'target members', a list of property URIs is expected specifying the chain of properties."@en ;
@@ -1023,11 +1023,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AddSuperclassAssertion
+###  https://w3id.org/refract#AddSuperclassAssertion
 :AddSuperclassAssertion rdf:type owl:Class ;
                         rdfs:subClassOf :SemanticAction ;
                         rdfs:comment "A semantic action that adds a superclass assertion to a class in the ontology."@en ;
-                        rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                        rdfs:isDefinedBy <https://w3id.org/refract> ;
                         rdfs:label "Add superclass assertion"@en ;
                         :exampleTMF <https://semanticweb.tools/rdf/tmf/AddSuperclassAssertion.ttl> ;
                         :hasParameters "For 'source node', a URI is expected specifying the class. For 'target parent', a URI is expected specifying the superclass to be asserted."@en ;
@@ -1042,19 +1042,19 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AlgorithmCheck
+###  https://w3id.org/refract#AlgorithmCheck
 :AlgorithmCheck rdf:type owl:Class ;
                 rdfs:subClassOf rdfs:Resource ;
                 rdfs:comment "A class representing the behaviour of the transformation algorithm when a pre-processing check condition is met. Subclasses of this class represent specific categories of pre-processing checks."@en ;
-                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "Algorithm check"@en .
 
 
-###  https://semanticweb.tools/ont/refract#AlgorithmCheckAnnotation
+###  https://w3id.org/refract#AlgorithmCheckAnnotation
 :AlgorithmCheckAnnotation rdf:type owl:Class ;
                           rdfs:subClassOf :AlgorithmCheck ;
                           rdfs:comment "A class representing the behaviour of the transformation algorithm when an existing annotation is not found during pre-processing for a change annotation action. One of three behaviours may be specified: 'If false - stop', 'If false - ignore', or 'If false - add'."@en ;
-                          rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                          rdfs:isDefinedBy <https://w3id.org/refract> ;
                           rdfs:label "Algorithm check - annotation"@en .
 
 [ rdf:type owl:Axiom ;
@@ -1066,11 +1066,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AlgorithmCheckAssertion
+###  https://w3id.org/refract#AlgorithmCheckAssertion
 :AlgorithmCheckAssertion rdf:type owl:Class ;
                          rdfs:subClassOf :AlgorithmCheck ;
                          rdfs:comment "A class representing the behaviour of the transformation algorithm when existing assertions are found during pre-processing for an element that is to be deleted. An element can be a class, object property, data property, or annotation property. One of three behaviours may be specified: stop, ignore, or delete."@en ;
-                         rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                         rdfs:isDefinedBy <https://w3id.org/refract> ;
                          rdfs:label "Algorithm check - assertion"@en .
 
 [ rdf:type owl:Axiom ;
@@ -1082,11 +1082,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AnnotationAction
+###  https://w3id.org/refract#AnnotationAction
 :AnnotationAction rdf:type owl:Class ;
                   rdfs:subClassOf :AtomicAction ;
                   rdfs:comment "An atomic action that adds, modifies, or removes an annotation on an ontology element using an existing annotation property. Annotations are ignored by reasoners and do not affect the structure or semantic meaning of the ontology. To add or delete an annotation property, see 'Structural action'."@en ;
-                  rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "Annotation action"@en .
 
 [ rdf:type owl:Axiom ;
@@ -1097,19 +1097,19 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#AtomicAction
+###  https://w3id.org/refract#AtomicAction
 :AtomicAction rdf:type owl:Class ;
               rdfs:subClassOf :LocalAction ;
               rdfs:comment "A micro-level local refactoring action that cannot be decomposed into smaller refactoring actions. An atomic action may operate on a single ontology element, a set of ontology elements, or a concept represented by one or more ontology elements."@en ;
-              rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "Atomic action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#ChangeAnnotation
+###  https://w3id.org/refract#ChangeAnnotation
 :ChangeAnnotation rdf:type owl:Class ;
                   rdfs:subClassOf :AnnotationAction ;
                   rdfs:comment "An annotation action that changes both the value and the datatype of an existing annotation on an ontology element."@en ;
-                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "Change annotation"@en ;
                   :exampleTMF <https://semanticweb.tools/rdf/tmf/ChangeAnnotation.ttl> ;
                   :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target annotation value', a plain string is expected. For 'target datatype', a URI is expected specifying the XSD, RDF, or OWL datatype of the new annotation value. For 'target language tag', a language tag conforming to BCP 47 is expected (e.g. \"en-za\", \"fr\"); this is used to identify the specific annotation to be changed, not to change the language tag itself. The algorithm performs two pre-processing checks: first, whether the annotation exists; second, whether more than one annotation exists for the same annotation property and language tag combination. The behaviour for each check is determined by the value of 'check for annotation'. If omitted, the algorithm defaults to 'If false - add' for the first check and 'If multiple - ignore' for the second check."@en ;
@@ -1129,11 +1129,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#ChangeAnnotationLangString
+###  https://w3id.org/refract#ChangeAnnotationLangString
 :ChangeAnnotationLangString rdf:type owl:Class ;
                             rdfs:subClassOf :AnnotationAction ;
                             rdfs:comment "An annotation action that changes the value and/or language tag of an existing language-tagged string annotation on an ontology element."@en ;
-                            rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                            rdfs:isDefinedBy <https://w3id.org/refract> ;
                             rdfs:label "Change annotation - langString"@en ;
                             :exampleTMF <https://semanticweb.tools/rdf/tmf/ChangeAnnotationLangString.ttl> ;
                             :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target language tag', a language tag conforming to BCP 47 is expected (e.g. \"en\", \"fr\"); this is used to identify the specific annotation to be changed, not to change the language tag itself. At least one of 'target annotation value' or 'target language tag - new' must be specified. The algorithm performs two pre-processing checks: first, whether the annotation exists; second, whether more than one annotation exists for the same annotation property and language tag combination. The behaviour for each check is determined by the value of 'check for annotation'. If omitted, the algorithm defaults to 'If false - add' for the first check and 'If multiple - ignore' for the second check."@en ;
@@ -1153,11 +1153,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#ChangeAnnotationValue
+###  https://w3id.org/refract#ChangeAnnotationValue
 :ChangeAnnotationValue rdf:type owl:Class ;
                        rdfs:subClassOf :AnnotationAction ;
                        rdfs:comment "An annotation action that changes the value of an existing annotation on an ontology element, without changing the datatype. If a language tag is specified, it is used to identify the specific annotation to be changed, not to change the language tag itself."@en ;
-                       rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                       rdfs:isDefinedBy <https://w3id.org/refract> ;
                        rdfs:label "Change annotation value"@en ;
                        :exampleTMF <https://semanticweb.tools/rdf/tmf/ChangeAnnotationValue.ttl> ;
                        :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target annotation value', a plain string is expected. For 'target language tag', a language tag conforming to BCP 47 is expected (e.g. \"en-za\"); if omitted and more than one annotation is found for the same annotation property, the behaviour is determined by 'If multiple - stop' or 'If multiple - ignore'. The algorithm performs two pre-processing checks: first, whether the annotation exists; second, whether more than one annotation exists for the same annotation property and language tag combination. The behaviour for each check is determined by the value of 'check for annotation'. If omitted, the algorithm defaults to 'If false - add' for the first check and 'If multiple - ignore' for the second check."@en ;
@@ -1176,11 +1176,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#ChangeInstanceAssertion
+###  https://w3id.org/refract#ChangeInstanceAssertion
 :ChangeInstanceAssertion rdf:type owl:Class ;
                          rdfs:subClassOf :SemanticAction ;
                          rdfs:comment "A semantic action that changes the class assertion of a named individual in the ontology."@en ;
-                         rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                         rdfs:isDefinedBy <https://w3id.org/refract> ;
                          rdfs:label "Change instance assertion"@en ;
                          :exampleTMF <https://semanticweb.tools/rdf/tmf/ChangeInstanceAssertion.ttl> ;
                          :hasParameters "For 'source node', a URI is expected specifying the individual whose class assertion is to be changed. For 'target node', a URI is expected specifying the new class."@en ;
@@ -1195,11 +1195,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#ChangeSuperclassAssertion
+###  https://w3id.org/refract#ChangeSuperclassAssertion
 :ChangeSuperclassAssertion rdf:type owl:Class ;
                            rdfs:subClassOf :SemanticAction ;
                            rdfs:comment "A semantic action that changes a superclass assertion for a class in the ontology."@en ;
-                           rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                           rdfs:isDefinedBy <https://w3id.org/refract> ;
                            rdfs:label "Change superclass assertion"@en ;
                            :exampleTMF <https://semanticweb.tools/rdf/tmf/ChangeSuperclassAssertion.ttl> ;
                            :hasParameters "For 'source node', a URI is expected specifying the class. For 'source parent', a URI is expected specifying the existing superclass to be replaced. If omitted, the algorithm will change the first superclass assertion it finds without checking for additional superclass assertions. For 'target parent', a URI is expected specifying the new superclass."@en ;
@@ -1215,27 +1215,27 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#CompositeAction
+###  https://w3id.org/refract#CompositeAction
 :CompositeAction rdf:type owl:Class ;
                  rdfs:subClassOf :LocalAction ;
                  rdfs:comment "A micro-level local refactoring action composed of two or more atomic actions that together represent a single logical change to an ontology."@en ;
-                 rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                 rdfs:isDefinedBy <https://w3id.org/refract> ;
                  rdfs:label "Composite action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#ConceptTransformation
+###  https://w3id.org/refract#ConceptTransformation
 :ConceptTransformation rdf:type owl:Class ;
                        rdfs:subClassOf rdfs:Class ;
                        rdfs:comment "A class representing the micro-level metadata of a concept transformation - the mapping between a source concept in the source ontology and its corresponding concept(s) in the target viewpoint. The semantic category of the transformation is specified using 'has semantic category'."@en ;
-                       rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                       rdfs:isDefinedBy <https://w3id.org/refract> ;
                        rdfs:label "Concept transformation"@en .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteAnnotation
+###  https://w3id.org/refract#DeleteAnnotation
 :DeleteAnnotation rdf:type owl:Class ;
                   rdfs:subClassOf :AnnotationAction ;
                   rdfs:comment "An annotation action that deletes an existing annotation from an ontology element. If a language tag is specified, only the annotation with the matching language tag is deleted."@en ;
-                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "Delete annotation"@en ;
                   :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteAnnotation.ttl> ;
                   :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. For 'target annotation', the URI of an annotation property is expected. For 'target language tag', a language tag conforming to BCP 47 is expected (e.g. \"en-za\", \"fr\"); if specified, only the annotation with the matching language tag is deleted. If omitted, all annotations for the specified annotation property on the specified ontology element are deleted."@en ;
@@ -1252,11 +1252,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteAnnotationProperty
+###  https://w3id.org/refract#DeleteAnnotationProperty
 :DeleteAnnotationProperty rdf:type owl:Class ;
                           rdfs:subClassOf :StructuralAction ;
                           rdfs:comment "A structural action that deletes an annotation property from the source ontology."@en ;
-                          rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                          rdfs:isDefinedBy <https://w3id.org/refract> ;
                           rdfs:label "Delete annotation property"@en ;
                           :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteAnnotationProperty.ttl> ;
                           :hasParameters "For 'source node', a URI is expected. If existing annotations for the annotation property are found during pre-processing (and there is no corresponding deletion refactoring action for those annotations), the behaviour of the transformation algorithm is determined by the value of 'check for assertion'. If 'check for assertion' is omitted, the algorithm defaults to 'If true - delete'."@en ;
@@ -1271,11 +1271,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteCardinalityRestriction
+###  https://w3id.org/refract#DeleteCardinalityRestriction
 :DeleteCardinalityRestriction rdf:type owl:Class ;
                               rdfs:subClassOf :SemanticAction ;
                               rdfs:comment "A semantic action that deletes a cardinality restriction from a class in the ontology."@en ;
-                              rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                              rdfs:isDefinedBy <https://w3id.org/refract> ;
                               rdfs:label "Delete cardinality restriction"@en ;
                               :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteCardinalityRestriction.ttl> ;
                               :hasParameters "For 'source node', a URI is expected specifying the class the restriction is on. For 'source property', a URI is expected specifying the property the restriction is on. For 'source on class', a URI is expected specifying the filler class of a qualified cardinality restriction; if omitted, the restriction is assumed to be unqualified."@en ;
@@ -1291,12 +1291,12 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteClass
+###  https://w3id.org/refract#DeleteClass
 :DeleteClass rdf:type owl:Class ;
              rdfs:subClassOf :SemanticAction ,
                              :StructuralAction ;
              rdfs:comment "A structural and semantic action that deletes a class from either the source ontology or the target ontology."@en ;
-             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+             rdfs:isDefinedBy <https://w3id.org/refract> ;
              rdfs:label "Delete class"@en ;
              :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteClass.ttl> ;
              :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided. In most cases, the class being deleted belongs to the source ontology. A class may also be deleted from the target ontology, for example when a temporary class was created as an intermediate step in the transformation process. For 'check for assertion', a value from 'Algorithm check - assertion' is expected. If existing assertions for the class are found during pre-processing (and there is no corresponding deletion refactoring action for those assertions), the behaviour of the transformation algorithm is determined by the value of 'check for assertion'. If 'check for assertion' is omitted, the algorithm defaults to 'If true - stop'."@en ;
@@ -1312,11 +1312,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteDataProperty
+###  https://w3id.org/refract#DeleteDataProperty
 :DeleteDataProperty rdf:type owl:Class ;
                     rdfs:subClassOf :StructuralAction ;
                     rdfs:comment "A structural action that deletes a data property from the source ontology."@en ;
-                    rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                    rdfs:isDefinedBy <https://w3id.org/refract> ;
                     rdfs:label "Delete data property"@en ;
                     :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteDataProperty.ttl> ;
                     :hasParameters "For 'source node', a URI is expected. If existing assertions for the data property are found during pre-processing (and there is no corresponding deletion refactoring action for those assertions), the behaviour of the transformation algorithm is determined by the value of 'check for assertion'. If 'check for assertion' is omitted, the algorithm defaults to 'If true - stop'."@en ;
@@ -1331,11 +1331,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteInstance
+###  https://w3id.org/refract#DeleteInstance
 :DeleteInstance rdf:type owl:Class ;
                 rdfs:subClassOf :SemanticAction ;
                 rdfs:comment "A semantic action that deletes a named individual from the source ontology."@en ;
-                rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "Delete instance"@en ;
                 :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteInstance.ttl> ;
                 :hasParameters "For 'source node', a URI is expected specifying the individual to be deleted. If existing assertions for the individual are found during pre-processing (and there is no corresponding deletion refactoring action for those assertions), the behaviour of the transformation algorithm is determined by the value of 'check for assertion'. If 'check for assertion' is omitted, the algorithm defaults to 'If true - stop'."@en ;
@@ -1350,11 +1350,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteInstancePropertyAssertion
+###  https://w3id.org/refract#DeleteInstancePropertyAssertion
 :DeleteInstancePropertyAssertion rdf:type owl:Class ;
                                  rdfs:subClassOf :SemanticAction ;
                                  rdfs:comment "A semantic action that deletes an object or data property assertion from a named individual in the ontology. For class-level property usage, use 'Delete property restriction' or 'Delete semantic axiom' instead."@en ;
-                                 rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                                 rdfs:isDefinedBy <https://w3id.org/refract> ;
                                  rdfs:label "Delete instance property assertion"@en ;
                                  :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteInstancePropertyAssertion.ttl> ;
                                  :hasParameters "Either 'source node' or 'target node' must be specified, but not both. A URI is expected for whichever is provided, specifying the named individual. For 'target object', a URI is expected specifying the property. For 'target object value', a URI is expected specifying the value of the assertion to be deleted."@en ;
@@ -1371,11 +1371,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteObjectProperty
+###  https://w3id.org/refract#DeleteObjectProperty
 :DeleteObjectProperty rdf:type owl:Class ;
                       rdfs:subClassOf :StructuralAction ;
                       rdfs:comment "A structural action that deletes an object property from the source ontology."@en ;
-                      rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                      rdfs:isDefinedBy <https://w3id.org/refract> ;
                       rdfs:label "Delete object property"@en ;
                       :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteObjectProperty.ttl> ;
                       :hasParameters "For 'source node', a URI is expected. If existing assertions for the object property are found during pre-processing (and there is no corresponding deletion refactoring action for those assertions), the behaviour of the transformation algorithm is determined by the value of 'check for assertion'. If 'check for assertion' is omitted, the algorithm defaults to 'If true - stop'."@en ;
@@ -1390,11 +1390,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeletePropertyDomainRange
+###  https://w3id.org/refract#DeletePropertyDomainRange
 :DeletePropertyDomainRange rdf:type owl:Class ;
                            rdfs:subClassOf :SemanticAction ;
                            rdfs:comment "A semantic action that deletes a domain or range assertion from an object or data property in the ontology."@en ;
-                           rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                           rdfs:isDefinedBy <https://w3id.org/refract> ;
                            rdfs:label "Delete property domain or range assertion"@en ;
                            :exampleTMF <https://semanticweb.tools/rdf/tmf/DeletePropertyDomainRange.ttl> ;
                            :hasParameters "For 'source node', a URI is expected specifying the property. For 'axiom type', either rdfs:domain or rdfs:range is expected."@en ;
@@ -1409,11 +1409,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeletePropertyRestriction
+###  https://w3id.org/refract#DeletePropertyRestriction
 :DeletePropertyRestriction rdf:type owl:Class ;
                            rdfs:subClassOf :SemanticAction ;
                            rdfs:comment "A semantic action that deletes an existential or universal property restriction from a class in the ontology."@en ;
-                           rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                           rdfs:isDefinedBy <https://w3id.org/refract> ;
                            rdfs:label "Delete property restriction"@en ;
                            :exampleTMF <https://semanticweb.tools/rdf/tmf/DeletePropertyRestriction.ttl> ;
                            :hasParameters "For 'source node', a URI is expected specifying the class the restriction is on. For 'target object', a URI is expected specifying the property of the restriction. For 'target object value', a URI is expected specifying the filler class of the restriction. For 'restriction type', either owl:someValuesFrom (existential) or owl:allValuesFrom (universal) is expected."@en ;
@@ -1430,11 +1430,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteSemanticAxiom
+###  https://w3id.org/refract#DeleteSemanticAxiom
 :DeleteSemanticAxiom rdf:type owl:Class ;
                      rdfs:subClassOf :SemanticAction ;
                      rdfs:comment "A catch-all semantic action that deletes a binary semantic axiom between two ontology elements. Use a dedicated action where one exists for the specific axiom type."@en ;
-                     rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                     rdfs:isDefinedBy <https://w3id.org/refract> ;
                      rdfs:label "Delete semantic axiom"@en ;
                      :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteSemanticAxiom.ttl> ;
                      :hasParameters "For 'source node', a URI is expected specifying the subject of the axiom. For 'target node', a URI is expected specifying the object of the axiom. For 'axiom type', a URI is expected specifying the OWL or RDF axiom type to be deleted."@en ;
@@ -1450,11 +1450,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeleteSuperclassAssertion
+###  https://w3id.org/refract#DeleteSuperclassAssertion
 :DeleteSuperclassAssertion rdf:type owl:Class ;
                            rdfs:subClassOf :SemanticAction ;
                            rdfs:comment "A semantic action that deletes a superclass assertion from a class in the ontology. This action does not delete the class itself; to delete a class, use 'Delete class'."@en ;
-                           rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                           rdfs:isDefinedBy <https://w3id.org/refract> ;
                            rdfs:label "Delete superclass assertion"@en ;
                            :exampleTMF <https://semanticweb.tools/rdf/tmf/DeleteSuperclassAssertion.ttl> ;
                            :hasParameters "For 'source node', a URI is expected specifying the class. One or more source nodes may be specified. For 'target parent', a URI is expected specifying the superclass assertion to be deleted."@en ;
@@ -1469,12 +1469,12 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeprecateClass
+###  https://w3id.org/refract#DeprecateClass
 :DeprecateClass rdf:type owl:Class ;
                 rdfs:subClassOf :SemanticAction ,
                                 :StructuralAction ;
                 rdfs:comment "A structural and semantic action that deprecates a class in the source ontology."@en ;
-                rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "Deprecate class"@en ;
                 rdfs:seeAlso :DeprecateClassWithSuccessor ;
                 :exampleTMF <https://semanticweb.tools/rdf/tmf/DeprecateClass.ttl> ;
@@ -1490,11 +1490,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DeprecateClassWithSuccessor
+###  https://w3id.org/refract#DeprecateClassWithSuccessor
 :DeprecateClassWithSuccessor rdf:type owl:Class ;
                              rdfs:subClassOf :CompositeAction ;
                              rdfs:comment "A composite refactoring action that deprecates a class and adds a successor class."@en ;
-                             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                             rdfs:isDefinedBy <https://w3id.org/refract> ;
                              rdfs:label "Deprecate class with successor class"@en ;
                              :exampleTMF <https://semanticweb.tools/rdf/tmf/DeprecateClassWithSuccessor.ttl> ;
                              :hasActions "At least one 'Deprecate class' action and one 'Add class' action are required. Optionally, one or more annotation actions may be included, such as 'Add annotation - langString', 'Add annotation', or 'Add comment for deprecation'."@en ;
@@ -1520,11 +1520,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DifferentRelationship
+###  https://w3id.org/refract#DifferentRelationship
 :DifferentRelationship rdf:type owl:Class ;
                        rdfs:subClassOf :URIRelationship ;
                        rdfs:comment "Indicates that the target ontology is published to an entirely new URI, unrelated to that of the source ontology. A fallback URI should be declared in this case."@en ;
-                       rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                       rdfs:isDefinedBy <https://w3id.org/refract> ;
                        rdfs:label "Different relationship"@en .
 
 [ rdf:type owl:Axiom ;
@@ -1535,35 +1535,35 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#DirectEquivalent
+###  https://w3id.org/refract#DirectEquivalent
 :DirectEquivalent rdf:type owl:Class ;
                   rdfs:subClassOf :SemanticCategory ;
                   rdfs:comment "A semantic category indicating that the source and target concepts have equal individuals, and the axiom pattern and superclass are both equivalent between the source and target viewpoints."@en ;
-                  rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "Direct equivalent"@en .
 
 
-###  https://semanticweb.tools/ont/refract#GlobalAction
+###  https://w3id.org/refract#GlobalAction
 :GlobalAction rdf:type owl:Class ;
               rdfs:subClassOf :RefactoringAction ;
               rdfs:comment "A macro-level refactoring action that operates on an ontology as a whole, rather than on individual ontology elements."@en ;
-              rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "Global action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#GranularityMismatch
+###  https://w3id.org/refract#GranularityMismatch
 :GranularityMismatch rdf:type owl:Class ;
                      rdfs:subClassOf :SemanticCategory ;
                      rdfs:comment "A semantic category indicating that the source and target concepts have a granularity difference, where the individuals of one concept are a proper subset of the other. The axiom pattern and superclass may be equivalent or may differ between the source and target viewpoints."@en ;
-                     rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                     rdfs:isDefinedBy <https://w3id.org/refract> ;
                      rdfs:label "Granularity mismatch"@en .
 
 
-###  https://semanticweb.tools/ont/refract#ImportOntology
+###  https://w3id.org/refract#ImportOntology
 :ImportOntology rdf:type owl:Class ;
                 rdfs:subClassOf :GlobalAction ;
                 rdfs:comment "A global refactoring action that adds an owl:imports statement to an ontology, declaring a dependency on an external ontology."@en ;
-                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "Import ontology"@en ;
                 :exampleTMF <https://semanticweb.tools/rdf/tmf/ImportOntology.ttl> ;
                 :hasParameters "For 'source node', a URI is expected specifying the ontology to which the import statement is being added. For 'URI', an xsd:anyURI value is expected specifying the ontology to be imported. Note that this action does not add a namespace prefix declaration. To add a namespace prefix, use 'Add namespace prefix'."@en ;
@@ -1578,51 +1578,51 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#IndirectEquivalent
+###  https://w3id.org/refract#IndirectEquivalent
 :IndirectEquivalent rdf:type owl:Class ;
                     rdfs:subClassOf :SemanticCategory ;
                     rdfs:comment "A semantic category indicating that the source and target concepts have equal individuals, but the axiom pattern or superclass (or both) differ between the source and target viewpoints."@en ;
-                    rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                    rdfs:isDefinedBy <https://w3id.org/refract> ;
                     rdfs:label "Indirect equivalent"@en .
 
 
-###  https://semanticweb.tools/ont/refract#LocalAction
+###  https://w3id.org/refract#LocalAction
 :LocalAction rdf:type owl:Class ;
              rdfs:subClassOf :RefactoringAction ;
              rdfs:comment "A micro-level refactoring action that operates on individual ontology elements. Local actions are further classified as either atomic or composite."@en ;
-             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+             rdfs:isDefinedBy <https://w3id.org/refract> ;
              rdfs:label "Local action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#NoCorrespondence
+###  https://w3id.org/refract#NoCorrespondence
 :NoCorrespondence rdf:type owl:Class ;
                   rdfs:subClassOf :SemanticCategory ;
                   rdfs:comment "A semantic category indicating that there are no shared individuals between the source and target concepts, such that there is no conceptual correspondence between the source and target viewpoints."@en ;
-                  rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "No correspondence"@en .
 
 
-###  https://semanticweb.tools/ont/refract#OverlappingMeaning
+###  https://w3id.org/refract#OverlappingMeaning
 :OverlappingMeaning rdf:type owl:Class ;
                     rdfs:subClassOf :SemanticCategory ;
                     rdfs:comment "A semantic category indicating that the source and target concepts share only some individuals (an intersection), where neither is a subset of the other, and the axiom pattern or superclass may be equivalent or may differ between the source and target viewpoints."@en ;
-                    rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                    rdfs:isDefinedBy <https://w3id.org/refract> ;
                     rdfs:label "Overlapping meaning"@en .
 
 
-###  https://semanticweb.tools/ont/refract#RefactoringAction
+###  https://w3id.org/refract#RefactoringAction
 :RefactoringAction rdf:type owl:Class ;
                    rdfs:subClassOf prov:Activity ;
                    rdfs:comment "An activity that applies a refactoring action to an ontology. Refactoring actions are classified as either global actions, which operate at the ontology level, or local actions, which operate at the level of individual ontology elements. For example, localising the English concept :River into French requires deleting the original class and replacing it with two sibling classes, :Riviere (a river that flows into another river) and :Fleuve (a river that flows into the sea)."@en ;
-                   rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                   rdfs:isDefinedBy <https://w3id.org/refract> ;
                    rdfs:label "Refactoring action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#RenameClass
+###  https://w3id.org/refract#RenameClass
 :RenameClass rdf:type owl:Class ;
              rdfs:subClassOf :StructuralAction ;
              rdfs:comment "A structural action that renames a class in the ontology by replacing its URI (or fragment identifier) with a new URI."@en ;
-             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+             rdfs:isDefinedBy <https://w3id.org/refract> ;
              rdfs:label "Rename class"@en ;
              :exampleTMF <https://semanticweb.tools/rdf/tmf/RenameClass.ttl> ;
              :hasParameters "For 'source node' and 'target identifier', a URI is expected. For 'target label' and 'target language tag', a plain string is expected (no language tag). If existing assertions for the class are found during pre-processing (and there is no corresponding deletion refactoring action for those assertions), the behaviour of the transformation algorithm is determined by the value of 'check for assertion'. If 'check for assertion' is omitted, the algorithm defaults to 'If true - stop'."@en ;
@@ -1640,11 +1640,11 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#RenameProperty
+###  https://w3id.org/refract#RenameProperty
 :RenameProperty rdf:type owl:Class ;
                 rdfs:subClassOf :StructuralAction ;
                 rdfs:comment "A structural action that renames a property (object, data, or annotation) in the ontology by replacing its URI (or fragment identifier) with a new URI."@en ;
-                rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "Rename property"@en ;
                 :exampleTMF <https://semanticweb.tools/rdf/tmf/RenameProperty.ttl> ;
                 :hasParameters "For 'source node' and 'target identifier', a URI is expected. For 'target label' and 'target language tag', a plain string is expected (no language tag). If existing assertions for the property are found during pre-processing (and there is no corresponding deletion refactoring action for those assertions), the behaviour of the transformation algorithm is determined by the value of 'check for assertion'. If 'check for assertion' is omitted, the algorithm defaults to 'If true - stop'."@en ;
@@ -1662,115 +1662,115 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract#SameUnversionedRelationship
+###  https://w3id.org/refract#SameUnversionedRelationship
 :SameUnversionedRelationship rdf:type owl:Class ;
                              rdfs:subClassOf :URIRelationship ;
                              rdfs:comment "Indicates that the target ontology is published to the same URI as the source ontology, without versioning."@en ;
-                             rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                             rdfs:isDefinedBy <https://w3id.org/refract> ;
                              rdfs:label "Same unversioned relationship"@en .
 
 
-###  https://semanticweb.tools/ont/refract#SameVersionedRelationship
+###  https://w3id.org/refract#SameVersionedRelationship
 :SameVersionedRelationship rdf:type owl:Class ;
                            rdfs:subClassOf :URIRelationship ;
                            rdfs:comment "Indicates that the target ontology is published to the same URI as the source ontology, with versioning."@en ;
-                           rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                           rdfs:isDefinedBy <https://w3id.org/refract> ;
                            rdfs:label "Same versioned relationship"@en .
 
 
-###  https://semanticweb.tools/ont/refract#SemanticAction
+###  https://w3id.org/refract#SemanticAction
 :SemanticAction rdf:type owl:Class ;
                 rdfs:subClassOf :AtomicAction ;
                 rdfs:comment "An atomic action that results in a change to the semantic meaning of the ontology. For example, adding a superclass assertion changes the ontological commitment of a class without introducing a new ontology element. A refactoring action may be both a semantic and a structural action — for example, adding a class introduces a new ontology element and simultaneously carries ontological commitment."@en ;
-                rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "Semantic action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#SemanticCategory
+###  https://w3id.org/refract#SemanticCategory
 :SemanticCategory rdf:type owl:Class ;
                   rdfs:subClassOf rdfs:Resource ;
                   rdfs:comment "A semantic category that characterises the conceptual relationship between a source concept and its corresponding concept(s) in the target viewpoint, based on the set-theoretic equivalence of their extensions as ontology individuals."@en ;
-                  rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "Semantic category"@en .
 
 
-###  https://semanticweb.tools/ont/refract#StructuralAction
+###  https://w3id.org/refract#StructuralAction
 :StructuralAction rdf:type owl:Class ;
                   rdfs:subClassOf :AtomicAction ;
                   rdfs:comment "An atomic action that adds or removes an ontology element, such as a class, object property, or annotation property, without necessarily affecting the semantic meaning of the ontology. For example, adding an object property is a structural change; the semantic meaning of the ontology is only affected once an assertion is made using that property. A refactoring action may be both a structural and a semantic action - for example, adding a class introduces a new ontology element and simultaneously carries ontological commitment."@en ;
-                  rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "Structural action"@en .
 
 
-###  https://semanticweb.tools/ont/refract#URIRelationship
+###  https://w3id.org/refract#URIRelationship
 :URIRelationship rdf:type owl:Class ;
                  rdfs:subClassOf rdfs:Resource ;
                  rdfs:comment "A class representing the relationship between the URI of a source ontology and the URI of its target ontology in a transformation process."@en ;
-                 rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
+                 rdfs:isDefinedBy <https://w3id.org/refract> ;
                  rdfs:label "URI relationship"@en .
 
 
-###  https://semanticweb.tools/ont/refract/Manifest
-<https://semanticweb.tools/ont/refract/Manifest> rdf:type owl:Class ;
-                                                 rdfs:subClassOf rdfs:Resource ;
-                                                 rdfs:comment "A Transformation Manifest File (TMF) that records the metadata and refactoring actions associated with an ontology transformation process. A manifest declares the source ontology, the transformation process type, the URI relationship to the source, version metadata, and the set of refactoring actions to be applied."@en ;
-                                                 rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                 rdfs:label "Manifest"@en .
+###  https://w3id.org/refract/Manifest
+<https://w3id.org/refract/Manifest> rdf:type owl:Class ;
+                                    rdfs:subClassOf rdfs:Resource ;
+                                    rdfs:comment "A Transformation Manifest File (TMF) that records the metadata and refactoring actions associated with an ontology transformation process. A manifest declares the source ontology, the transformation process type, the URI relationship to the source, version metadata, and the set of refactoring actions to be applied."@en ;
+                                    rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                    rdfs:label "Manifest"@en .
 
 
-###  https://semanticweb.tools/ont/refract/OntologyEvolutionProcess
-<https://semanticweb.tools/ont/refract/OntologyEvolutionProcess> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <https://semanticweb.tools/ont/refract/TransformationProcess> ;
-                                                                 rdfs:comment "A transformation process that modifies an ontology to reflect changes in the domain it models. Characterised by: same viewpoint, same URI (versioned), and semantic changes driven by a real-world domain change. Examples include adding or removing classes and properties in response to changes in the world."@en ;
-                                                                 rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                                 rdfs:label "Ontology evolution process"@en ;
-                                                                 :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeEvolution.ttl> .
+###  https://w3id.org/refract/OntologyEvolutionProcess
+<https://w3id.org/refract/OntologyEvolutionProcess> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/refract/TransformationProcess> ;
+                                                    rdfs:comment "A transformation process that modifies an ontology to reflect changes in the domain it models. Characterised by: same viewpoint, same URI (versioned), and semantic changes driven by a real-world domain change. Examples include adding or removing classes and properties in response to changes in the world."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                                    rdfs:label "Ontology evolution process"@en ;
+                                                    :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeEvolution.ttl> .
 
 
-###  https://semanticweb.tools/ont/refract/OntologyLocalisationProcess
-<https://semanticweb.tools/ont/refract/OntologyLocalisationProcess> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf <https://semanticweb.tools/ont/refract/OntologyTransformationProcess> ;
-                                                                    rdfs:comment "A transformation process that adapts an ontology to a specific cultural, linguistic, or regional viewpoint. A subclass of 'Ontology transformation process'. Characterised by: different viewpoint, different URI, and semantic changes driven by a community-specific viewpoint."@en ;
-                                                                    rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                                    rdfs:label "Ontology localisation process"@en ;
-                                                                    :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeLocalisation.ttl> .
+###  https://w3id.org/refract/OntologyLocalisationProcess
+<https://w3id.org/refract/OntologyLocalisationProcess> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://w3id.org/refract/OntologyTransformationProcess> ;
+                                                       rdfs:comment "A transformation process that adapts an ontology to a specific cultural, linguistic, or regional viewpoint. A subclass of 'Ontology transformation process'. Characterised by: different viewpoint, different URI, and semantic changes driven by a community-specific viewpoint."@en ;
+                                                       rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                                       rdfs:label "Ontology localisation process"@en ;
+                                                       :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeLocalisation.ttl> .
 
 
-###  https://semanticweb.tools/ont/refract/OntologyRefactoringProcess
-<https://semanticweb.tools/ont/refract/OntologyRefactoringProcess> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf <https://semanticweb.tools/ont/refract/TransformationProcess> ;
-                                                                   rdfs:comment "A transformation process that modifies an ontology without changing its intended meaning. Characterised by: same viewpoint, same URI (versioned), and structural changes only with no semantic or domain change. Examples include renaming classes or properties."@en ;
-                                                                   rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                                   rdfs:label "Ontology refactoring process"@en ;
-                                                                   :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeRefactoring.ttl> .
+###  https://w3id.org/refract/OntologyRefactoringProcess
+<https://w3id.org/refract/OntologyRefactoringProcess> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/refract/TransformationProcess> ;
+                                                      rdfs:comment "A transformation process that modifies an ontology without changing its intended meaning. Characterised by: same viewpoint, same URI (versioned), and structural changes only with no semantic or domain change. Examples include renaming classes or properties."@en ;
+                                                      rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                                      rdfs:label "Ontology refactoring process"@en ;
+                                                      :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeRefactoring.ttl> .
 
 
-###  https://semanticweb.tools/ont/refract/OntologyTransformationProcess
-<https://semanticweb.tools/ont/refract/OntologyTransformationProcess> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf <https://semanticweb.tools/ont/refract/TransformationProcess> ;
-                                                                      rdfs:comment "A transformation process that produces a new ontology from an existing one, representing a different viewpoint or context. Characterised by: different viewpoint, different URI, and semantic changes driven by a different viewpoint or conte"@en ;
-                                                                      rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                                      rdfs:label "Ontology transformation process"@en ;
-                                                                      :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeTransformation.ttl> .
+###  https://w3id.org/refract/OntologyTransformationProcess
+<https://w3id.org/refract/OntologyTransformationProcess> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/refract/TransformationProcess> ;
+                                                         rdfs:comment "A transformation process that produces a new ontology from an existing one, representing a different viewpoint or context. Characterised by: different viewpoint, different URI, and semantic changes driven by a different viewpoint or conte"@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                                         rdfs:label "Ontology transformation process"@en ;
+                                                         :hasShapesGraph <https://semanticweb.tools/rdf/shapes/ShapeTransformation.ttl> .
 
 
-###  https://semanticweb.tools/ont/refract/OntologyView
-<https://semanticweb.tools/ont/refract/OntologyView> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://www.w3.org/ns/shacl#Target> ;
-                                                     rdfs:comment "A class representing an ontology view — the transformation of a source ontology to a target viewpoint, where both the semantic and annotation layers are adapted as required. In the context of internationalisation, a view is specific to a culture, language, or region. Modelled as a subclass of sh:Target to enable view-specific SHACL validation."@en ;
-                                                     rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                     rdfs:label "Ontology view"@en .
+###  https://w3id.org/refract/OntologyView
+<https://w3id.org/refract/OntologyView> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.w3.org/ns/shacl#Target> ;
+                                        rdfs:comment "A class representing an ontology view — the transformation of a source ontology to a target viewpoint, where both the semantic and annotation layers are adapted as required. In the context of internationalisation, a view is specific to a culture, language, or region. Modelled as a subclass of sh:Target to enable view-specific SHACL validation."@en ;
+                                        rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                        rdfs:label "Ontology view"@en .
 
 
-###  https://semanticweb.tools/ont/refract/TargetSameAsSource
-<https://semanticweb.tools/ont/refract/TargetSameAsSource> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://www.w3.org/ns/shacl#Target> ;
-                                                           rdfs:comment "A SHACL target that applies validation to ontologies where the target is the same as the source, used in refactoring and evolution processes where the URI relationship is 'same versioned' or 'same unversioned'."@en ;
-                                                           rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                           rdfs:label "Target same as source"@en .
+###  https://w3id.org/refract/TargetSameAsSource
+<https://w3id.org/refract/TargetSameAsSource> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.w3.org/ns/shacl#Target> ;
+                                              rdfs:comment "A SHACL target that applies validation to ontologies where the target is the same as the source, used in refactoring and evolution processes where the URI relationship is 'same versioned' or 'same unversioned'."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                              rdfs:label "Target same as source"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource <https://semanticweb.tools/ont/refract/TargetSameAsSource> ;
+   owl:annotatedSource <https://w3id.org/refract/TargetSameAsSource> ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "A SHACL target that applies validation to ontologies where the target is the same as the source, used in refactoring and evolution processes where the URI relationship is 'same versioned' or 'same unversioned'."@en ;
    rdfs:seeAlso :SameUnversionedRelationship ,
@@ -1778,102 +1778,102 @@ prov:Activity rdf:type owl:Class ;
  ] .
 
 
-###  https://semanticweb.tools/ont/refract/TransformationProcess
-<https://semanticweb.tools/ont/refract/TransformationProcess> rdf:type owl:Class ;
-                                                              rdfs:subClassOf rdfs:Class ;
-                                                              rdfs:comment "A process that transforms one or more ontologies or knowledge graphs into a new form."@en ;
-                                                              rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                              rdfs:label "Transformation process"@en .
+###  https://w3id.org/refract/TransformationProcess
+<https://w3id.org/refract/TransformationProcess> rdf:type owl:Class ;
+                                                 rdfs:subClassOf rdfs:Class ;
+                                                 rdfs:comment "A process that transforms one or more ontologies or knowledge graphs into a new form."@en ;
+                                                 rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                                 rdfs:label "Transformation process"@en .
 
 
-###  https://semanticweb.tools/ont/refract/Version
-<https://semanticweb.tools/ont/refract/Version> rdf:type owl:Class ;
-                                                rdfs:subClassOf rdfs:Resource ;
-                                                rdfs:comment "A class representing the version metadata of a Transformation Manifest File. Version metadata includes the version number, the date of the version, the previous version, and the contributors to the TMF."@en ;
-                                                rdfs:isDefinedBy "https://semanticweb.tools/ont/refract" ;
-                                                rdfs:label "Version"@en .
+###  https://w3id.org/refract/Version
+<https://w3id.org/refract/Version> rdf:type owl:Class ;
+                                   rdfs:subClassOf rdfs:Resource ;
+                                   rdfs:comment "A class representing the version metadata of a Transformation Manifest File. Version metadata includes the version number, the date of the version, the previous version, and the contributors to the TMF."@en ;
+                                   rdfs:isDefinedBy <https://w3id.org/refract> ;
+                                   rdfs:label "Version"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://semanticweb.tools/ont/refract#IfFalseAdd
+###  https://w3id.org/refract#IfFalseAdd
 :IfFalseAdd rdf:type owl:NamedIndividual ,
                      :AlgorithmCheckAnnotation ;
             rdfs:comment "Indicates that the transformation algorithm should add the annotation if it is not found during pre-processing, and proceed with execution."@en ;
-            rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+            rdfs:isDefinedBy <https://w3id.org/refract> ;
             rdfs:label "If false - add"@en .
 
 
-###  https://semanticweb.tools/ont/refract#IfFalseIgnore
+###  https://w3id.org/refract#IfFalseIgnore
 :IfFalseIgnore rdf:type owl:NamedIndividual ,
                         :AlgorithmCheckAnnotation ;
                rdfs:comment "Indicates that the transformation algorithm should suppress the violation and skip the change annotation action if the annotation is not found during pre-processing."@en ;
-               rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+               rdfs:isDefinedBy <https://w3id.org/refract> ;
                rdfs:label "If false - ignore"@en .
 
 
-###  https://semanticweb.tools/ont/refract#IfFalseStop
+###  https://w3id.org/refract#IfFalseStop
 :IfFalseStop rdf:type owl:NamedIndividual ,
                       :AlgorithmCheckAnnotation ;
              rdfs:comment "Indicates that the transformation algorithm should halt and report a violation if the annotation to be changed is not found during pre-processing. The algorithm will need to be restarted."@en ;
-             rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+             rdfs:isDefinedBy <https://w3id.org/refract> ;
              rdfs:label "If false - stop"@en .
 
 
-###  https://semanticweb.tools/ont/refract#IfMultipleIgnore
+###  https://w3id.org/refract#IfMultipleIgnore
 :IfMultipleIgnore rdf:type owl:NamedIndividual ,
                            :AlgorithmCheckAnnotation ;
                   rdfs:comment "Indicates that the transformation algorithm should suppress the violation and skip the change annotation action if more than one annotation is found for the same annotation property (and language tag combination) during pre-processing."@en ;
-                  rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                  rdfs:isDefinedBy <https://w3id.org/refract> ;
                   rdfs:label "If multiple - ignore"@en .
 
 
-###  https://semanticweb.tools/ont/refract#IfMultipleStop
+###  https://w3id.org/refract#IfMultipleStop
 :IfMultipleStop rdf:type owl:NamedIndividual ,
                          :AlgorithmCheckAnnotation ;
                 rdfs:comment "Indicates that the transformation algorithm should halt and report a violation if more than one annotation is found for the same annotation property (and language tag combination) during pre-processing. The algorithm will need to be restarted."@en ;
-                rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                rdfs:isDefinedBy <https://w3id.org/refract> ;
                 rdfs:label "If multiple - stop"@en .
 
 
-###  https://semanticweb.tools/ont/refract#IfTrueDelete
+###  https://w3id.org/refract#IfTrueDelete
 :IfTrueDelete rdf:type owl:NamedIndividual ,
                        :AlgorithmCheckAssertion ;
               rdfs:comment "Indicates that the transformation algorithm should delete the existing assertions if found during pre-processing, and proceed with execution."@en ;
-              rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "If true - delete"@en .
 
 
-###  https://semanticweb.tools/ont/refract#IfTrueIgnore
+###  https://w3id.org/refract#IfTrueIgnore
 :IfTrueIgnore rdf:type owl:NamedIndividual ,
                        :AlgorithmCheckAssertion ;
               rdfs:comment "Indicates that the transformation algorithm should suppress the violation and proceed with execution if existing assertions are found during pre-processing."@en ;
-              rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+              rdfs:isDefinedBy <https://w3id.org/refract> ;
               rdfs:label "If true - ignore"@en .
 
 
-###  https://semanticweb.tools/ont/refract#IfTrueStop
+###  https://w3id.org/refract#IfTrueStop
 :IfTrueStop rdf:type owl:NamedIndividual ,
                      :AlgorithmCheckAssertion ;
             rdfs:comment "Indicates that the transformation algorithm should halt and report a violation if existing assertions are found during pre-processing. The algorithm will need to be restarted."@en ;
-            rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+            rdfs:isDefinedBy <https://w3id.org/refract> ;
             rdfs:label "If true - stop"@en .
 
 
-###  https://semanticweb.tools/ont/refract#NoPreviousVersion
+###  https://w3id.org/refract#NoPreviousVersion
 :NoPreviousVersion rdf:type owl:NamedIndividual ,
-                            <https://semanticweb.tools/ont/refract/Version> ;
+                            <https://w3id.org/refract/Version> ;
                    rdfs:comment "A named individual indicating that a Transformation Manifest File has no previous version, i.e. it is the first version of the manifest."@en ;
-                   rdfs:isDefinedBy <https://semanticweb.tools/ont/refract> ;
+                   rdfs:isDefinedBy <https://w3id.org/refract> ;
                    rdfs:label "No previous version"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :NoPreviousVersion ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "A named individual indicating that a Transformation Manifest File has no previous version, i.e. it is the first version of the manifest."@en ;
-   rdfs:seeAlso <https://semanticweb.tools/ont/refract/Manifest>
+   rdfs:seeAlso <https://w3id.org/refract/Manifest>
  ] .
 
 
