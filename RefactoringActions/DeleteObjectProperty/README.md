@@ -6,7 +6,7 @@
 
 A structural action that deletes an object property from the source ontology.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeleteObjectProperty).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#DeleteObjectProperty).
 
 ## Shapes graph
 - [ShapeDeleteObjectProperty.ttl](ShapeDeleteObjectProperty.ttl) (local instance)
