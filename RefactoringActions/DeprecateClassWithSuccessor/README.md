@@ -1,5 +1,5 @@
 # Deprecate class with successor class
-**URI:** `https://semanticweb.tools/ont/refract#DeprecateClassWithSuccessor`
+**URI:** `https://w3id.org/refract#DeprecateClassWithSuccessor`
 
 **Type:** [Composite action](../../Definitions/CompositeAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
