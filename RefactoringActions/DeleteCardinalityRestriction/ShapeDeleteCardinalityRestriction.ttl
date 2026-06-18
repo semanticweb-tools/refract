@@ -1,5 +1,5 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -7,9 +7,9 @@ shape:ShapeDeleteCardinalityRestriction
     a sh:NodeShape ;
     rdfs:label "Shape Delete Cardinality Restriction" ;
     rdfs:comment "A shapes graph for validating a 'Delete cardinality restriction' refactoring action in a Transformation Manifest File." ;
-    sh:targetClass ref:DeleteCardinalityRestriction ;
+    sh:targetClass fract:DeleteCardinalityRestriction ;
     sh:property [
-        sh:path ref:sourceNode ;
+        sh:path fract:sourceNode ;
         sh:name "source node" ;
         sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ;
         sh:nodeKind sh:IRI ;
@@ -17,17 +17,17 @@ shape:ShapeDeleteCardinalityRestriction
         sh:maxCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:sourceProperty ;
+        sh:path fract:sourceProperty ;
         sh:name "source property" ;
-        sh:description "The URI of the filler class in a qualified cardinality restriction in the source ontology, used to uniquely identify the restriction when a class has multiple cardinality restrictions on the same property." ;
+        sh:description "The URI of the property that a restriction or axiom is applied to in the source ontology, used to identify the specific restriction or axiom to be deleted." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:sourceOnClass ;
+        sh:path fract:sourceOnClass ;
         sh:name "source on class" ;
-        sh:description "The URI of the property that a restriction or axiom is applied to in the source ontology, used to identify the specific restriction or axiom to be deleted." ;
+        sh:description "The URI of the filler class in a qualified cardinality restriction in the source ontology, used to uniquely identify the restriction when a class has multiple cardinality restrictions on the same property. If omitted, the restriction is assumed to be unqualified." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 0 ;
         sh:maxCount 1 ;
