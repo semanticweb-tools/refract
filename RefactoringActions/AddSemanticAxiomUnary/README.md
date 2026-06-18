@@ -6,7 +6,7 @@
 
 A catch-all semantic action that adds a unary semantic axiom to a single ontology element, such as a property characteristic. Use a dedicated action where one exists for the specific axiom type.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddSemanticAxiomUnary).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#AddSemanticAxiomUnary).
 
 ## Shapes graph
 - [ShapeAddSemanticAxiomUnary.ttl](ShapeAddSemanticAxiomUnary.ttl) (local instance)
