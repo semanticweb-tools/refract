@@ -6,7 +6,7 @@
 
 A semantic action that deletes a domain or range assertion from an object or data property in the ontology.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeletePropertyDomainRange).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#DeletePropertyDomainRange).
 
 ## Shapes graph
 - [ShapeDeletePropertyDomainRange.ttl](ShapeDeletePropertyDomainRange.ttl) (local instance)
