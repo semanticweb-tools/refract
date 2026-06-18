@@ -1,5 +1,5 @@
 # Add data property
-**URI:** `https://semanticweb.tools/ont/refract#AddDataProperty`
+**URI:** `https://w3id.org/refract#AddDataProperty`
 
 **Type:** [Structural action](../../Definitions/StructuralAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
