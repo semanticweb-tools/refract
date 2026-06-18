@@ -1,5 +1,5 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -7,9 +7,9 @@ shape:ShapeAddSuperclassAssertion
     a sh:NodeShape ;
     rdfs:label "Shape Add Superclass Assertion" ;
     rdfs:comment "A shapes graph for validating an 'Add superclass assertion' refactoring action in a Transformation Manifest File." ;
-    sh:targetClass ref:AddSuperclassAssertion ;
+    sh:targetClass fract:AddSuperclassAssertion ;
     sh:property [
-        sh:path ref:sourceNode ;
+        sh:path fract:sourceNode ;
         sh:name "source node" ;
         sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ;
         sh:nodeKind sh:IRI ;
@@ -17,7 +17,7 @@ shape:ShapeAddSuperclassAssertion
         sh:maxCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:targetParent ;
+        sh:path fract:targetParent ;
         sh:name "target parent" ;
         sh:description "The URI of the parent class or property of an ontology element that is to be created by a refactoring action." ;
         sh:nodeKind sh:IRI ;
