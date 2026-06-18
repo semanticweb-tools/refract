@@ -1,20 +1,19 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex: <http://example.org/ontology#> .
 
-ref:tmf_ChangeAnnotationValue a ref:Manifest ;
-    ref:transformationType ref:OntologyRefactoringProcess ;
-    ref:transformationSource <http://example.org/ontology> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_ChangeAnnotationValue_1 .
+fract:tmf_ChangeAnnotationValue a fract:Manifest ;
+    fract:transformationType fract:OntologyRefactoringProcess ;
+    fract:transformationSource <http://example.org/ontology> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_ChangeAnnotationValue_1 .
 
-ref:action_ChangeAnnotationValue_1 a ref:ChangeAnnotationValue ;
-    ref:sourceNode ex:River ;
-    ref:targetAnnotation rdfs:comment ;
-    ref:targetLanguageTag "en" ;
-    ref:targetAnnotationValue "A natural waterbody that flows into the sea." ;
-    ref:checkForAnnotation ref:IfFalseStop ;
-    ref:checkForAnnotation ref:IfMultipleStop ;
+fract:action_ChangeAnnotationValue_1 a fract:ChangeAnnotationValue ;
+    fract:sourceNode ex:River ;
+    fract:targetAnnotation rdfs:comment ;
+    fract:targetLanguageTag "en" ;
+    fract:targetAnnotationValue "A natural waterbody that flows into the sea." ;
+    fract:checkForAnnotation fract:IfFalseStop ;
     dash:shape shape:ShapeChangeAnnotationValue .
