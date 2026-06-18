@@ -1,5 +1,5 @@
 # Add annotation property
-**URI:** `https://semanticweb.tools/ont/refract#AddAnnotationProperty`
+**URI:** `https://w3id.org/refract#AddAnnotationProperty`
 
 **Type:** [Structural action](../../Definitions/StructuralAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
