@@ -6,7 +6,7 @@
 
 A semantic action that deletes a superclass assertion from a class in the ontology. This action does not delete the class itself; to delete a class, use [Delete class](../DeleteClass/README.md).
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeleteSuperclassAssertion).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#DeleteSuperclassAssertion).
 
 ## Shapes graph
 - [ShapeDeleteSuperclassAssertion.ttl](ShapeDeleteSuperclassAssertion.ttl) (local instance)
