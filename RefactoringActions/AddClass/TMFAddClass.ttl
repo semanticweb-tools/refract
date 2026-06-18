@@ -1,17 +1,17 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix uct: <https://example.org/uct#> .
 
-ref:tmf_AddClass a ref:Manifest ;
-    ref:transformationType ref:OntologyRefactoringProcess ;
-    ref:transformationSource <https://example.org/uct> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_AddClass_1 .
+fract:tmf_AddClass a fract:Manifest ;
+    fract:transformationType fract:OntologyRefactoringProcess ;
+    fract:transformationSource <https://example.org/uct> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_AddClass_1 .
 
-ref:action_AddClass_1 a ref:AddClass ;
-    ref:targetIdentifier uct:DepartmentOfKnowledgeAndInformationStewardship ;
-    ref:targetParent uct:HumanitiesFaculty ;
-    ref:targetLabel "Department of Knowledge and Information Stewardship" ;
-    ref:targetLanguageTag "en" ;
+fract:action_AddClass_1 a fract:AddClass ;
+    fract:targetIdentifier uct:DepartmentOfKnowledgeAndInformationStewardship ;
+    fract:targetParent uct:HumanitiesFaculty ;
+    fract:targetLabel "Department of Knowledge and Information Stewardship" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddClass .
