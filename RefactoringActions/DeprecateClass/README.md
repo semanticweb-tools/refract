@@ -6,7 +6,7 @@
 
 A structural and semantic action that deprecates a class in the source ontology.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeprecateClass).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#DeprecateClass).
 
 ## Shapes graph
 - [ShapeDeprecateClass.ttl](ShapeDeprecateClass.ttl) (local instance)
