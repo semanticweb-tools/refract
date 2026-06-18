@@ -6,7 +6,7 @@
 
 A semantic action that adds a set-based equivalent class assertion to a class in the ontology, using either an `owl:unionOf` or `owl:intersectionOf` property. For simple equivalent class assertions, use [Add semantic axiom](../AddSemanticAxiom/README.md) instead.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddEquivalentClassSet).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#AddEquivalentClassSet).
 
 ## Shapes graph
 - [ShapeAddEquivalentClassSet.ttl](ShapeAddEquivalentClassSet.ttl) (local instance)
