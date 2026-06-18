@@ -1,17 +1,17 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sweetfr: <https://example.org/sweet/fr#> .
 
-ref:tmf_AddSemanticAxiom a ref:Manifest ;
-    ref:transformationType ref:OntologyLocalisationProcess ;
-    ref:transformationSource <http://sweetontology.net/realmHydroBody> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_AddSemanticAxiom_1 .
+fract:tmf_AddSemanticAxiom a fract:Manifest ;
+    fract:transformationType fract:OntologyLocalisationProcess ;
+    fract:transformationSource <http://sweetontology.net/realmHydroBody> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_AddSemanticAxiom_1 .
 
-ref:action_AddSemanticAxiom_1 a ref:AddSemanticAxiom ;
-    ref:sourceNode sweetfr:Riviere ;
-    ref:axiomType owl:disjointWith ;
-    ref:targetNode sweetfr:Fleuve ;
+fract:action_AddSemanticAxiom_1 a fract:AddSemanticAxiom ;
+    fract:sourceNode sweetfr:Riviere ;
+    fract:axiomType owl:disjointWith ;
+    fract:targetNode sweetfr:Fleuve ;
     dash:shape shape:ShapeAddSemanticAxiom .
