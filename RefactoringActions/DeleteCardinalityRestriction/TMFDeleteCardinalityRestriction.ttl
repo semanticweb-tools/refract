@@ -6,7 +6,7 @@
 fract:tmf_DeleteCardinalityRestriction a fract:Manifest ;
     fract:transformationType fract:OntologyTransformationProcess ;
     fract:transformationSource <https://semanticweb.tools/ont/mola> ;
-    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasURIRelationshipToSource fract:SameVersionedRelationship ;
     fract:hasAction fract:action_DeleteCardinalityRestriction_1 .
 
 fract:action_DeleteCardinalityRestriction_1 a fract:DeleteCardinalityRestriction ;
