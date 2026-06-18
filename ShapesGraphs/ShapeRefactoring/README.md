@@ -2,7 +2,7 @@
 
 ## For transformation process: Ontology Refactoring
 - Definition: [Ontology Refactoring](../../Definitions/OntologyRefactoring.md)
-- URI: `https://semanticweb.tools/ont/refract#OntologyRefactoringProcess`
+- URI: `https://w3id.org/refract#OntologyRefactoringProcess`
 
 ## Shapes graph
 A macro-level shapes graph for validating the Transformation Manifest File of an ontology refactoring process.
