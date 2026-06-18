@@ -1,5 +1,5 @@
 # Delete annotation property
-**URI:** `https://semanticweb.tools/ont/refract#DeleteAnnotationProperty`
+**URI:** `https://w3id.org/refract#DeleteAnnotationProperty`
 
 **Type:** [Structural action](../../Definitions/StructuralAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
