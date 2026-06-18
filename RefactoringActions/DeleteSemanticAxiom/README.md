@@ -6,7 +6,7 @@
 
 A catch-all semantic action that deletes a binary semantic axiom between two ontology elements. Use a dedicated action where one exists for the specific axiom type.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeleteSemanticAxiom).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#DeleteSemanticAxiom).
 
 ## Shapes graph
 - [ShapeDeleteSemanticAxiom.ttl](ShapeDeleteSemanticAxiom.ttl) (local instance)
