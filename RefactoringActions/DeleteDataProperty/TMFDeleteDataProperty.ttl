@@ -1,15 +1,15 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix ex: <http://example.org/ontology#> .
 
-ref:tmf_DeleteDataProperty a ref:Manifest ;
-    ref:transformationType ref:OntologyRefactoringProcess ;
-    ref:transformationSource <http://example.org/ontology> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_DeleteDataProperty_1 .
+fract:tmf_DeleteDataProperty a fract:Manifest ;
+    fract:transformationType fract:OntologyRefactoringProcess ;
+    fract:transformationSource <http://example.org/ontology> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_DeleteDataProperty_1 .
 
-ref:action_DeleteDataProperty_1 a ref:DeleteDataProperty ;
-    ref:sourceNode ex:hasLength ;
-    ref:checkForAssertion ref:IfTrueStop ;
+fract:action_DeleteDataProperty_1 a fract:DeleteDataProperty ;
+    fract:sourceNode ex:hasLength ;
+    fract:checkForAssertion fract:IfTrueStop ;
     dash:shape shape:ShapeDeleteDataProperty .
