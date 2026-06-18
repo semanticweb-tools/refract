@@ -6,7 +6,7 @@
 
 A structural action that adds an annotation property to the ontology.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddAnnotationProperty).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#AddAnnotationProperty).
 
 ## Shapes graph
 - [ShapeAddAnnotationProperty.ttl](ShapeAddAnnotationProperty.ttl) (local instance)
