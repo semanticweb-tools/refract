@@ -6,7 +6,7 @@
 
 A semantic action that deletes a cardinality restriction from a class in the ontology.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeleteCardinalityRestriction).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#DeleteCardinalityRestriction).
 
 ## Shapes graph
 - [ShapeDeleteCardinalityRestriction.ttl](ShapeDeleteCardinalityRestriction.ttl) (local instance)
