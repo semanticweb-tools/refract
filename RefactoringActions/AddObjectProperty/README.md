@@ -1,5 +1,5 @@
 # Add object property
-**URI:** `https://semanticweb.tools/ont/refract#AddObjectProperty`
+**URI:** `https://w3id.org/refract#AddObjectProperty`
 
 **Type:** [Structural action](../../Definitions/StructuralAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
