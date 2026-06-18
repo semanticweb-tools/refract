@@ -1,5 +1,5 @@
 # Change instance assertion
-**URI:** `https://semanticweb.tools/ont/refract#ChangeInstanceAssertion`
+**URI:** `https://w3id.org/refract#ChangeInstanceAssertion`
 
 **Type:** [Semantic action](../../Definitions/SemanticAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
