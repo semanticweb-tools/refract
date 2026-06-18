@@ -6,7 +6,7 @@
 
 A structural action that adds a data property to the ontology.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddDataProperty).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#AddDataProperty).
 
 ## Shapes graph
 - [ShapeAddDataProperty.ttl](ShapeAddDataProperty.ttl) (local instance)
