@@ -1,5 +1,5 @@
 # Add instance
-**URI:** `https://semanticweb.tools/ont/refract#AddInstance`
+**URI:** `https://w3id.org/refract#AddInstance`
 
 **Type:** [Semantic action](../../Definitions/SemanticAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
