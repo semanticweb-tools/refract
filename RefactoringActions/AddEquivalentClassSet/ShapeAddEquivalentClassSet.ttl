@@ -1,5 +1,5 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,20 +8,20 @@ shape:ShapeAddEquivalentClassSet
     a sh:NodeShape ;
     rdfs:label "Shape Add Equivalent Class (Set-Based)" ;
     rdfs:comment "A shapes graph for validating an 'Add equivalent class (set-based)' refactoring action in a Transformation Manifest File." ;
-    sh:targetClass ref:AddEquivalentClassSet ;
+    sh:targetClass fract:AddEquivalentClassSet ;
     sh:xone (
-        [ sh:property [ sh:path ref:sourceNode ; sh:name "source node" ; sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
-        [ sh:property [ sh:path ref:targetNode ; sh:name "target node" ; sh:description "The URI of an ontology element that already exists in the target ontology, or has been created during the transformation process, and is then referenced by a refactoring action during the same transformation process." ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
+        [ sh:property [ sh:path fract:sourceNode ; sh:name "source node" ; sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
+        [ sh:property [ sh:path fract:targetNode ; sh:name "target node" ; sh:description "The URI of an ontology element that already exists in the target ontology, or has been created during the transformation process, and is then referenced by a refactoring action during the same transformation process." ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ; ] ]
     ) ;
     sh:property [
-        sh:path ref:targetMembers ;
+        sh:path fract:targetMembers ;
         sh:name "target members" ;
-        sh:description "A list of URIs representing the members of a set-based class expression in a refactoring action, for example the classes in a union or intersection." ;
+        sh:description "A list of URIs representing the members of an ordered or unordered group used in a refactoring action, for example the classes in a union or intersection, or the properties in a sub-property chain." ;
         sh:nodeKind sh:BlankNodeOrIRI ;
         sh:minCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:setType ;
+        sh:path fract:setType ;
         sh:name "set type" ;
         sh:description "Specifies the type of set operation used in a set-based equivalent class assertion. The value must be either owl:unionOf or owl:intersectionOf." ;
         sh:nodeKind sh:IRI ;
