@@ -6,7 +6,7 @@
 
 A composite refactoring action that deprecates a class and adds a successor class.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeprecateClassWithSuccessor).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#DeprecateClassWithSuccessor).
 
 ## Shapes graph
 - [ShapeDeprecateClassWithSuccessor.ttl](ShapeDeprecateClassWithSuccessor.ttl) (local instance)
