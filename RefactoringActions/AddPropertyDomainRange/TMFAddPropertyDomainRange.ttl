@@ -1,19 +1,19 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix mola: <https://ontology.londisizwe.org/mola#> .
+@prefix mola: <https://semanticweb.tools/ont/mola#> .
 
-ref:tmf_AddPropertyDomainRange a ref:Manifest ;
-    ref:transformationType ref:OntologyRefactoringProcess ;
-    ref:transformationSource <https://semanticweb.tools/ont/mola> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_AddPropertyDomainRange_1 .
+fract:tmf_AddPropertyDomainRange a fract:Manifest ;
+    fract:transformationType fract:OntologyRefactoringProcess ;
+    fract:transformationSource <https://semanticweb.tools/ont/mola> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_AddPropertyDomainRange_1 .
 
-ref:action_AddPropertyDomainRange_1 a ref:AddPropertyDomainRange ;
-    ref:sourceNode mola:hasMember ;
-    ref:targetNode mola:DialectCluster ;
-    ref:axiomType rdfs:domain ;
-    ref:propertyType owl:ObjectProperty ;
+fract:action_AddPropertyDomainRange_1 a fract:AddPropertyDomainRange ;
+    fract:sourceNode mola:hasMember ;
+    fract:targetNode mola:DialectCluster ;
+    fract:axiomType rdfs:domain ;
+    fract:propertyType owl:ObjectProperty ;
     dash:shape shape:ShapeAddPropertyDomainRange .
