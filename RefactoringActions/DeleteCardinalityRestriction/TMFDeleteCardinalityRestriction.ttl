@@ -1,16 +1,16 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
-@prefix mola: <https://ontology.londisizwe.org/mola#> .
+@prefix mola: <https://semanticweb.tools/ont/mola#> .
 
-ref:tmf_DeleteCardinalityRestriction a ref:Manifest ;
-    ref:transformationType ref:OntologyTransformationProcess ;
-    ref:transformationSource <https://semanticweb.tools/ont/mola> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_DeleteCardinalityRestriction_1 .
+fract:tmf_DeleteCardinalityRestriction a fract:Manifest ;
+    fract:transformationType fract:OntologyTransformationProcess ;
+    fract:transformationSource <https://semanticweb.tools/ont/mola> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_DeleteCardinalityRestriction_1 .
 
-ref:action_DeleteCardinalityRestriction_1 a ref:DeleteCardinalityRestriction ;
-    ref:sourceNode mola:Region ;
-    ref:sourceProperty mola:hasCoordinate ;
-    ref:sourceOnClass mola:GeographicCoordinate ;
+fract:action_DeleteCardinalityRestriction_1 a fract:DeleteCardinalityRestriction ;
+    fract:sourceNode mola:Region ;
+    fract:sourceProperty mola:hasCoordinate ;
+    fract:sourceOnClass mola:GeographicCoordinate ;
     dash:shape shape:ShapeDeleteCardinalityRestriction .
