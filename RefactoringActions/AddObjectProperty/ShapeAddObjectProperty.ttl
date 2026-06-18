@@ -1,5 +1,5 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,35 +8,35 @@ shape:ShapeAddObjectProperty
     a sh:NodeShape ;
     rdfs:label "Shape Add Object Property" ;
     rdfs:comment "A shapes graph for validating an 'Add object property' refactoring action in a Transformation Manifest File." ;
-    sh:targetClass ref:AddObjectProperty ;
+    sh:targetClass fract:AddObjectProperty ;
     sh:property [
-        sh:path ref:targetIdentifier ;
+        sh:path fract:targetIdentifier ;
         sh:name "target identifier" ;
-        sh:description "The URI (or fragment identifier) of an ontology element to be created by a refactoring action." ;
+        sh:description "The URI (or fragment identifier) of an ontology element. This parameter is used when the element does not yet exist in the target ontology, for example when creating a new element. It is also used to specify the new URI when renaming an existing element." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:targetParent ;
+        sh:path fract:targetParent ;
         sh:name "target parent" ;
-        sh:description "The URI of the parent class or property of an ontology element that is to be created by a refactoring action." ;
+        sh:description "The URI of the parent class or property of an ontology element that is to be created by a refactoring action. If omitted, the element will be a subclass of owl:Thing (for classes) or a sub-property of the top object, data, or annotation property (for properties)." ;
         sh:nodeKind sh:IRI ;
         sh:minCount 0 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:targetLabel ;
+        sh:path fract:targetLabel ;
         sh:name "target label" ;
-        sh:description "A plain string label for an ontology element that is to be created by a refactoring action." ;
+        sh:description "A plain string label for an ontology element that is to be created by a refactoring action. The language of the label is specified by 'target language tag'. To add additional language-tagged strings, use the annotation action 'Add annotation - lang string'." ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:targetLanguageTag ;
+        sh:path fract:targetLanguageTag ;
         sh:name "target language tag" ;
-        sh:description "A language tag expressed as a plain string, conforming to ISO 639 or BCP 47 (e.g. \"en-za\", \"fr\")." ;
+        sh:description "A language tag expressed as a plain string, conforming to ISO 639 or BCP 47 (e.g. \"en-za\", \"fr\"). For add actions, this specifies the language tag of the new annotation value or label. For change annotation actions, this is used to identify the specific annotation to be changed where more than one annotation exists for the same annotation property; it is not used to change the language tag itself. To change a language tag, use 'target language tag new'." ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
