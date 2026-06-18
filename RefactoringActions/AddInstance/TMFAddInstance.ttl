@@ -1,17 +1,17 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix ex: <https://example.org/vo/> .
 
-ref:tmf_AddInstance a ref:Manifest ;
-    ref:transformationType ref:OntologyEvolutionProcess ;
-    ref:transformationSource <http://purl.obolibrary.org/obo/vo.owl> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_AddInstance_1 .
+fract:tmf_AddInstance a fract:Manifest ;
+    fract:transformationType fract:OntologyEvolutionProcess ;
+    fract:transformationSource <http://purl.obolibrary.org/obo/vo.owl> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_AddInstance_1 .
 
-ref:action_AddInstance_1 a ref:AddInstance ;
-    ref:targetIdentifier ex:PfizerBioNTech ;
-    ref:targetInstanceOf ex:mRNAVaccine ;
-    ref:targetLabel "Pfizer-BioNTech COVID-19 vaccine" ;
-    ref:targetLanguageTag "en" ;
+fract:action_AddInstance_1 a fract:AddInstance ;
+    fract:targetIdentifier ex:PfizerBioNTech ;
+    fract:targetInstanceOf ex:mRNAVaccine ;
+    fract:targetLabel "Pfizer-BioNTech COVID-19 vaccine" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddInstance .
