@@ -6,7 +6,7 @@
 
 A semantic action that adds an existential or universal property restriction to a class in the ontology, using either an object or data property.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#AddPropertyRestriction).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#AddPropertyRestriction).
 
 ## Shapes graph
 - [ShapeAddPropertyRestriction.ttl](ShapeAddPropertyRestriction.ttl) (local instance)
