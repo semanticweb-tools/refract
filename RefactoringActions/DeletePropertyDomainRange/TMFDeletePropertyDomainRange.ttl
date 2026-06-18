@@ -1,16 +1,16 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix mola: <https://ontology.londisizwe.org/mola#> .
+@prefix mola: <https://semanticweb.tools/ont/mola#> .
 
-ref:tmf_DeletePropertyDomainRange a ref:Manifest ;
-    ref:transformationType ref:OntologyRefactoringProcess ;
-    ref:transformationSource <https://semanticweb.tools/ont/mola> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_DeletePropertyDomainRange_1 .
+fract:tmf_DeletePropertyDomainRange a fract:Manifest ;
+    fract:transformationType fract:OntologyRefactoringProcess ;
+    fract:transformationSource <https://semanticweb.tools/ont/mola> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_DeletePropertyDomainRange_1 .
 
-ref:action_DeletePropertyDomainRange_1 a ref:DeletePropertyDomainRange ;
-    ref:sourceNode mola:hasMember ;
-    ref:axiomType rdfs:domain ;
+fract:action_DeletePropertyDomainRange_1 a fract:DeletePropertyDomainRange ;
+    fract:sourceNode mola:hasMember ;
+    fract:axiomType rdfs:domain ;
     dash:shape shape:ShapeDeletePropertyDomainRange .
