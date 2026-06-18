@@ -1,5 +1,5 @@
 # Add superclass assertion
-**URI:** `https://semanticweb.tools/ont/refract#AddSuperclassAssertion`
+**URI:** `https://w3id.org/refract#AddSuperclassAssertion`
 
 **Type:** [Semantic action](../../Definitions/SemanticAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
