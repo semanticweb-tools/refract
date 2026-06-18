@@ -1,21 +1,20 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/ontology#> .
 
-ref:tmf_ChangeAnnotation a ref:Manifest ;
-    ref:transformationType ref:OntologyRefactoringProcess ;
-    ref:transformationSource <http://example.org/ontology> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_ChangeAnnotation_1 .
+fract:tmf_ChangeAnnotation a fract:Manifest ;
+    fract:transformationType fract:OntologyRefactoringProcess ;
+    fract:transformationSource <http://example.org/ontology> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_ChangeAnnotation_1 .
 
-ref:action_ChangeAnnotation_1 a ref:ChangeAnnotation ;
-    ref:sourceNode ex:River ;
-    ref:targetAnnotation dct:issued ;
-    ref:targetAnnotationValue "2016-01-01" ;
-    ref:targetDataType xsd:date ;
-    ref:checkForAnnotation ref:IfFalseStop ;
-    ref:checkForAnnotation ref:IfMultipleStop ;
+fract:action_ChangeAnnotation_1 a fract:ChangeAnnotation ;
+    fract:sourceNode ex:River ;
+    fract:targetAnnotation dct:issued ;
+    fract:targetAnnotationValue "2016-01-01" ;
+    fract:targetDataType xsd:date ;
+    fract:checkForAnnotation fract:IfFalseStop ;
     dash:shape shape:ShapeChangeAnnotation .
