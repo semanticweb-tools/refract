@@ -1,5 +1,5 @@
 # Change annotation
-**URI:** `https://semanticweb.tools/ont/refract#ChangeAnnotation`
+**URI:** `https://w3id.org/refract#ChangeAnnotation`
 
 **Type:** [Annotation action](../../Definitions/AnnotationAction.md) · [Atomic action](../../Definitions/AtomicAction.md) \
 **Scope:** [Local action](../../Definitions/LocalAction.md)
