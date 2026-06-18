@@ -6,7 +6,7 @@
 fract:tmf_DeleteInstancePropertyAssertion a fract:Manifest ;
     fract:transformationType fract:OntologyEvolutionProcess ;
     fract:transformationSource <http://example.org/ontology> ;
-    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasURIRelationshipToSource fract:SameVersionedRelationship ;
     fract:hasAction fract:action_DeleteInstancePropertyAssertion_1 .
 
 fract:action_DeleteInstancePropertyAssertion_1 a fract:DeleteInstancePropertyAssertion ;
