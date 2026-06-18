@@ -1,16 +1,16 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix ex: <http://example.org/ontology#> .
 
-ref:tmf_ChangeSuperclassAssertion a ref:Manifest ;
-    ref:transformationType ref:OntologyRefactoringProcess ;
-    ref:transformationSource <http://example.org/ontology> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:hasAction ref:action_ChangeSuperclassAssertion_1 .
+fract:tmf_ChangeSuperclassAssertion a fract:Manifest ;
+    fract:transformationType fract:OntologyRefactoringProcess ;
+    fract:transformationSource <http://example.org/ontology> ;
+    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasAction fract:action_ChangeSuperclassAssertion_1 .
 
-ref:action_ChangeSuperclassAssertion_1 a ref:ChangeSuperclassAssertion ;
-    ref:sourceNode ex:Fleuve ;
-    ref:sourceParent ex:River ;
-    ref:targetParent ex:NaturalWaterBody ;
+fract:action_ChangeSuperclassAssertion_1 a fract:ChangeSuperclassAssertion ;
+    fract:sourceNode ex:Fleuve ;
+    fract:sourceParent ex:River ;
+    fract:targetParent ex:NaturalWaterBody ;
     dash:shape shape:ShapeChangeSuperclassAssertion .
