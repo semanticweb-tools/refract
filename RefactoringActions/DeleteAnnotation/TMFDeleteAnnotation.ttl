@@ -7,7 +7,7 @@
 fract:tmf_DeleteAnnotation a fract:Manifest ;
     fract:transformationType fract:OntologyRefactoringProcess ;
     fract:transformationSource <http://example.org/ontology> ;
-    fract:hasURIRelationshipToSource fract:SameVersioned ;
+    fract:hasURIRelationshipToSource fract:SameVersionedRelationship ;
     fract:hasAction fract:action_DeleteAnnotation_1 .
 
 fract:action_DeleteAnnotation_1 a fract:DeleteAnnotation ;
