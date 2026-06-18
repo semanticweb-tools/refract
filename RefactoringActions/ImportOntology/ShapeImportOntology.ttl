@@ -1,5 +1,5 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix shape: <https://semanticweb.tools/rdf/shapes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,9 +8,9 @@ shape:ShapeImportOntology
     a sh:NodeShape ;
     rdfs:label "Shape Import Ontology" ;
     rdfs:comment "A shapes graph for validating an 'Import ontology' refactoring action in a Transformation Manifest File." ;
-    sh:targetClass ref:ImportOntology ;
+    sh:targetClass fract:ImportOntology ;
     sh:property [
-        sh:path ref:sourceNode ;
+        sh:path fract:sourceNode ;
         sh:name "source node" ;
         sh:description "The URI of an ontology element that already exists in the source ontology and is referenced by a refactoring action." ;
         sh:nodeKind sh:IRI ;
@@ -18,7 +18,7 @@ shape:ShapeImportOntology
         sh:maxCount 1 ;
     ] ;
     sh:property [
-        sh:path ref:URI ;
+        sh:path fract:URI ;
         sh:name "URI" ;
         sh:description "A URI value associated with a refactoring action, expressed as an xsd:anyURI literal." ;
         sh:datatype xsd:anyURI ;
