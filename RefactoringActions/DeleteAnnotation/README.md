@@ -6,7 +6,7 @@
 
 An annotation action that deletes an existing annotation from an ontology element. If a language tag is specified, only the annotation with the matching language tag is deleted.
 
-For full documentation including parameters, see the [REFrACT vocabulary](https://semanticweb.tools/ont/refract#DeleteAnnotation).
+For full documentation including parameters, see the [REFrACT vocabulary](https://w3id.org/refract#DeleteAnnotation).
 
 ## Shapes graph
 - [ShapeDeleteAnnotation.ttl](ShapeDeleteAnnotation.ttl) (local instance)
