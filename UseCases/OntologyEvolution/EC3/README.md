@@ -30,7 +30,6 @@ The emergence of mRNA vaccine technology as a recognised and distinct vaccine pl
 - Target: Yes
 
 ## Evaluation
-- Shapes graph validation: [Using SHACL meta-validation](Evaluation/ShapesGraphValidation.md)
 - TMF validation: [Using SHACL](Evaluation/TMFValidation.md)
 
 ---
