@@ -1,4 +1,4 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,85 +10,85 @@
 @prefix meshza: <https://example.org/mesh/za#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-ref:tmf_lc2 a ref:Manifest ;
+fract:tmf_lc2 a fract:Manifest ;
     rdfs:label "Manifest 1.0.0 for localisation of MeSH to South African Viewpoint"@en ;
-    ref:transformationType ref:OntologyLocalisationProcess ;
-    ref:transformationSource <http://purl.bioontology.org/ontology/MESH/> ;
-    ref:hasURIRelationshipToSource ref:Different ;
-    ref:targetOntologyURI <https://example.org/mesh/za> ;
-    ref:targetViewpoint <https://semanticweb.tools/rdf/multi/southafrica> ;
-    ref:versionManifest ref:tmf_lc2_v1 ;
+    fract:transformationType fract:OntologyLocalisationProcess ;
+    fract:transformationSource <http://purl.bioontology.org/ontology/MESH/> ;
+    fract:hasURIRelationshipToSource fract:DifferentRelationship ;
+    fract:targetOntologyURI <https://example.org/mesh/za> ;
+    fract:targetViewpoint <https://semanticweb.tools/rdf/multi/southafrica> ;
+    fract:versionManifest fract:tmf_lc2_v1 ;
     dash:shape shape:ShapeLocalisation ;
-    ref:hasAction ref:action_lc2_1, ref:action_lc2_2, ref:action_lc2_3,
-                  ref:action_lc2_4, ref:action_lc2_5, ref:action_lc2_6,
-                  ref:action_lc2_7, ref:action_lc2_8 ;
-    ref:actionOrder (
-        ref:action_lc2_1
-        ref:action_lc2_2
-        ref:action_lc2_3
-        ref:action_lc2_4
-        ref:action_lc2_5
-        ref:action_lc2_6
-        ref:action_lc2_7
-        ref:action_lc2_8
+    fract:hasAction fract:action_lc2_1, fract:action_lc2_2, fract:action_lc2_3,
+                  fract:action_lc2_4, fract:action_lc2_5, fract:action_lc2_6,
+                  fract:action_lc2_7, fract:action_lc2_8 ;
+    fract:actionOrder (
+        fract:action_lc2_1
+        fract:action_lc2_2
+        fract:action_lc2_3
+        fract:action_lc2_4
+        fract:action_lc2_5
+        fract:action_lc2_6
+        fract:action_lc2_7
+        fract:action_lc2_8
     ) .
 
-ref:tmf_lc2_v1 a ref:Version ;
-    ref:versionNumber "1.0.0" ;
+fract:tmf_lc2_v1 a fract:Version ;
+    fract:versionNumber "1.0.0" ;
     dct:date "2025-05-01" ;
-    ref:versionPrevious ref:NoPreviousVersion ;
+    fract:versionPrevious fract:NoPreviousVersion ;
     dct:contributor "Frances Gillis-Webber" .
 
-ref:action_lc2_1 a ref:ChangeAnnotationValue ;
-    ref:sourceNode mesh:D000095083 ;
-    ref:targetAnnotation skos:prefLabel ;
-    ref:targetAnnotationValue "Traditional Healer" ;
-    ref:targetLanguageTag "en" ;
+fract:action_lc2_1 a fract:ChangeAnnotationValue ;
+    fract:sourceNode mesh:D000095083 ;
+    fract:targetAnnotation skos:prefLabel ;
+    fract:targetAnnotationValue "Traditional Healer" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeChangeAnnotationValue .
 
-ref:action_lc2_2 a ref:AddClass ;
-    ref:targetIdentifier meshza:Sangoma ;
-    ref:targetParent mesh:D000095083 ;
-    ref:targetLabel "Sangoma" ;
-    ref:targetLanguageTag "en" ;
+fract:action_lc2_2 a fract:AddClass ;
+    fract:targetIdentifier meshza:Sangoma ;
+    fract:targetParent mesh:D000095083 ;
+    fract:targetLabel "Sangoma" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddClass .
 
-ref:action_lc2_3 a ref:AddClass ;
-    ref:targetIdentifier meshza:Herbalist ;
-    ref:targetParent mesh:D000095083 ;
-    ref:targetLabel "Herbalist" ;
-    ref:targetLanguageTag "en" ;
+fract:action_lc2_3 a fract:AddClass ;
+    fract:targetIdentifier meshza:Herbalist ;
+    fract:targetParent mesh:D000095083 ;
+    fract:targetLabel "Herbalist" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddClass .
 
-ref:action_lc2_4 a ref:AddClass ;
-    ref:targetIdentifier meshza:TraditionalBirthAttendant ;
-    ref:targetParent mesh:D000095083 ;
-    ref:targetLabel "Traditional Birth Attendant" ;
-    ref:targetLanguageTag "en" ;
+fract:action_lc2_4 a fract:AddClass ;
+    fract:targetIdentifier meshza:TraditionalBirthAttendant ;
+    fract:targetParent mesh:D000095083 ;
+    fract:targetLabel "Traditional Birth Attendant" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddClass .
 
-ref:action_lc2_5 a ref:AddClass ;
-    ref:targetIdentifier meshza:TraditionalSurgeon ;
-    ref:targetParent mesh:D000095083 ;
-    ref:targetLabel "Traditional Surgeon" ;
-    ref:targetLanguageTag "en" ;
+fract:action_lc2_5 a fract:AddClass ;
+    fract:targetIdentifier meshza:TraditionalSurgeon ;
+    fract:targetParent mesh:D000095083 ;
+    fract:targetLabel "Traditional Surgeon" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddClass .
 
-ref:action_lc2_6 a ref:AddClass ;
-    ref:targetIdentifier meshza:MedicineSouthAfricanTraditional ;
-    ref:targetParent mesh:D016488 ;
-    ref:targetLabel "Medicine, South African Traditional" ;
-    ref:targetLanguageTag "en" ;
+fract:action_lc2_6 a fract:AddClass ;
+    fract:targetIdentifier meshza:MedicineSouthAfricanTraditional ;
+    fract:targetParent mesh:D016488 ;
+    fract:targetLabel "Medicine, South African Traditional" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddClass .
 
-ref:action_lc2_7 a ref:AddSuperclassAssertion ;
-    ref:sourceNode meshza:MedicineSouthAfricanTraditional ;
-    ref:targetParent mesh:D013812 ;
+fract:action_lc2_7 a fract:AddSuperclassAssertion ;
+    fract:sourceNode meshza:MedicineSouthAfricanTraditional ;
+    fract:targetParent mesh:D013812 ;
     dash:shape shape:ShapeAddSuperclassAssertion .
 
-ref:action_lc2_8 a ref:AddAnnotationLangString ;
-    ref:sourceNode mesh:D000095083 ;
-    ref:targetAnnotation skos:altLabel ;
-    ref:targetAnnotationValue "Traditional Medicine Practitioners" ;
-    ref:targetLanguageTag "en" ;
+fract:action_lc2_8 a fract:AddAnnotationLangString ;
+    fract:sourceNode mesh:D000095083 ;
+    fract:targetAnnotation skos:altLabel ;
+    fract:targetAnnotationValue "Traditional Medicine Practitioners" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddAnnotationLangString .
