@@ -1,4 +1,4 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,50 +9,50 @@
 @prefix uct: <https://example.org/uct#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-ref:tmf_rc4 a ref:Manifest ;
+fract:tmf_rc4 a fract:Manifest ;
     rdfs:label "Manifest 1.0.0 for refactoring of UCT Organisational Structure ontology"@en ;
-    ref:transformationType ref:OntologyRefactoringProcess ;
-    ref:transformationSource <https://example.org/uct> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:versionManifest ref:tmf_rc4_v1 ;
+    fract:transformationType fract:OntologyRefactoringProcess ;
+    fract:transformationSource <https://example.org/uct> ;
+    fract:hasURIRelationshipToSource fract:SameVersionedRelationship ;
+    fract:versionManifest fract:tmf_rc4_v1 ;
     dash:shape shape:ShapeRefactoring ;
-    ref:hasAction ref:action_rc4_1 .
+    fract:hasAction fract:action_rc4_1 .
 
-ref:tmf_rc4_v1 a ref:Version ;
-    ref:versionNumber "1.0.0" ;
+fract:tmf_rc4_v1 a fract:Version ;
+    fract:versionNumber "1.0.0" ;
     dct:date "2025-05-01" ;
-    ref:versionPrevious ref:NoPreviousVersion ;
+    fract:versionPrevious fract:NoPreviousVersion ;
     dct:contributor "Frances Gillis-Webber" .
 
-ref:action_rc4_1 a ref:DeprecateClassWithSuccessor ;
-    ref:hasAction ref:action_rc4_1a ;
-    ref:hasAction ref:action_rc4_1b ;
-    ref:hasAction ref:action_rc4_1c ;
-    ref:hasAction ref:action_rc4_1d ;
+fract:action_rc4_1 a fract:DeprecateClassWithSuccessor ;
+    fract:hasAction fract:action_rc4_1a ;
+    fract:hasAction fract:action_rc4_1b ;
+    fract:hasAction fract:action_rc4_1c ;
+    fract:hasAction fract:action_rc4_1d ;
     dash:shape shape:ShapeDeprecateClassWithSuccessor .
 
-ref:action_rc4_1a a ref:DeprecateClass ;
-    ref:sourceNode uct:SchoolOfLibraryStudies ;
-    ref:actionSequence 1 ;
+fract:action_rc4_1a a fract:DeprecateClass ;
+    fract:sourceNode uct:SchoolOfLibraryStudies ;
+    fract:actionSequence 1 ;
     dash:shape shape:ShapeDeprecateClass .
 
-ref:action_rc4_1b a ref:AddClass ;
-    ref:targetIdentifier uct:DepartmentOfKnowledgeAndInformationStewardship ;
-    ref:targetParent uct:HumanitiesFaculty ;
-    ref:targetLabel "Department of Knowledge and Information Stewardship" ;
-    ref:targetLanguageTag "en" ;
-    ref:actionSequence 2 ;
+fract:action_rc4_1b a fract:AddClass ;
+    fract:targetIdentifier uct:DepartmentOfKnowledgeAndInformationStewardship ;
+    fract:targetParent uct:HumanitiesFaculty ;
+    fract:targetLabel "Department of Knowledge and Information Stewardship" ;
+    fract:targetLanguageTag "en" ;
+    fract:actionSequence 2 ;
     dash:shape shape:ShapeAddClass .
 
-ref:action_rc4_1c a ref:AddCommentForDeprecation ;
-    ref:sourceNode uct:SchoolOfLibraryStudies ;
-    ref:actionSequence 3 ;
+fract:action_rc4_1c a fract:AddCommentForDeprecation ;
+    fract:sourceNode uct:SchoolOfLibraryStudies ;
+    fract:actionSequence 3 ;
     dash:shape shape:ShapeAddCommentForDeprecation .
 
-ref:action_rc4_1d a ref:AddAnnotation ;
-    ref:sourceNode uct:SchoolOfLibraryStudies ;
-    ref:targetAnnotation prov:atTime ;
-    ref:targetAnnotationValue "2016-01-01+02:00" ;
-    ref:targetDataType xsd:date ;
-    ref:actionSequence 4 ;
+fract:action_rc4_1d a fract:AddAnnotation ;
+    fract:sourceNode uct:SchoolOfLibraryStudies ;
+    fract:targetAnnotation prov:atTime ;
+    fract:targetAnnotationValue "2016-01-01+02:00" ;
+    fract:targetDataType xsd:date ;
+    fract:actionSequence 4 ;
     dash:shape shape:ShapeAddAnnotation .
