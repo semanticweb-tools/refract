@@ -8,10 +8,10 @@ The transformation of a source ontology O_S with viewpoint V_S, where changes ar
 
 ## Use cases
 
-* [**RC1**](UseCases/OntologyRefactoring/RC1) - Normalisation of naming conventions – renaming of class name(s)
-* [**RC2**](UseCases/OntologyRefactoring/RC2) - Decidability repair – change of OWL profile from OWL Full to OWL DL
-* [**RC3**](UseCases/OntologyRefactoring/RC3) - Lexical enrichment – making an ontology multilingual
-* [**RC4**](UseCases/OntologyRefactoring/RC4) - Hierarchical restructuring – regrouping of university Course classes into a different hierarchy
+* [**RC1**](/UseCases/OntologyRefactoring/RC1) - Normalisation of naming conventions – renaming of class name(s)
+* [**RC2**](/UseCases/OntologyRefactoring/RC2) - Decidability repair – change of OWL profile from OWL Full to OWL DL
+* [**RC3**](/UseCases/OntologyRefactoring/RC3) - Lexical enrichment – making an ontology multilingual
+* [**RC4**](/UseCases/OntologyRefactoring/RC4) - Hierarchical restructuring – regrouping of university Course classes into a different hierarchy
 
 ## Position in hierarchy
 
