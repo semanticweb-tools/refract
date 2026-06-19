@@ -5,8 +5,8 @@
 - SPARQL for CQs: [CQ1](Files/CQ1.rq) | [CQ2](Files/CQ2.rq) | [CQ3](Files/CQ3.rq) | [CQ4](Files/CQ4.rq) | [CQ5](Files/CQ5.rq)
 - TMF for target viewpoint: [JSON-LD](Files/TMF.json) | [Turtle](Files/TMF.ttl)
 - Shapes graphs:
-  - Macro: [ShapeLocalisation](../../ShapesGraphs/ShapeLocalisation/README.md)
-  - Micro: [ShapeDeleteClass](../../RefactoringActions/DeleteClass/ShapeDeleteClass.ttl) | [ShapeAddClass](../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddSemanticAxiom](../../RefactoringActions/AddSemanticAxiom/ShapeAddSemanticAxiom.ttl) | [ShapeAddAnnotationLangString](../../RefactoringActions/AddAnnotationLangString/ShapeAddAnnotationLangString.ttl)
+  - Macro: [ShapeLocalisation](../../../ShapesGraphs/ShapeLocalisation/README.md)
+  - Micro: [ShapeDeleteClass](../../../RefactoringActions/DeleteClass/ShapeDeleteClass.ttl) | [ShapeAddClass](../../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddSemanticAxiom](../../../RefactoringActions/AddSemanticAxiom/ShapeAddSemanticAxiom.ttl) | [ShapeAddAnnotationLangString](../../../RefactoringActions/AddAnnotationLangString/ShapeAddAnnotationLangString.ttl)
 
 ## Description
 The English concept of 'river' maps to two distinct concepts in French: `sweetfr:Riviere` (a river that flows into another river) and `sweetfr:Fleuve` (a river that flows into the sea). The transformation replaces the single English class `sweet:River` with two sibling French classes, capturing the conceptual distinction inherent to the French language viewpoint.
