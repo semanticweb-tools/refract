@@ -10,7 +10,7 @@ There are three types of atomic actions: [structural actions](StructuralAction.m
 
 For the list of atomic actions, see [Local Action](LocalAction.md).
 
-## Position in hierarchy
+## Position in class hierarchy
 
 `owl:Thing` → `rdfs:Class` → `prov:Activity` → `fract:RefactoringAction` → `fract:LocalAction` → `fract:AtomicAction`
 
