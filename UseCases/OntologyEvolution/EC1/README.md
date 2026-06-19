@@ -32,7 +32,6 @@ The goal is to update EFO with a new class `efo:DistributedIntelligence` as a si
 
 ## Evaluation
 
-- Shapes graph validation: [Using SHACL meta-validation](Evaluation/ShapesGraphValidation.md)
 - TMF validation: [Using SHACL](Evaluation/TMFValidation.md)
 
 ---
