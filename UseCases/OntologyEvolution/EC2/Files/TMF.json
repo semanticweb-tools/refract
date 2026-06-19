@@ -1,11 +1,11 @@
 {
   "@context": {
-    "ref": "https://semanticweb.tools/ont/refract#",
+    "fract": "https://w3id.org/refract#",
+    "dash": "http://datashapes.org/dash#",
     "dct": "http://purl.org/dc/terms/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "shape": "https://semanticweb.tools/rdf/shapes/",
-    "dash": "http://datashapes.org/dash#",
     "mesh": "http://purl.bioontology.org/ontology/MESH/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "owl": "http://www.w3.org/2002/07/owl#",
@@ -13,60 +13,60 @@
   },
   "@graph": [
     {
-      "@id": "ref:tmf_ec2",
-      "@type": "ref:Manifest",
+      "@id": "fract:tmf_ec2",
+      "@type": "fract:Manifest",
       "rdfs:label": {"@value": "Manifest 1.0.0 for evolution of MeSH ontology", "@language": "en"},
-      "ref:transformationType": {"@id": "ref:OntologyEvolutionProcess"},
-      "ref:transformationSource": {"@id": "http://purl.bioontology.org/ontology/MESH/"},
-      "ref:hasURIRelationshipToSource": {"@id": "ref:SameVersioned"},
-      "ref:versionManifest": {"@id": "ref:tmf_ec2_v1"},
+      "fract:transformationType": {"@id": "fract:OntologyEvolutionProcess"},
+      "fract:transformationSource": {"@id": "http://purl.bioontology.org/ontology/MESH/"},
+      "fract:hasURIRelationshipToSource": {"@id": "fract:SameVersionedRelationship"},
+      "fract:versionManifest": {"@id": "fract:tmf_ec2_v1"},
       "dash:shape": {"@id": "shape:ShapeEvolution"},
-      "ref:hasAction": [
-        {"@id": "ref:action_ec2_1"},
-        {"@id": "ref:action_ec2_2"},
-        {"@id": "ref:action_ec2_3"}
+      "fract:hasAction": [
+        {"@id": "fract:action_ec2_1"},
+        {"@id": "fract:action_ec2_2"},
+        {"@id": "fract:action_ec2_3"}
       ],
-      "ref:actionOrder": {
+      "fract:actionOrder": {
         "@list": [
-          {"@id": "ref:action_ec2_1"},
-          {"@id": "ref:action_ec2_2"},
-          {"@id": "ref:action_ec2_3"}
+          {"@id": "fract:action_ec2_1"},
+          {"@id": "fract:action_ec2_2"},
+          {"@id": "fract:action_ec2_3"}
         ]
       }
     },
     {
-      "@id": "ref:tmf_ec2_v1",
-      "@type": "ref:Version",
-      "ref:versionNumber": "1.0.0",
+      "@id": "fract:tmf_ec2_v1",
+      "@type": "fract:Version",
+      "fract:versionNumber": "1.0.0",
       "dct:date": "2025-05-01",
-      "ref:versionPrevious": {"@id": "ref:NoPreviousVersion"},
+      "fract:versionPrevious": {"@id": "fract:NoPreviousVersion"},
       "dct:contributor": "Frances Gillis-Webber"
     },
     {
-      "@id": "ref:action_ec2_1",
-      "@type": "ref:ChangeAnnotationValue",
-      "ref:sourceNode": {"@id": "mesh:D005062"},
-      "ref:targetAnnotation": {"@id": "skos:definition"},
-      "ref:targetAnnotationValue": "An economic union with the principal objectives of free movement of goods, capital, and labor. The constituent countries are Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, and Sweden. (https://europa.eu/european-union/about-eu/countries accessed 31/01/2020)",
-      "ref:targetLanguageTag": "en",
+      "@id": "fract:action_ec2_1",
+      "@type": "fract:ChangeAnnotationValue",
+      "fract:sourceNode": {"@id": "mesh:D005062"},
+      "fract:targetAnnotation": {"@id": "skos:definition"},
+      "fract:targetAnnotationValue": "An economic union with the principal objectives of free movement of goods, capital, and labor. The constituent countries are Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, and Sweden. (https://europa.eu/european-union/about-eu/countries accessed 31/01/2020)",
+      "fract:targetLanguageTag": "en",
       "dash:shape": {"@id": "shape:ShapeChangeAnnotationValue"}
     },
     {
-      "@id": "ref:action_ec2_2",
-      "@type": "ref:AddAnnotationLangString",
-      "ref:sourceNode": {"@id": "mesh:D005062"},
-      "ref:targetAnnotation": {"@id": "skos:historyNote"},
-      "ref:targetAnnotationValue": "The United Kingdom was a member of the European Union until 31 January 2020, when it formally withdrew following the Brexit referendum of 23 June 2016.",
-      "ref:targetLanguageTag": "en",
+      "@id": "fract:action_ec2_2",
+      "@type": "fract:AddAnnotationLangString",
+      "fract:sourceNode": {"@id": "mesh:D005062"},
+      "fract:targetAnnotation": {"@id": "skos:historyNote"},
+      "fract:targetAnnotationValue": "The United Kingdom was a member of the European Union until 31 January 2020, when it formally withdrew following the Brexit referendum of 23 June 2016.",
+      "fract:targetLanguageTag": "en",
       "dash:shape": {"@id": "shape:ShapeAddAnnotationLangString"}
     },
     {
-      "@id": "ref:action_ec2_3",
-      "@type": "ref:AddAnnotation",
-      "ref:sourceNode": {"@id": "mesh:D005062"},
-      "ref:targetAnnotation": {"@id": "dct:modified"},
-      "ref:targetAnnotationValue": "2020-01-31",
-      "ref:targetDataType": {"@id": "xsd:date"},
+      "@id": "fract:action_ec2_3",
+      "@type": "fract:AddAnnotation",
+      "fract:sourceNode": {"@id": "mesh:D005062"},
+      "fract:targetAnnotation": {"@id": "dct:modified"},
+      "fract:targetAnnotationValue": "2020-01-31",
+      "fract:targetDataType": {"@id": "xsd:date"},
       "dash:shape": {"@id": "shape:ShapeAddAnnotation"}
     }
   ]
