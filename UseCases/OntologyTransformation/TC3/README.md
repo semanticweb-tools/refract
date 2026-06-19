@@ -25,7 +25,6 @@ The goal is to transform a fragment of MoLA from OWL2 DL to OWL2 RL by removing 
 - Target: False
 
 ## Evaluation
-- Shapes graph validation: [Using SHACL meta-validation](Evaluation/ShapesGraphValidation.md)
 - TMF validation: [Using SHACL](Evaluation/TMFValidation.md)
 
 ---
