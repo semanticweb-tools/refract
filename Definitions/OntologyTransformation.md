@@ -4,7 +4,7 @@
 **Fragment identifier:** `fract:OntologyTransformationProcess` \
 **URI:** `https://w3id.org/refract#OntologyTransformationProcess`
 
-The adaptation of a source ontology O_S with a source viewpoint V_S to a target viewpoint V_T, where V_T differs from V_S. Changes are made in the semantic layer of the ontology, with possible changes in the structural layer as well. The output O_T is published to a different URI to that of the source.
+The adaptation of a source ontology O_S with viewpoint V_S to a target viewpoint V_T, where V_T differs from V_S. Changes are made in the semantic layer of the ontology, with possible changes in the structural layer as well. The output O_T is published to a different URI to that of the source.
 
 ## Use cases
 
