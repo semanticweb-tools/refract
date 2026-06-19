@@ -20,7 +20,6 @@ The goal is to remove the United Kingdom from the list of countries given in `sk
 - Target: Yes
 
 ## Evaluation
-- Shapes graph validation: [Using SHACL meta-validation](Evaluation/ShapesGraphValidation.md)
 - TMF validation: [Using SHACL](Evaluation/TMFValidation.md)
 
 ---
