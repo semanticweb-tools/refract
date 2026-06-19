@@ -1,4 +1,4 @@
-PREFIX mola: <https://ontology.londisizwe.org/mola#>
+PREFIX mola: <https://semanticweb.tools/ont/mola#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 ASK {
