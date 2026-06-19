@@ -28,7 +28,6 @@ The goal is to transform the MeSH representation of traditional medicine practit
 - Target: `mesh:D016488` and `mesh:D013812`
 
 ## Evaluation
-- Shapes graph validation: [Using SHACL meta-validation](Evaluation/ShapesGraphValidation.md)
 - TMF validation: [Using SHACL](Evaluation/TMFValidation.md)
 
 ---
