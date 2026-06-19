@@ -1,4 +1,4 @@
-PREFIX mola: <https://ontology.londisizwe.org/mola#>
+PREFIX mola: <https://semanticweb.tools/ont/mola#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?domain
