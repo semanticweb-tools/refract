@@ -1,4 +1,4 @@
-@prefix ref: <https://semanticweb.tools/ont/refract#> .
+@prefix fract: <https://w3id.org/refract#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,58 +10,58 @@
 @prefix ex: <https://example.org/efo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-ref:tmf_ec1 a ref:Manifest ;
+fract:tmf_ec1 a fract:Manifest ;
     rdfs:label "Manifest 1.0.0 for evolution of EFO ontology"@en ;
-    ref:transformationType ref:OntologyEvolutionProcess ;
-    ref:transformationSource <http://www.ebi.ac.uk/efo/> ;
-    ref:hasURIRelationshipToSource ref:SameVersioned ;
-    ref:versionManifest ref:tmf_ec1_v1 ;
+    fract:transformationType fract:OntologyEvolutionProcess ;
+    fract:transformationSource <http://www.ebi.ac.uk/efo/> ;
+    fract:hasURIRelationshipToSource fract:SameVersionedRelationship ;
+    fract:versionManifest fract:tmf_ec1_v1 ;
     dash:shape shape:ShapeEvolution ;
-    ref:hasAction ref:action_ec1_1, ref:action_ec1_2, ref:action_ec1_3, ref:action_ec1_4, ref:action_ec1_5 ;
-    ref:actionOrder (
-        ref:action_ec1_1
-        ref:action_ec1_2
-        ref:action_ec1_3
-        ref:action_ec1_4
-        ref:action_ec1_5
+    fract:hasAction fract:action_ec1_1, fract:action_ec1_2, fract:action_ec1_3, fract:action_ec1_4, fract:action_ec1_5 ;
+    fract:actionOrder (
+        fract:action_ec1_1
+        fract:action_ec1_2
+        fract:action_ec1_3
+        fract:action_ec1_4
+        fract:action_ec1_5
     ) .
 
-ref:tmf_ec1_v1 a ref:Version ;
-    ref:versionNumber "1.0.0" ;
+fract:tmf_ec1_v1 a fract:Version ;
+    fract:versionNumber "1.0.0" ;
     dct:date "2025-05-01" ;
-    ref:versionPrevious ref:NoPreviousVersion ;
+    fract:versionPrevious fract:NoPreviousVersion ;
     dct:contributor "Frances Gillis-Webber" .
 
-ref:action_ec1_1 a ref:AddClass ;
-    ref:targetIdentifier ex:ArtificialIntelligence ;
-    ref:targetParent efo:EFO_0004542 ;
-    ref:targetLabel "Artificial intelligence" ;
-    ref:targetLanguageTag "en" ;
+fract:action_ec1_1 a fract:AddClass ;
+    fract:targetIdentifier ex:ArtificialIntelligence ;
+    fract:targetParent efo:EFO_0004542 ;
+    fract:targetLabel "Artificial intelligence" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddClass .
 
-ref:action_ec1_2 a ref:AddClass ;
-    ref:targetIdentifier ex:DistributedIntelligence ;
-    ref:targetParent efo:EFO_0003925 ;
-    ref:targetLabel "Distributed intelligence" ;
-    ref:targetLanguageTag "en" ;
+fract:action_ec1_2 a fract:AddClass ;
+    fract:targetIdentifier ex:DistributedIntelligence ;
+    fract:targetParent efo:EFO_0003925 ;
+    fract:targetLabel "Distributed intelligence" ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddClass .
 
-ref:action_ec1_3 a ref:AddEquivalentClassSet ;
-    ref:targetNode ex:DistributedIntelligence ;
-    ref:targetMembers ( efo:EFO_0004337 ex:ArtificialIntelligence ) ;
-    ref:setType owl:unionOf ;
+fract:action_ec1_3 a fract:AddEquivalentClassSet ;
+    fract:targetNode ex:DistributedIntelligence ;
+    fract:targetMembers ( efo:EFO_0004337 ex:ArtificialIntelligence ) ;
+    fract:setType owl:unionOf ;
     dash:shape shape:ShapeAddEquivalentClassSet .
 
-ref:action_ec1_4 a ref:AddAnnotationLangString ;
-    ref:targetNode ex:DistributedIntelligence ;
-    ref:targetAnnotation skos:definition ;
-    ref:targetAnnotationValue "The cognitive capacity emerging from the partnership between human and artificial intelligence systems." ;
-    ref:targetLanguageTag "en" ;
+fract:action_ec1_4 a fract:AddAnnotationLangString ;
+    fract:targetNode ex:DistributedIntelligence ;
+    fract:targetAnnotation skos:definition ;
+    fract:targetAnnotationValue "The cognitive capacity emerging from the partnership between human and artificial intelligence systems." ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddAnnotationLangString .
 
-ref:action_ec1_5 a ref:AddAnnotationLangString ;
-    ref:targetNode ex:ArtificialIntelligence ;
-    ref:targetAnnotation skos:definition ;
-    ref:targetAnnotationValue "Machines capable of performing tasks that typically require human intelligence." ;
-    ref:targetLanguageTag "en" ;
+fract:action_ec1_5 a fract:AddAnnotationLangString ;
+    fract:targetNode ex:ArtificialIntelligence ;
+    fract:targetAnnotation skos:definition ;
+    fract:targetAnnotationValue "Machines capable of performing tasks that typically require human intelligence." ;
+    fract:targetLanguageTag "en" ;
     dash:shape shape:ShapeAddAnnotationLangString .
