@@ -1,12 +1,12 @@
-@prefix mola: <https://ontology.londisizwe.org/mola#> .
-@prefix molarlf: <https://ontology.londisizwe.org/mola/rl#> .
+@prefix mola: <https://semanticweb.tools/ont/mola#> .
+@prefix molarlf: <https://semanticweb.tools/ont/mola/rl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-<https://ontology.londisizwe.org/mola/rl>
+<https://semanticweb.tools/ont/mola/rl>
     a owl:Ontology ;
     rdfs:label "MoLA Ontology - OWL2_RL Context"@en ;
     prov:wasDerivedFrom <https://semanticweb.tools/ont/mola> ;
