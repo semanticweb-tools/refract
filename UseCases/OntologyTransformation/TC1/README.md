@@ -4,8 +4,8 @@
 - SPARQL for CQs: [CQ1](Files/CQ1.rq) | [CQ2](Files/CQ2.rq) | [CQ3](Files/CQ3.rq) | [CQ4](Files/CQ4.rq) | [CQ5](Files/CQ5.rq)
 - TMF for target viewpoint: [JSON-LD](Files/TMF.json) | [Turtle](Files/TMF.ttl)
 - Shapes graphs:
-  - Macro: [ShapeTransformation](../../ShapesGraphs/ShapeTransformation/README.md)
-  - Micro: [ShapeAddClass](../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddAnnotation](../../RefactoringActions/AddAnnotation/ShapeAddAnnotation.ttl) | [ShapeDeleteClass](../../RefactoringActions/DeleteClass/ShapeDeleteClass.ttl)
+  - Macro: [ShapeTransformation](../../../ShapesGraphs/ShapeTransformation/README.md)
+  - Micro: [ShapeAddClass](../../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddAnnotation](../../../RefactoringActions/AddAnnotation/ShapeAddAnnotation.ttl) | [ShapeDeleteClass](../../../RefactoringActions/DeleteClass/ShapeDeleteClass.ttl)
 
 ## Description
 The goal is to transform a metric measurement ontology to an imperial measurement ontology, replacing metric units with their imperial equivalents and capturing the conversion factors between the two systems.
