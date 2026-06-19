@@ -9,8 +9,8 @@ The changes made to a source ontology O_S in response to a change in the domain 
 ## Use cases
 
 * [**EC1**](/UseCases/OntologyEvolution/EC1) - Semantic drift – the term 'cloud' shifting from a meteorological event to a computing infrastructure concept
-* [**EC2**](UseCases/OntologyEvolution/EC2) - Legal changes – removal of UK from European Union
-* [**EC3**](UseCases/OntologyEvolution/EC3) - New knowledge – adding mRNA vaccine as a sub-class of Vaccine
+* [**EC2**](/UseCases/OntologyEvolution/EC2) - Legal changes – removal of UK from European Union
+* [**EC3**](/UseCases/OntologyEvolution/EC3) - New knowledge – adding mRNA vaccine as a sub-class of Vaccine
 
 ## Position in hierarchy
 
