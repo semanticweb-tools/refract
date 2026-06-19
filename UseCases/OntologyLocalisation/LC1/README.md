@@ -31,7 +31,6 @@ The English concept of 'river' maps to two distinct concepts in French: `sweetfr
 - Target: Yes
 
 ## Evaluation
-- Shapes graph validation: [Using SHACL meta-validation](Evaluation/ShapesGraphValidation.md)
 - TMF validation: [Using SHACL](Evaluation/TMFValidation.md)
 
 ---
