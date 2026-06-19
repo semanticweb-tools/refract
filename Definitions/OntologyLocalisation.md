@@ -21,3 +21,5 @@ A specialised form of [Ontology Transformation](OntologyTransformation.md), wher
 * [Ontology Transformation](OntologyTransformation.md)
 * [Ontology Refactoring](OntologyRefactoring.md)
 * [Ontology Evolution](OntologyEvolution.md)
+* [Viewpoint](Viewpoint.md)
+* 
