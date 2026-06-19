@@ -7,7 +7,7 @@
 - TMF for target viewpoint: [JSON-LD](Files/TMF.json) | [Turtle](Files/TMF.ttl)
 - Shapes graphs:
   - Macro: [ShapeEvolution](../../../ShapesGraphs/ShapeEvolution/README.md)
-  - Micro: [ShapeAddClass](../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddEquivalentClassSet](../../RefactoringActions/AddEquivalentClassSet/ShapeAddEquivalentClassSet.ttl) | [ShapeAddAnnotationLangString](../../RefactoringActions/AddAnnotationLangString/ShapeAddAnnotationLangString.ttl)
+  - Micro: [ShapeAddClass](../../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddEquivalentClassSet](../../../RefactoringActions/AddEquivalentClassSet/ShapeAddEquivalentClassSet.ttl) | [ShapeAddAnnotationLangString](../../../RefactoringActions/AddAnnotationLangString/ShapeAddAnnotationLangString.ttl)
 
 ## Description
 
