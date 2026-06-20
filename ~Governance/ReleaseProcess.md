@@ -94,3 +94,4 @@ This mints a new version-specific DOI for the release (archived permanently, for
 - `owl:versionIRI` and `owl:versionInfo` are the primary version identifiers and must always be updated together with `owl:priorVersion`.
 - `dcterms:issued` is the original publication date and is never changed on subsequent releases; only `dcterms:modified` updates.
 - The `.htaccess` change (step 6) must precede the file uploads (step 7), so that the unversioned path never serves new content ahead of the dedicated versioned route existing.
+- When a major version ships (e.g. 2.0.0), archive the prior major version's entries from `CHANGELOG.md` into a separate file (e.g. `CHANGELOG-1.x.md`), leaving the active `CHANGELOG.md` scoped to the current major line. This keeps the active changelog from growing indefinitely.
