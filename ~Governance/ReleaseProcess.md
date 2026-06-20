@@ -14,7 +14,7 @@ REFrACT follows a patch/minor/major versioning scheme:
 
 Create a branch named `release/vX.Y.Z` for the target version. All changes for this release - both to `Ontologies/refract.ttl` and to any accompanying documentation - are made in this branch, isolated from `main`.
 
-Duplicate the local working copy of `refract.ttl` as `refract-X.Y.Z.ttl`. All ontology edits for this release are made in this local file, not directly in `refract.ttl`.
+Download the raw `refract.ttl` from the newly-created `release/vX.Y.Z` branch and save it locally as `refract-X.Y.Z.ttl`. All ontology edits for this release are made in this local file, not directly in `refract.ttl`. Downloading from the branch (rather than duplicating a local working copy) avoids working from a stale version if local files have drifted from `main`.
 
 ### 2. Finalise the ontology changes
 
