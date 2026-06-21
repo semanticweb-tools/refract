@@ -12,8 +12,8 @@
 # Example TMF Shapes Graph Validation
 
 ## 18 June 2026
+<img width="1138" height="156" alt="TMFAddObjectProperty" src="https://github.com/user-attachments/assets/e0f9e0c2-6a9c-4ede-a950-7c74026bcf06" />
 
-
-- Validated file: [See version]()
+- Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/6e858009443c0beab9cfe86871e44c0df8790c5b/RefactoringActions/AddObjectProperty/TMFAddObjectProperty.ttl)
 - Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
-- Validated against [ShapeNameGoesHere.ttl](../ShapeNameGoesHere.ttl)
+- Validated against [ShapeAddObjectProperty.ttl](../ShapeAddObjectProperty.ttl)
