@@ -30,7 +30,7 @@ REFrACT provides a controlled vocabulary of refactoring action types, each with 
                             dcterms:bibliographicCitation "Gillis-Webber, F. (2026) “Refactoring Actions Shapes Library (REFrACT)”. Zenodo. doi:10.5281/zenodo.20742084."@en ;
                             dcterms:created "2026-05-16"^^xsd:date ;
                             dcterms:issued "2026-06-16"^^xsd:date ;
-                            dcterms:modified "2026-06-21" ;
+                            dcterms:modified "2026-06-21"^^xsd:date ;
                             dcterms:publisher "Frances Gillis-Webber c/o SemanticWeb.tools" ;
                             dcterms:source <https://github.com/semanticweb-tools/refract> ;
                             bibo:doi <https://doi.org/10.5281/zenodo.20742084> ;
