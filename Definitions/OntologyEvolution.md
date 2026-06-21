@@ -22,4 +22,3 @@ The changes made to a source ontology O_S in response to a change in the domain 
 * [Ontology Transformation](OntologyTransformation.md)
 * [Ontology Localisation](OntologyLocalisation.md)
 * [Viewpoint](Viewpoint.md)
-* 
