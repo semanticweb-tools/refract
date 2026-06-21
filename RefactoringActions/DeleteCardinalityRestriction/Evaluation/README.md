@@ -9,7 +9,7 @@
 
 ----
 
-# Example TMF Shapes Graph Validation
+# Example TMF Validation
 
 ## 18 June 2026
 <img width="1138" height="156" alt="TMFDeleteCardinalityRestriction" src="https://github.com/user-attachments/assets/a91dcb3c-49f0-439e-8aa1-5d4bb6320798" />
