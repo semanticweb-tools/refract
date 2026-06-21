@@ -12,8 +12,8 @@
 # Example TMF Shapes Graph Validation
 
 ## 18 June 2026
+<img width="1138" height="156" alt="TMFAddCommentForDeprecation" src="https://github.com/user-attachments/assets/aa4ee09e-4ada-4eb8-86b7-3e9d99cac835" />
 
-
-- Validated file: [See version]()
+- Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/7fb017832e86f8c206d4ab9de505875a69657f0d/RefactoringActions/AddCommentForDeprecation/TMFAddCommentForDeprecation.ttl)
 - Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
-- Validated against [ShapeNameGoesHere.ttl](../ShapeNameGoesHere.ttl)
+- Validated against [ShapeAddCommentForDeprecation.ttl](../ShapeAddCommentForDeprecation.ttl)
