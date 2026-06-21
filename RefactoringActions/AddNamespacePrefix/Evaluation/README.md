@@ -9,7 +9,7 @@
 
 ----
 
-# Example TMF Shapes Graph Validation
+# Example TMF Validation
 
 ## 18 June 2026
 <img width="1138" height="156" alt="TMFAddNamespacePrefix" src="https://github.com/user-attachments/assets/0111c1c8-62a1-4b19-8066-1fe7b6787825" />
