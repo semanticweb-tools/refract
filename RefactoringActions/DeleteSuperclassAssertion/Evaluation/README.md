@@ -9,11 +9,11 @@
 
 ----
 
-# Example TMF Shapes Graph Validation
+# Example TMF Validation
 
 ## 18 June 2026
+<img width="1138" height="156" alt="TMFDeleteSuperclassAssertion" src="https://github.com/user-attachments/assets/e285ecbf-7ff9-4799-b5d4-3f0c042d41f3" />
 
-
-- Validated file: [See version]()
+- Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/49b5ff4840bc9da330fa4587c96eab4368fd4a4e/RefactoringActions/DeleteSuperclassAssertion/TMFDeleteSuperclassAssertion.ttl)
 - Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
-- Validated against [ShapeNameGoesHere.ttl](../ShapeNameGoesHere.ttl)
+- Validated against [ShapeDeleteSuperclassAssertion.ttl](../ShapeDeleteSuperclassAssertion.ttl)
