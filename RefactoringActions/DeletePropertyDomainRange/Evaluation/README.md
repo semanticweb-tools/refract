@@ -9,11 +9,11 @@
 
 ----
 
-# Example TMF Shapes Graph Validation
+# Example TMF Validation
 
 ## 18 June 2026
+<img width="1138" height="156" alt="TMFDeletePropertyDomainRange" src="https://github.com/user-attachments/assets/b167915a-e32a-40e3-8768-e0169220a24c" />
 
-
-- Validated file: [See version]()
+- Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/f3377167de2a5a2872db8094f21c2a416a22cfe3/RefactoringActions/DeletePropertyDomainRange/TMFDeletePropertyDomainRange.ttl)
 - Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
-- Validated against [ShapeNameGoesHere.ttl](../ShapeNameGoesHere.ttl)
+- Validated against [ShapeDeletePropertyDomainRange.ttl](../ShapeDeletePropertyDomainRange.ttl)
