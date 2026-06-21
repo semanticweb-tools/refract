@@ -9,11 +9,11 @@
 
 ----
 
-# Example TMF Shapes Graph Validation
+# Example TMF Validation
 
 ## 18 June 2026
+<img width="1138" height="156" alt="TMFImportOntology" src="https://github.com/user-attachments/assets/b0e3d3dd-8d7d-4ef2-b395-88bfc46e1fb0" />
 
-
-- Validated file: [See version]()
+- Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/a094b8af62b50779b043caaccbd670e0a205c7a5/RefactoringActions/ImportOntology/TMFImportOntology.ttl)
 - Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
-- Validated against [ShapeNameGoesHere.ttl](../ShapeNameGoesHere.ttl)
+- Validated against [ShapeImportOntology.ttl](../ShapeImportOntology.ttl)
