@@ -12,8 +12,8 @@
 # Example TMF Shapes Graph Validation
 
 ## 18 June 2026
+<img width="1138" height="156" alt="TMFChangeAnnotationValue" src="https://github.com/user-attachments/assets/2b0b2f5a-d35d-4aa9-95d0-bb5bd673e2ef" />
 
-
-- Validated file: [See version]()
+- Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/5e830c57e6efe9db40fa48e66e08690c7f17ae18/RefactoringActions/ChangeAnnotationValue/TMFChangeAnnotationValue.ttl)
 - Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
-- Validated against [ShapeNameGoesHere.ttl](../ShapeNameGoesHere.ttl)
+- Validated against [ShapeChangeAnnotationValue.ttl](../ShapeChangeAnnotationValue.ttl)
