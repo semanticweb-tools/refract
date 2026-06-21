@@ -6,3 +6,14 @@
 - Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/43ba9c1c3cb237ef1718da13ff68601cba177de2/RefactoringActions/AddAnnotationLangString/ShapeAddAnnotationLangString.ttl)
 - Validator: [ITB SHACL Shape Validator](https://www.itb.ec.europa.eu/shacl/shacl/upload)
 - Validated against: SHACL's [shacl-shacl.ttl](https://github.com/w3c/data-shapes/blob/gh-pages/shacl/shacl-shacl.ttl) (as of PR #244, February 2025)
+
+----
+
+# Example TMF Shapes Graph Validation
+
+## 18 June 2026
+
+
+- Validated file: [See version]()
+- Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
+- Validated against [ShapeNameGoesHere.ttl](../ShapeNameGoesHere.ttl)
