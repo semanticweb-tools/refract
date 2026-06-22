@@ -105,7 +105,7 @@ This mints a new version-specific DOI for the release (archived permanently, for
 
 When completing the deposit form for the new version:
 
-- **Publication Date**: leave as the original first-publication date (matching `dcterms:issued`) — do **not** change this to the current release date
+- **Publication Date**: use today's date (matching `dcterms:modified`) - this is the version-specific release date shown in Zenodo's version history, not the original publication date
 - **Version**: add the latest release version number
 - **Dates** (optional field): add a date of type "Updated" with today's date, and description "See CHANGELOG.md on GitHub"
 
