@@ -1,7 +1,7 @@
 ## [1.0.2] - 2026-06-22
 
 ### Ontology
-- - Corrected `cc:license` URI from the HTML endpoint to the RDF-resolvable endpoint (`/rdf`), resolving FOOPS! OM4.2 failure.
+- Corrected `cc:license` URI from the HTML endpoint to the RDF-resolvable endpoint (`/rdf`), resolving FOOPS! OM4.2 failure.
 
 ### Repository
 - Updated `README.md`: bumped version number to 1.0.2.
