@@ -1,3 +1,15 @@
+## [1.0.2] - 2026-06-22
+
+### Ontology
+- - Corrected `cc:license` URI from the HTML endpoint to the RDF-resolvable endpoint (`/rdf`), resolving FOOPS! OM4.2 failure.
+
+### Repository
+- Updated `README.md`: bumped version number to 1.0.2.
+- Added "Example TMF Validation" section in `Evaluation/README.md` for all 39 refactoring actions.
+- Updated `~Governance/ReleaseProcess.md`: added repository-only release type, restructured versioning scheme, added Zenodo deposit guidance.
+
+----
+
 ## [1.0.1] - 2026-06-21
 
 ### Ontology

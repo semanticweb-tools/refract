@@ -4,10 +4,15 @@ This folder contains the REFrACT vocabulary and locally hosted copies of DASH an
 
 ## REFrACT
 
-**URI:** `https://semanticweb.tools/ont/refract` \
 **Persistent URI:** `https://w3id.org/refract` \
-**Version:** 1.0.0 \
-**Licence:** [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+**Redirects to:** `https://semanticweb.tools/ont/refract`
+
+**Recommended prefix:** `fract: <https://w3id.org/refract#>`
+
+**Version:** [See CHANGELOG](../CHANGELOG.md) \
+**Licence:** [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20742084.svg)](https://doi.org/10.5281/zenodo.20742084)
 
 - [refract.ttl](refract.ttl)
 

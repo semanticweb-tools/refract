@@ -6,3 +6,14 @@
 - Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/ff3de64c268a08b2f96095f462e95c3bec4614fb/RefactoringActions/DeleteDataProperty/ShapeDeleteDataProperty.ttl)
 - Validator: [ITB SHACL Shape Validator](https://www.itb.ec.europa.eu/shacl/shacl/upload)
 - Validated against: SHACL's [shacl-shacl.ttl](https://github.com/w3c/data-shapes/blob/gh-pages/shacl/shacl-shacl.ttl) (as of PR #244, February 2025)
+
+----
+
+# Example TMF Validation
+
+## 18 June 2026
+<img width="1138" height="156" alt="TMFDeleteDataProperty" src="https://github.com/user-attachments/assets/9307564f-db90-4c59-9b7b-19411c80c567" />
+
+- Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/89965e91c2c3aea67d92b7d54585fe7f7c0beaf4/RefactoringActions/DeleteDataProperty/TMFDeleteDataProperty.ttl)
+- Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
+- Validated against [ShapeDeleteDataProperty.ttl](../ShapeDeleteDataProperty.ttl)

@@ -17,10 +17,10 @@
 @base <https://w3id.org/refract#> .
 
 <https://w3id.org/refract> rdf:type owl:Ontology ;
-                            owl:versionIRI <https://w3id.org/refract/1.0.1> ;
+                            owl:versionIRI <https://w3id.org/refract/1.0.2> ;
                             owl:imports <https://semanticweb.tools/ont/dash> ,
                                         <https://semanticweb.tools/ont/shacl> ;
-                            cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                            cc:license <https://creativecommons.org/publicdomain/zero/1.0/rdf> ;
                             dc:creator "Frances Gillis-Webber" ;
                             dc:description """REFrACT is a vocabulary for describing and validating a Transformation Manifest File (TMF). A TMF records the metadata and refactoring actions associated with an ontology transformation process, including refactoring, evolution, transformation, and localisation. REFrACT has been aligned to the DASH Data Shapes Vocabulary, which in turn imports the Shapes Constraint Language (SHACL).
 
@@ -30,7 +30,7 @@ REFrACT provides a controlled vocabulary of refactoring action types, each with 
                             dcterms:bibliographicCitation "Gillis-Webber, F. (2026) “Refactoring Actions Shapes Library (REFrACT)”. Zenodo. doi:10.5281/zenodo.20742084."@en ;
                             dcterms:created "2026-05-16"^^xsd:date ;
                             dcterms:issued "2026-06-16"^^xsd:date ;
-                            dcterms:modified "2026-06-21"^^xsd:date ;
+                            dcterms:modified "2026-06-22"^^xsd:date ;
                             dcterms:publisher "Frances Gillis-Webber c/o SemanticWeb.tools" ;
                             dcterms:source <https://github.com/semanticweb-tools/refract> ;
                             bibo:doi <https://doi.org/10.5281/zenodo.20742084> ;
@@ -38,8 +38,8 @@ REFrACT provides a controlled vocabulary of refactoring action types, each with 
                             vann:preferredNamespaceUri "https://w3id.org/refract#" ;
                             rdfs:comment "The SHACL shapes graphs, example Transformation Manifest Files, rdfs:comments, and fract:hasParameters annotations for each refactoring action were generated with the assistance of Claude Sonnet 4.6 by Anthropic. If you identify any discrepancies, please contact Frances Gillis-Webber at fgilliswebber@cs.uct.ac.za."@en ;
                             rdfs:label "REFrACT" ;
-                            owl:priorVersion <https://w3id.org/refract/1.0.0> ;
-                            owl:versionInfo "1.0.1" ;
+                            owl:priorVersion <https://w3id.org/refract/1.0.1> ;
+                            owl:versionInfo "1.0.2" ;
                             foaf:logo <https://semanticweb.tools/logo.png> ;
                             mod:status "stable" .
 

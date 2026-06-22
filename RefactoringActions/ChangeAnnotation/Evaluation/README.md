@@ -6,3 +6,14 @@
 - Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/dd9c09be17af2d628ff3b20be97aee2708e60121/RefactoringActions/ChangeAnnotation/ShapeChangeAnnotation.ttl)
 - Validator: [ITB SHACL Shape Validator](https://www.itb.ec.europa.eu/shacl/shacl/upload)
 - Validated against: SHACL's [shacl-shacl.ttl](https://github.com/w3c/data-shapes/blob/gh-pages/shacl/shacl-shacl.ttl) (as of PR #244, February 2025)
+
+----
+
+# Example TMF Validation
+
+## 18 June 2026
+<img width="1138" height="156" alt="TMFChangeAnnotation" src="https://github.com/user-attachments/assets/e2430af8-ac1c-41e6-8ff2-d394ce974906" />
+
+- Validated file: [See version](https://github.com/semanticweb-tools/refract/blob/4c9f0e2594368d74a05ce65fa53b1b7b2368808d/RefactoringActions/ChangeAnnotation/TMFChangeAnnotation.ttl)
+- Validator: [ITB SHACL Validator](https://www.itb.ec.europa.eu/shacl/any/upload)
+- Validated against [ShapeChangeAnnotation.ttl](../ShapeChangeAnnotation.ttl)

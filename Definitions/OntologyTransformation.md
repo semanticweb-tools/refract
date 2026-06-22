@@ -22,4 +22,4 @@ The adaptation of a source ontology O_S with viewpoint V_S to a target viewpoint
 * [Ontology Evolution](OntologyEvolution.md)
 * [Ontology Localisation](OntologyLocalisation.md)
 * [Viewpoint](Viewpoint.md)
-* 
+  

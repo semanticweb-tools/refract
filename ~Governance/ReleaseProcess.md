@@ -1,14 +1,23 @@
 # Release Process
 
-This document describes the process for releasing a new version of REFrACT (the vocabulary, defined in `Ontologies/refract.ttl`).
+This document describes the process for releasing a new version of the REFrACT **ontology** (`Ontologies/refract.ttl`), and separately, the process for **repository-only** changes that don't touch the ontology.
 
-REFrACT follows a patch/minor/major versioning scheme:
+There are two release types:
 
-- **Patch** (e.g. 1.0.0 → 1.0.1): non-logical changes only - annotations, comments, `rdfs:seeAlso`, documentation. No impact on axioms or entailments.
-- **Minor** (e.g. 1.0.1 → 1.1.0): additive, backward-compatible changes - new classes, new properties, new axioms.
+1. **Ontology release** (`vX.Y.Z`) - used whenever `Ontologies/refract.ttl` changes, whether or not repository changes are included in the same release. Follows the major/minor/patch versioning scheme below.
+2. **Repository-only release** (`vX.Y.Z.a`) - used when only repository content changes (documentation, this process document, Definitions pages, etc.), with no change to `Ontologies/refract.ttl`. `X.Y.Z` stays fixed at the current ontology version; `a` increments with each repository-only release and carries no semantic versioning meaning of its own. See [Repository-Only Releases](#repository-only-releases) below.
+
+### Ontology Versioning Scheme
+
+The ontology follows a major/minor/patch versioning scheme:
+
 - **Major** (e.g. 1.1.0 → 2.0.0): breaking changes - removed or renamed classes/properties, changes to existing axioms that affect conformance.
+- **Minor** (e.g. 1.0.1 → 1.1.0): additive, backward-compatible changes - new classes, new properties, new axioms.
+- **Patch** (e.g. 1.0.0 → 1.0.1): non-logical changes only - annotations, comments, `rdfs:seeAlso`, documentation. No impact on axioms or entailments.
 
-## Process
+----
+
+## Ontology Release Process
 
 ### 1. Start a release branch
 
@@ -47,14 +56,17 @@ Read through both and summarise each distinct change in plain language (not the 
 ```markdown
 ## [1.0.1] - 2026-06-20
 
-### Changed
+### Ontology
 - Revised `rdfs:comment` for `fract:CompositeAction` to clarify that a composite action
   represents a batch of changes in a single action, rather than a single logical change.
 - Added `rdfs:seeAlso` annotation to every refactoring action, referencing its
   corresponding page in the REFrACT GitHub repository.
+
+### Repository
+- Added `Governance/RELEASE-PROCESS.md`, documenting the release workflow.
 ```
 
-Commit `CHANGELOG.md` to the `release/vX.Y.Z` branch (again, not `main`).
+Commit `CHANGELOG.md` to the `release/vX.Y.Z` branch (not in `main`).
 
 ### 5. Merge, tag, and release
 
@@ -90,6 +102,32 @@ Manually upload `refract-X.Y.Z.ttl` to the existing Zenodo deposit as a new vers
 This mints a new version-specific DOI for the release (archived permanently, for anyone who needs to cite or pin this exact snapshot). The deposit's **concept DOI** (`10.5281/zenodo.20742084`) always resolves to the latest version automatically and requires no action.
 
 `refract.ttl`'s own citation metadata (`dcterms:bibliographicCitation` and `bibo:doi`) references the **concept DOI**, not a version-specific one, and does not need to be updated on each release - it only changes if the concept DOI itself ever changes, which is not expected.
+
+When completing the deposit form for the new version:
+
+- **Publication Date**: leave as the original first-publication date (matching `dcterms:issued`) — do **not** change this to the current release date
+- **Version**: add the latest release version number
+- **Dates** (optional field): add a date of type "Updated" with today's date, and description "See CHANGELOG.md on GitHub"
+
+----
+
+## Repository-Only Releases
+
+Used when only repository content changes - documentation, this process document, Definitions pages, etc. - with no change to `Ontologies/refract.ttl`. As nothing is being deployed to `semanticweb.tools` or Zenodo, this is a simpler release process, with no `.htaccess` change, no server upload, and no Zenodo upload.
+
+The version number takes the form `vX.Y.Z.a`, where `X.Y.Z` is the current ontology version (unchanged) and `a` is a sequential counter starting at `1`, incrementing with each repository-only release since the last ontology release. `a` carries no SemVer meaning - it does not indicate patch/minor/major significance, only sequence.
+
+### Process
+
+1. Create a branch named `release/vX.Y.Z.a` for the target version (e.g. `release/v1.0.1.1`). Make the repository changes in this branch - no direct commits to `main`.
+2. Add a new entry to `CHANGELOG.md` under the `### Repository` heading for the current version, describing the change.
+3. Merge `release/vX.Y.Z.a` into `main` via pull request.
+4. Tag the merge commit: `git tag vX.Y.Z.a` (e.g. `v1.0.1.1`).
+5. Push the tag. A full GitHub Release (with notes, attached binaries) is not required, since there is no new artefact being archived - the tag alone is sufficient to mark the point in history.
+
+When the next ontology release ships, the `.a` counter resets - the first repository-only release after `v1.1.0`, for example, begins again at `v1.1.0.1`.
+
+----
 
 ## Notes
 

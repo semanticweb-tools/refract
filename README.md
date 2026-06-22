@@ -7,7 +7,7 @@ Supporting artefacts for REFrACT (Refactoring Actions Vocabulary), including SHA
 
 **Recommended prefix:** `fract: <https://w3id.org/refract#>`
 
-**Version:** 1.0.1 \
+**Version:** 1.0.2 \
 **Licence:** [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20742084.svg)](https://doi.org/10.5281/zenodo.20742084)

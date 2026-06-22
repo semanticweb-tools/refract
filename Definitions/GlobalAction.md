@@ -8,8 +8,8 @@ A macro-level refactoring action that operates on an ontology as a whole, rather
 
 Global actions include:
 
-* [AddNamespacePrefix](RefactoringActions/AddNamespacePrefix)
-* [ImportOntology](RefactoringActions/ImportOntology)
+* [AddNamespacePrefix](../RefactoringActions/AddNamespacePrefix)
+* [ImportOntology](../RefactoringActions/ImportOntology)
 
 ## Position in class hierarchy
 
