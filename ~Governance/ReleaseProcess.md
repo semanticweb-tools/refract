@@ -75,7 +75,7 @@ Commit `CHANGELOG.md` to the `release/vX.Y.Z` branch (not in `main`).
 3. Push the tag.
 4. Create a GitHub Release for the tag:
    - Title: `vX.Y.Z`
-   - Release notes: the same summary written for the `CHANGELOG.md` entry
+   - Release notes: `See CHANGELOG.md for details.`
    - Attach `refract-X.Y.Z.ttl` as a binary asset, named to match the version (not the generic `refract.ttl`), so the file is self-identifying if downloaded outside the context of the release page
 
 ### 6. Update the semanticweb.tools `.htaccess`
