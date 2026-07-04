@@ -1,3 +1,10 @@
+## [1.0.2.2] - 2026-07-04
+
+### Repository
+- Added missing `ShapeAddCommentForDeprecation` link to the micro shapes graphs list in `UseCases/OntologyRefactoring/RC4/README.md`.
+
+----
+
 ## [1.0.2.1] - 2026-06-22
 
 ### Repository

@@ -5,7 +5,7 @@
 - TMF for target viewpoint: [JSON-LD](Files/TMF.json) | [Turtle](Files/TMF.ttl)
 - Shapes graphs:
   - Macro: [ShapeRefactoring](../../../ShapesGraphs/ShapeRefactoring/README.md)
-  - Micro: [ShapeDeprecateClassWithSuccessor](../../../RefactoringActions/DeprecateClassWithSuccessor/ShapeDeprecateClassWithSuccessor.ttl) | [ShapeDeprecateClass](../../../RefactoringActions/DeprecateClass/ShapeDeprecateClass.ttl) | [ShapeAddClass](../../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddAnnotation](../../../RefactoringActions/AddAnnotation/ShapeAddAnnotation.ttl)
+  - Micro: [ShapeDeprecateClassWithSuccessor](../../../RefactoringActions/DeprecateClassWithSuccessor/ShapeDeprecateClassWithSuccessor.ttl) | [ShapeDeprecateClass](../../../RefactoringActions/DeprecateClass/ShapeDeprecateClass.ttl) | [ShapeAddClass](../../../RefactoringActions/AddClass/ShapeAddClass.ttl) | [ShapeAddCommentForDeprecation](../../../RefactoringActions/AddCommentForDeprecation/ShapeAddCommentForDeprecation.ttl) | [ShapeAddAnnotation](../../../RefactoringActions/AddAnnotation/ShapeAddAnnotation.ttl)
 
 ## Description
 This is a real-world scenario where the name of a department at the University of Cape Town was changed from 'School of Library Studies' to 'Department of Knowledge and Information Stewardship'. A dummy ontology has been created to represent this knowledge prior to and post-refactoring. This example is more extensive than RC1 because it is not just a change to the fragment identifier(s). The changes required include the introduction of a new class with a corresponding label and provenance metadata, as well as the deprecation of an old class.
