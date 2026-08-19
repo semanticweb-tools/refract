@@ -1,0 +1,1406 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semanticweb.tools/ont/multi#"
+     xml:base="http://semanticweb.tools/ont/multi"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:mola="https://ontology.londisizwe.org/mola#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:multi="http://semanticweb.tools/ont/multi#"
+     xmlns:lexinfo="http://www.lexinfo.net/ontology/3.0/lexinfo#"
+     xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#">
+    <owl:Ontology rdf:about="http://semanticweb.tools/ont/multi">
+        <owl:versionIRI rdf:resource="http://semanticweb.tools/ont/multi/1.0.0"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <cc:license>https://creativecommons.org/publicdomain/zero/1.0/</cc:license>
+        <dc:creator>Frances Gillis-Webber</dc:creator>
+        <dc:description xml:lang="en">A model for the representation of viewpoints specific to natural language, where each natural language is an embodiment of a culture. Using this model, the viewpoint of an ontology or ontology entity can be made explicit.
+
+This core version has been aligned to DOLCE+DnS Ultralite, an upper-level ontology suitable for modelling contexts.</dc:description>
+        <dc:issued>2023-02-13</dc:issued>
+        <dc:modified>2023-07-16</dc:modified>
+        <dc:rights>CC-Zero</dc:rights>
+        <vann:preferredNamespacePrefix>multi</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://semanticweb.tools/ont/multi#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">13/02/2023 : First version was made live
+15/02/2023 : Made minor changes to annotation properties and definitions
+31/03/2023 : Added metadata
+16/07/2023 : Fixed bug relating to #CommunityOfIdentity. #DemographicVariable is now a sub-class of #Description.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model of Multiple Viewpoints</rdfs:label>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#hasViewpoint -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticweb.tools/ont/multi#hasViewpoint">
+        <rdfs:isDefinedBy>http://semanticweb.tools/ont/multi</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has viewpoint</rdfs:label>
+        <rdfs:range rdf:resource="http://semanticweb.tools/ont/multi#Viewpoint"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#isExpressedInEnglish -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticweb.tools/ont/multi#isExpressedInEnglish">
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">is expressed in English</rdfs:label>
+        <rdfs:domain rdf:resource="https://ontology.londisizwe.org/mola#Languoid"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#isExpressedLocally -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticweb.tools/ont/multi#isExpressedLocally">
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">is expressed locally</rdfs:label>
+        <rdfs:domain rdf:resource="https://ontology.londisizwe.org/mola#Languoid"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#isLexicalisedAs -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticweb.tools/ont/multi#isLexicalisedAs">
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">is lexicalised as</rdfs:label>
+        <rdfs:range rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#ProperNoun"/>
+        <rdfs:domain rdf:resource="https://ontology.londisizwe.org/mola#Languoid"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#symbolisesConcept -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticweb.tools/ont/multi#symbolisesConcept">
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">symbolises concept</rdfs:label>
+        <rdfs:domain rdf:resource="http://semanticweb.tools/ont/multi#Term"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#symbolisesName -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticweb.tools/ont/multi#symbolisesName">
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">symbolises name</rdfs:label>
+        <rdfs:range rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#ProperNoun"/>
+        <rdfs:domain rdf:resource="http://semanticweb.tools/ont/multi#LanguoidIdentifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/ontolex#denotes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/lemon/ontolex#denotes">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+        <rdfs:label xml:lang="en">denotes</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#ProperNoun"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#hasLanguageTag -->
+
+    <owl:AnnotationProperty rdf:about="https://ontology.londisizwe.org/mola#hasLanguageTag">
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">has language tag</rdfs:label>
+        <rdfs:range rdf:resource="http://semanticweb.tools/ont/multi#LanguoidIdentifier"/>
+        <rdfs:domain rdf:resource="https://ontology.londisizwe.org/mola#Languoid"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#AbsoluteLocation -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#AbsoluteLocation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+        <owl:disjointWith rdf:resource="http://semanticweb.tools/ont/multi#MetaphoricalLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Absolute Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Age -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Age">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Age</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Architecture -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Architecture">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CreativeExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Architecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Art -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Art">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CreativeExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Art</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#BiologicalSex -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#BiologicalSex">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Biological Sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#BodyModification -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#BodyModification">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Body Modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Codeswitching -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Codeswitching">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#LanguageUse"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Codeswitching</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#CollectiveCulturalExpression -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Collective Cultural Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#CollectiveDemographicVariable -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#DemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Collective Demographic Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#ColourPerception -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#ColourPerception">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Colour Perception</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#ColourScheme -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#ColourScheme">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#ColourPerception"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Colour Scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#CommunityAgnosticViewpoint -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#CommunityAgnosticViewpoint">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticweb.tools/ont/multi#Viewpoint"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://semanticweb.tools/ont/multi#CommunitySpecificViewpoint"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Community-Agnostic Viewpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#CommunityOfIdentity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#CommunityOfIdentity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Community"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+                                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#CulturalExpression"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#DemographicVariable"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Community of Identity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#CommunitySpecificViewpoint -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#CommunitySpecificViewpoint">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticweb.tools/ont/multi#Viewpoint"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#unifies"/>
+                                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#CommunityOfIdentity"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#unifies"/>
+                                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#LinguisticCommunity"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#unifies"/>
+                                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#PoliticalCommunity"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Community-Specific Viewpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Continent -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Continent">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#AbsoluteLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Continent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Country -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Country">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#AbsoluteLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#CreativeExpression -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#CreativeExpression">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Creative Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Cuisine -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Cuisine">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CreativeExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Cuisine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#CulturalExpression -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#CulturalExpression">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObjectAttribute"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Cultural Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Custom -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Custom">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Norm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Dance -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Dance">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CreativeExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Dance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Decor -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Decor">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CreativeExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Decor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#DemographicVariable -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#DemographicVariable">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#CulturalExpression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Demographic Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#DependentCountry -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#DependentCountry">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#Country"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Dependent Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Dress -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Dress">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Dress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#EducationLevel -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#EducationLevel">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Education Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#EducationSystem -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#EducationSystem">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Education System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#EthnicGroup -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#EthnicGroup">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Ethnic Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Ethnicity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Ethnicity">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Ethnicity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#GenderExpression -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#GenderExpression">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Gender Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#GenderIdentity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#GenderIdentity">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Gender Identity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#GenderRole -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#GenderRole">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Gender Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#GenerationalSegment -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#GenerationalSegment">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Generational Segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Grammar -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Grammar">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TypeCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#LexicalItemSpecificRule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#PartOfSpeechSpecificRule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Grammar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Income -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Income">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Income</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#IncomeScale -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#IncomeScale">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Income Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#IndependentCountry -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#IndependentCountry">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#Country"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Independent Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#IndividualCulturalExpression -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#IndividualCulturalExpression">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Individual Cultural Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#IndividualDemographicVariable -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#IndividualDemographicVariable">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#DemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Individual Demographic Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#KinshipSystem -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#KinshipSystem">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Kinship System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#L1LinguisticCommunity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#L1LinguisticCommunity">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#LinguisticCommunity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#L2LinguisticCommunity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#L2LinguisticCommunity">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#LinguisticCommunity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LanguageSpeaker -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LanguageSpeaker">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Language Speaker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LanguageUse -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LanguageUse">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Language Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LanguoidIdentifier -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LanguoidIdentifier">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Languoid Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LegalStatus -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LegalStatus">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Legal Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LegalSystem -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LegalSystem">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#System"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Legal System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LexicalItem -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LexicalItem">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expressesConcept"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#PartOfSpeech"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSpecializedBy"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#LexicalItemSpecificRule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Lexical Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LexicalItemSpecificRule -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LexicalItemSpecificRule">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Lexical Item-Specific Rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Lexicon -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Lexicon">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TypeCollection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#LexicalItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Lexicon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LinguisticCommunity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LinguisticCommunity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Community"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isUnifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="https://ontology.londisizwe.org/mola#Language"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Linguistic Community</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LinguisticEtiquette -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LinguisticEtiquette">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#LanguageUse"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Linguistic Etiquette</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Literature -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Literature">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CreativeExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Literature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#LocationBasedCommunity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#LocationBasedCommunity">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CommunityOfIdentity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#MaritalStatus -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#MaritalStatus">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Marital Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#MarriageSystem -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#MarriageSystem">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#MedicineSystem -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#MedicineSystem">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#System"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Medicine System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#MetaphoricalLocation -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#MetaphoricalLocation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+        <owl:disjointWith rdf:resource="http://semanticweb.tools/ont/multi#RelativeLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Metaphorical Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Music -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Music">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CreativeExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Music</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Nationality -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Nationality">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Nationality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Occupation -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Occupation">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Occupation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#PartOfSpeech -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#PartOfSpeech">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameter"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#PartOfSpeechSpecificRule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Part of Speech</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#PartOfSpeechSpecificRule -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#PartOfSpeechSpecificRule">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Part of Speech-Specific Rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#PeriUrbanArea -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#PeriUrbanArea">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#RelativeLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Peri-Urban Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#PoliticalCommunity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#PoliticalCommunity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Community"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
+                                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#AbsoluteLocation"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation"/>
+                                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#MetaphoricalLocation"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Political Community</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Politics -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Politics">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Politics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Population -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Population">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Region -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Region">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#AbsoluteLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#RegionByCoordinates -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#RegionByCoordinates">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#Region"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Region by Coordinates</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#RegionalBloc -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#RegionalBloc">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#Region"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Regional Bloc</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#RelativeLocation -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#RelativeLocation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Relative Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Religion -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Religion">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Religion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#ReligiousCommunity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#ReligiousCommunity">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CommunityOfIdentity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Rule -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Rule">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Norm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#RuralArea -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#RuralArea">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#RelativeLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Rural Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#SexualOrientation -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#SexualOrientation">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Sexual Orientation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#SingleColour -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#SingleColour">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#ColourPerception"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Single Colour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#SocialClassScale -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#SocialClassScale">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Social Class Scale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#SocialEtiquette -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#SocialEtiquette">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Social Etiquette</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#SocialStatus -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#SocialStatus">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveDemographicVariable"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Social Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Spirituality -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Spirituality">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#IndividualCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Spirituality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Sport -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Sport">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CreativeExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Sport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#SubcultureCommunity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#SubcultureCommunity">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CommunityOfIdentity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#SuburbanArea -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#SuburbanArea">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#RelativeLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Suburban Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#System -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#System">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#TechnologyUse -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#TechnologyUse">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CollectiveCulturalExpression"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Technology Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Term -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Term">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Term</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#UNGeoschemeRegion -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#UNGeoschemeRegion">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#Region"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">UN Geoscheme Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#UrbanArea -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#UrbanArea">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#RelativeLocation"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Urban Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#Viewpoint -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#Viewpoint">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Narrative"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticweb.tools/ont/multi"/>
+        <rdfs:label xml:lang="en">Viewpoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticweb.tools/ont/multi#VirtualCommunity -->
+
+    <owl:Class rdf:about="http://semanticweb.tools/ont/multi#VirtualCommunity">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#CommunityOfIdentity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/ontology/3.0/lexinfo#Noun -->
+
+    <owl:Class rdf:about="http://www.lexinfo.net/ontology/3.0/lexinfo#Noun">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/lemon/ontolex#Word"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo"/>
+        <rdfs:label xml:lang="en">Noun</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lexinfo.net/ontology/3.0/lexinfo#ProperNoun -->
+
+    <owl:Class rdf:about="http://www.lexinfo.net/ontology/3.0/lexinfo#ProperNoun">
+        <rdfs:subClassOf rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo#Noun"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.lexinfo.net/ontology/3.0/lexinfo"/>
+        <rdfs:label xml:lang="en">Proper Noun</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/ontolex#Affix -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/ontolex#Affix">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+        <rdfs:label xml:lang="en">Affix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/ontolex#LexicalEntry -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/ontolex#LexicalEntry">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+        <rdfs:label xml:lang="en">Lexical Entry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/ontolex#MultiwordExpression -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/ontolex#MultiwordExpression">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+        <rdfs:label xml:lang="en">Multiword Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/ontolex#Word -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/ontolex#Word">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+        <rdfs:label xml:lang="en">Word</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#Dialect -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#Dialect">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#Lect"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Dialect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#DialectCluster -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#DialectCluster">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#LanguageFamily"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Dialect Cluster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#Ethnolect -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#Ethnolect">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#Lect"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Ethnolect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#Idiolect -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#Idiolect">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#Lect"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Idiolect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#Language -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#Language">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#Languoid"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#LanguageCode -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#LanguageCode">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#LanguoidIdentifier"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Language Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#LanguageFamily -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#LanguageFamily">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#Languoid"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Language Family</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#LanguageTag -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#LanguageTag">
+        <rdfs:subClassOf rdf:resource="http://semanticweb.tools/ont/multi#LanguoidIdentifier"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Language Tag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#Languoid -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#Languoid">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Norm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#unifies"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#Grammar"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#unifies"/>
+                <owl:someValuesFrom rdf:resource="http://semanticweb.tools/ont/multi#Lexicon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Languoid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#Lect -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#Lect">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#Language"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Lect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#Pidgin -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#Pidgin">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#Lect"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Pidgin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ontology.londisizwe.org/mola#Sociolect -->
+
+    <owl:Class rdf:about="https://ontology.londisizwe.org/mola#Sociolect">
+        <rdfs:subClassOf rdf:resource="https://ontology.londisizwe.org/mola#Lect"/>
+        <rdfs:isDefinedBy rdf:resource="https://ontology.londisizwe.org/mola"/>
+        <rdfs:label xml:lang="en">Sociolect</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
